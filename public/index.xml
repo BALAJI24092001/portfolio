@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>BALAJI</title>
-    <link>//localhost:1313/</link>
+    <link>balaji24092001/</link>
     <description>Recent content on BALAJI</description>
     <generator>Hugo -- 0.144.2</generator>
     <language>en-us</language>
-    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="balaji24092001/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bayesian Networks</title>
-      <link>//localhost:1313/post/bayesian-networks/</link>
+      <link>balaji24092001/post/bayesian-networks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/post/bayesian-networks/</guid>
+      <guid>balaji24092001/post/bayesian-networks/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Bayesian Networks (BNs)&lt;/strong&gt;, also known as Belief Networks or Bayes Nets, are graphical models that represent probabilistic relationships among a set of variables. They are widely used in various fields such as medicine, finance, artificial intelligence, and more for reasoning under uncertainty.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Key Concepts:&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
@@ -27,9 +27,9 @@
     </item>
     <item>
       <title>Calculus</title>
-      <link>//localhost:1313/post/calculus/</link>
+      <link>balaji24092001/post/calculus/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/post/calculus/</guid>
+      <guid>balaji24092001/post/calculus/</guid>
       <description>&lt;h2 id=&#34;function&#34;&gt;Function&lt;/h2&gt;
 &lt;h3 id=&#34;function-of-single-variable&#34;&gt;Function of single variable&lt;/h3&gt;
 &lt;p&gt;A relation f from a set $A$ to a set $B$ is said to be a function if every element of set $A$ has one and only one image in set $B$. In other words, a function $f$ is a relation such that no two pairs in the relation have the same first element.&lt;/p&gt;
@@ -37,27 +37,27 @@
     </item>
     <item>
       <title>Database Warehousing</title>
-      <link>//localhost:1313/post/database-warehousing/</link>
+      <link>balaji24092001/post/database-warehousing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/post/database-warehousing/</guid>
+      <guid>balaji24092001/post/database-warehousing/</guid>
       <description>&lt;p&gt;I computing, a data warehouse, also known as an enterprise data warehouse, is a system used for reporting and data analysis and is considered a core component of data analysis.&lt;/p&gt;
 &lt;p&gt;Data warehouses are central repositories of integrated data from one or more different sources. They store current and historical data in one single place.&lt;/p&gt;
 &lt;p&gt;We use databases for transaction purposes, and the historical data of these transactions and it&amp;rsquo;s previous states are stored in this data warehouses.&lt;/p&gt;</description>
     </item>
     <item>
       <title>DBMS</title>
-      <link>//localhost:1313/post/dbms/</link>
+      <link>balaji24092001/post/dbms/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/post/dbms/</guid>
+      <guid>balaji24092001/post/dbms/</guid>
       <description>&lt;p&gt;A database management system (DBMS) is a collection of programs that enables users to create and maintain a database. The DBMS is a general-purpose software system that facilitates the processes of defining, constructing, manipulating and sharing databases among various users and applications.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Data Model:&lt;/strong&gt;&lt;/em&gt; A data model is a collection of concepts that can be used to describe the structure of a database. It provides the necessary means to achieve abstraction.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Git</title>
-      <link>//localhost:1313/post/git/</link>
+      <link>balaji24092001/post/git/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/post/git/</guid>
+      <guid>balaji24092001/post/git/</guid>
       <description>&lt;h2 id=&#34;commands&#34;&gt;Commands&lt;/h2&gt;
 &lt;h3 id=&#34;install&#34;&gt;Install:&lt;!-- raw HTML omitted --&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;winget install git&lt;/code&gt;&lt;/p&gt;
@@ -78,17 +78,17 @@
     </item>
     <item>
       <title>NeoVim</title>
-      <link>//localhost:1313/post/neovim/</link>
+      <link>balaji24092001/post/neovim/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/post/neovim/</guid>
+      <guid>balaji24092001/post/neovim/</guid>
       <description>&lt;p&gt;Vim is a text editor which includes most commands from the Unix program &amp;ldquo;Vi&amp;rdquo; and many new ones.&lt;/p&gt;
 &lt;p&gt;An overview of this manual can be found in the file &amp;ldquo;help.txt&amp;rdquo;, help.txt. It can be accessed from within Vim with the &lt;!-- raw HTML omitted --&gt; or &lt;!-- raw HTML omitted --&gt; key and with the :help command (just type &amp;ldquo;:help&amp;rdquo;, without the bars or quotes). The &amp;lsquo;helpfile&amp;rsquo; option can be set to the name of the help file, in case it is not located in the default place. You can jump to subjects like with tags: Use CTRL-] to jump to a subject under the cursor, use CTRL-T to jump back.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Projects</title>
-      <link>//localhost:1313/projects/</link>
+      <link>balaji24092001/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/projects/</guid>
+      <guid>balaji24092001/projects/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;</description>
     </item>
   </channel>

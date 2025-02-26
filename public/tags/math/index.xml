@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>MATH on BALAJI</title>
-    <link>//localhost:1313/tags/math/</link>
+    <link>balaji24092001/tags/math/</link>
     <description>Recent content in MATH on BALAJI</description>
     <generator>Hugo -- 0.144.2</generator>
     <language>en-us</language>
-    <atom:link href="//localhost:1313/tags/math/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="balaji24092001/tags/math/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Calculus</title>
-      <link>//localhost:1313/post/calculus/</link>
+      <link>balaji24092001/post/calculus/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/post/calculus/</guid>
+      <guid>balaji24092001/post/calculus/</guid>
       <description>&lt;h2 id=&#34;function&#34;&gt;Function&lt;/h2&gt;
 &lt;h3 id=&#34;function-of-single-variable&#34;&gt;Function of single variable&lt;/h3&gt;
 &lt;p&gt;A relation f from a set $A$ to a set $B$ is said to be a function if every element of set $A$ has one and only one image in set $B$. In other words, a function $f$ is a relation such that no two pairs in the relation have the same first element.&lt;/p&gt;
