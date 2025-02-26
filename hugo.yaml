@@ -1,0 +1,60 @@
+baseURL: "balaji24092001"
+languageCode: en-us
+title: BALAJI
+theme: "PaperMod"
+params:
+  # ShowShareButtons: true
+  # label.icon: "logo.png"
+  ShowToc: true
+  TocSide: right
+  ShowCodeCopyButtons: true
+  ShowReadingTime: true
+  profileMode:
+    enabled: true
+    title: "DEGA BALAJI VARA PRASAD"
+    subtitle: "AI Enthusiast"
+    content: "Soemthing "
+    imageUrl: "botsimple.jpg"
+    imageWidth: 120
+    imageHeight: 120
+    buttons:
+      - name: GATE DA
+        url: "categories/gate-da/"
+      - name: NOTES
+        url: "/categories/notes"
+      - name: DEV
+        url: "categories/dev/"
+      - name: ML
+        url: "/categories/ml"
+  socialIcons:
+    - name: "Github"
+      url: "https://github.com/BALAJI24092001"
+    - name: "LinkedIn"
+      url: "https://www.linkedin.com/in/balaji24092001/"
+    - name: "substack"
+      url: "https://thetensortribune.substack.com/"
+    - name: "x"
+      url: "https://x.com/BALAJI240901"
+    - name: "kaggle"
+      url: "https://www.kaggle.com/balajivaraprasad"
+menu:
+  main:
+    - identifier: Search
+      name: Search
+      url: "/search/"
+      weight: 1
+    - identifier: Projects
+      name: Projects
+      url: "/projects/"
+      weight: 4
+    - identifier: categories
+      name: Categories
+      url: "/categories/"
+      weight: 2
+    - identifier: tags
+      name: Tags
+      url: "/tags/"
+      weight: 3
+# REF:
+# 1. https://github.com/adityatelange/hugo-PaperMod/wiki/Features#profile-mode # profile-mode for PaperMod Theme
+# 2. https://gohugo.io/hosting-and-deployment/hosting-on-github/ # Host website for free on github-pages
