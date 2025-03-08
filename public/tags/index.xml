@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on BALAJI</title>
-    <link>balaji24092001/tags/</link>
+    <link>//localhost:1313/tags/</link>
     <description>Recent content in Tags on BALAJI</description>
     <generator>Hugo -- 0.144.2</generator>
     <language>en-us</language>
-    <atom:link href="balaji24092001/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CS</title>
-      <link>balaji24092001/tags/cs/</link>
+      <link>//localhost:1313/tags/cs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>balaji24092001/tags/cs/</guid>
+      <guid>//localhost:1313/tags/cs/</guid>
       <description></description>
     </item>
     <item>
       <title>MATH</title>
-      <link>balaji24092001/tags/math/</link>
+      <link>//localhost:1313/tags/math/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>balaji24092001/tags/math/</guid>
+      <guid>//localhost:1313/tags/math/</guid>
       <description></description>
     </item>
   </channel>

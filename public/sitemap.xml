@@ -2,40 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>balaji24092001/archives/</loc>
+    <loc>//localhost:1313/archives/</loc>
   </url><url>
-    <loc>balaji24092001/</loc>
+    <loc>//localhost:1313/</loc>
   </url><url>
-    <loc>balaji24092001/post/bayesian-networks/</loc>
+    <loc>//localhost:1313/post/bayesian-networks/</loc>
   </url><url>
-    <loc>balaji24092001/post/calculus/</loc>
+    <loc>//localhost:1313/post/calculus/</loc>
   </url><url>
-    <loc>balaji24092001/categories/</loc>
+    <loc>//localhost:1313/categories/</loc>
   </url><url>
-    <loc>balaji24092001/tags/cs/</loc>
+    <loc>//localhost:1313/tags/cs/</loc>
   </url><url>
-    <loc>balaji24092001/post/database-warehousing/</loc>
+    <loc>//localhost:1313/post/database-warehousing/</loc>
   </url><url>
-    <loc>balaji24092001/post/dbms/</loc>
+    <loc>//localhost:1313/post/dbms/</loc>
   </url><url>
-    <loc>balaji24092001/categories/dev/</loc>
+    <loc>//localhost:1313/categories/dev/</loc>
   </url><url>
-    <loc>balaji24092001/categories/gate-da/</loc>
+    <loc>//localhost:1313/categories/gate-da/</loc>
   </url><url>
-    <loc>balaji24092001/post/git/</loc>
+    <loc>//localhost:1313/post/git/</loc>
   </url><url>
-    <loc>balaji24092001/tags/math/</loc>
+    <loc>//localhost:1313/tags/math/</loc>
   </url><url>
-    <loc>balaji24092001/post/neovim/</loc>
+    <loc>//localhost:1313/post/neovim/</loc>
   </url><url>
-    <loc>balaji24092001/categories/notes/</loc>
+    <loc>//localhost:1313/categories/notes/</loc>
   </url><url>
-    <loc>balaji24092001/post/</loc>
+    <loc>//localhost:1313/post/</loc>
   </url><url>
-    <loc>balaji24092001/projects/</loc>
+    <loc>//localhost:1313/projects/</loc>
   </url><url>
-    <loc>balaji24092001/search/</loc>
+    <loc>//localhost:1313/search/</loc>
   </url><url>
-    <loc>balaji24092001/tags/</loc>
+    <loc>//localhost:1313/tags/</loc>
   </url>
 </urlset>

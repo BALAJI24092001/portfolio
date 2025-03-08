@@ -6,6 +6,7 @@ params:
   # ShowShareButtons: true
   # label.icon: "logo.png"
   ShowToc: true
+  defaultTheme: light
   TocSide: right
   ShowCodeCopyButtons: true
   ShowReadingTime: true
@@ -21,11 +22,11 @@ params:
       - name: GATE DA
         url: "categories/gate-da/"
       - name: NOTES
-        url: "/categories/notes"
+        url: "categories/notes"
       - name: DEV
         url: "categories/dev/"
       - name: ML
-        url: "/categories/ml"
+        url: "categories/ml"
   socialIcons:
     - name: "Github"
       url: "https://github.com/BALAJI24092001"

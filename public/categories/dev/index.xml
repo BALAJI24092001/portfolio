@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Dev on BALAJI</title>
-    <link>balaji24092001/categories/dev/</link>
+    <link>//localhost:1313/categories/dev/</link>
     <description>Recent content in Dev on BALAJI</description>
     <generator>Hugo -- 0.144.2</generator>
     <language>en-us</language>
-    <atom:link href="balaji24092001/categories/dev/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/categories/dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Git</title>
-      <link>balaji24092001/post/git/</link>
+      <link>//localhost:1313/post/git/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>balaji24092001/post/git/</guid>
+      <guid>//localhost:1313/post/git/</guid>
       <description>&lt;h2 id=&#34;commands&#34;&gt;Commands&lt;/h2&gt;
 &lt;h3 id=&#34;install&#34;&gt;Install:&lt;!-- raw HTML omitted --&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;winget install git&lt;/code&gt;&lt;/p&gt;
@@ -32,17 +32,17 @@
     </item>
     <item>
       <title>NeoVim</title>
-      <link>balaji24092001/post/neovim/</link>
+      <link>//localhost:1313/post/neovim/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>balaji24092001/post/neovim/</guid>
+      <guid>//localhost:1313/post/neovim/</guid>
       <description>&lt;p&gt;Vim is a text editor which includes most commands from the Unix program &amp;ldquo;Vi&amp;rdquo; and many new ones.&lt;/p&gt;
 &lt;p&gt;An overview of this manual can be found in the file &amp;ldquo;help.txt&amp;rdquo;, help.txt. It can be accessed from within Vim with the &lt;!-- raw HTML omitted --&gt; or &lt;!-- raw HTML omitted --&gt; key and with the :help command (just type &amp;ldquo;:help&amp;rdquo;, without the bars or quotes). The &amp;lsquo;helpfile&amp;rsquo; option can be set to the name of the help file, in case it is not located in the default place. You can jump to subjects like with tags: Use CTRL-] to jump to a subject under the cursor, use CTRL-T to jump back.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Projects</title>
-      <link>balaji24092001/projects/</link>
+      <link>//localhost:1313/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>balaji24092001/projects/</guid>
+      <guid>//localhost:1313/projects/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;</description>
     </item>
   </channel>
