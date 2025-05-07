@@ -156,11 +156,11 @@ $$
 
 $$
 \begin{align*}
-\mathbb{E}[x^2] & = \mathbb{E}[(x - \mu + \mu)^2] \\\\\\
-& = \mathbb{E}[(x - \mu)^2 + 2(x - \mu)\mu + \mu^2] \\\\\\
-& = \mathbb{E}[(x - \mu)^2] + \mathbb{E}[2(x - \mu)\mu] + \mathbb{E}[\mu^2] \\\\\\
-& = \mathbb{E}[(x - \mu)^2] + 2\mu \cdot 0 + \mu^2 \\\\\\
-& = \mathbb{E}[(x - \mu)^2] + \mu^2 \\\\\\
+\mathbb{E}[x^2] & = \mathbb{E}[(x - \mu + \mu)^2] \\newline
+& = \mathbb{E}[(x - \mu)^2 + 2(x - \mu)\mu + \mu^2] \\newline
+& = \mathbb{E}[(x - \mu)^2] + \mathbb{E}[2(x - \mu)\mu] + \mathbb{E}[\mu^2] \\newline
+& = \mathbb{E}[(x - \mu)^2] + 2\mu \cdot 0 + \mu^2 \\newline
+& = \mathbb{E}[(x - \mu)^2] + \mu^2 \\newline
 & = \text{Var}(x) + \mu^2 \\\\\\
 & = \sigma^2 + \mu^2 \\\\\\
 \end{align*}
