@@ -86,18 +86,18 @@ For a univariate normal distribution, the natural parameters are:
 
 $$
 \begin{align*}
-& \eta(\theta) = \begin{pmatrix} \frac{\mu}{\sigma^2} \\ -\frac{1}{2\sigma^2} \end{pmatrix} \\
-&  \eta_1 = \frac{\mu}{\sigma^2} \\
-& \eta_2 = -\frac{1}{2\sigma^2} \\
-& \text{The log-partition function A(θ) for the normal distribution is:} \\
-&  A(\theta) = \frac{\mu^2}{2 \sigma^2} + \frac{1}{2} \log(2 \pi \sigma^2) \\
-& \text{Substituting } \(\mu\) and \(\sigma^2\) \text{ in terms of }\(\eta_1\) \text{ and }\(\eta_2\):\\
-&\mu = \eta_1 \sigma^2 \\
- &\sigma^2 = -\frac{1}{2 \eta_2} \\
- &\text{Thus:} \\
-A(\theta) & = \frac{(\eta_1 \sigma^2)^2}{2 \sigma^2} + \frac{1}{2} \log\left(2 \pi \sigma^2\right) \\
-&= \frac{\eta_1^2 \sigma^2}{2} + \frac{1}{2} \log\left(2 \pi \left(-\frac{1}{2 \eta_2}\right)\right) \\
-&= \frac{\eta_1^2 \left(-\frac{1}{2 \eta_2}\right)}{2} + \frac{1}{2} \left(\log(2 \pi) - \log(-\eta_2)\right) \\
+& \eta(\theta) = \begin{pmatrix} \frac{\mu}{\sigma^2} \\ -\frac{1}{2\sigma^2} \end{pmatrix} \\\\\\
+&  \eta_1 = \frac{\mu}{\sigma^2} \\\\\\
+& \eta_2 = -\frac{1}{2\sigma^2} \\\\\\
+& \text{The log-partition function A(θ) for the normal distribution is:} \\\\\\
+&  A(\theta) = \frac{\mu^2}{2 \sigma^2} + \frac{1}{2} \log(2 \pi \sigma^2) \\\\\\
+& \text{Substituting } \(\mu\) and \(\sigma^2\) \text{ in terms of }\(\eta_1\) \text{ and }\(\eta_2\):\\\\\\
+&\mu = \eta_1 \sigma^2 \\\\\\
+ &\sigma^2 = -\frac{1}{2 \eta_2} \\\\\\
+ &\text{Thus:} \\\\\\
+A(\theta) & = \frac{(\eta_1 \sigma^2)^2}{2 \sigma^2} + \frac{1}{2} \log\left(2 \pi \sigma^2\right) \\\\\\
+&= \frac{\eta_1^2 \sigma^2}{2} + \frac{1}{2} \log\left(2 \pi \left(-\frac{1}{2 \eta_2}\right)\right) \\\\\\
+&= \frac{\eta_1^2 \left(-\frac{1}{2 \eta_2}\right)}{2} + \frac{1}{2} \left(\log(2 \pi) - \log(-\eta_2)\right) \\\\\\
 &= -\frac{\eta_1^2}{4 \eta_2} - \frac{1}{2} \log(-\eta_2) + \text{constant}
 \end{align*}
 $$
@@ -121,7 +121,7 @@ $$
   Since the mean of $x^2$ is $mu^2 + \sigma^2$, and by subtracting $mu^2$, the mean of $\sigma^2$ is directly:
 
 $$
-  \frac{\partial A(\theta)}{\partial \eta_2} = \frac{\mu^2 + \sigma^2}{2} \\
+  \frac{\partial A(\theta)}{\partial \eta_2} = \frac{\mu^2 + \sigma^2}{2} \\\\\\
   \mathbb{E}[\hat{\sigma}^2] = \text{Var}(x) = \sigma^2
 $$
 
@@ -131,8 +131,8 @@ To find the variance, we use the second derivatives of $A(\theta)$.
 
 $$
 \begin{align*}
-\text{Var}(\hat\mu) = -\frac{\partial^2 A(\theta)}{\partial \eta_1^2} = \frac{1}{2 \eta_2} \\ \\
-\text{Since} \(\eta_2 = -\frac{1}{2 \sigma^2}\), \text{ this can be rewritten as: } \\  \\
+\text{Var}(\hat\mu) = -\frac{\partial^2 A(\theta)}{\partial \eta_1^2} = \frac{1}{2 \eta_2} \\ \\\\
+\text{Since} \(\eta_2 = -\frac{1}{2 \sigma^2}\), \text{ this can be rewritten as: } \\  \\\\
  \text{Var}(\hat\mu) = \sigma^2
 \end{align*}
 $$
@@ -145,10 +145,10 @@ The final estimates of the mean and variance of the statistics are:
 
 $$
 \begin{align*}
-\mathbb{E}[\hat\mu] &= \mu \\
-\text{Var}(\hat\mu) &= \sigma^2 \\
-\mathbb{E}[\hat\sigma^2] &= \sigma^2 \\
-\text{Var}(\hat\sigma^2) &= 2 \left(\frac{\mu^2}{\sigma^2} + \sigma^2\right) \\
+\mathbb{E}[\hat\mu] &= \mu \\\\\\
+\text{Var}(\hat\mu) &= \sigma^2 \\\\\\
+\mathbb{E}[\hat\sigma^2] &= \sigma^2 \\\\\\
+\text{Var}(\hat\sigma^2) &= 2 \left(\frac{\mu^2}{\sigma^2} + \sigma^2\right) \\\\\\
 \end{align*}
 $$
 
@@ -156,12 +156,12 @@ $$
 
 $$
 \begin{align*}
-\mathbb{E}[x^2] & = \mathbb{E}[(x - \mu + \mu)^2] \\
-& = \mathbb{E}[(x - \mu)^2 + 2(x - \mu)\mu + \mu^2] \\
-& = \mathbb{E}[(x - \mu)^2] + \mathbb{E}[2(x - \mu)\mu] + \mathbb{E}[\mu^2] \\
-& = \mathbb{E}[(x - \mu)^2] + 2\mu \cdot 0 + \mu^2 \\
-& = \mathbb{E}[(x - \mu)^2] + \mu^2 \\
-& = \text{Var}(x) + \mu^2 \newline
-& = \sigma^2 + \mu^2
+\mathbb{E}[x^2] & = \mathbb{E}[(x - \mu + \mu)^2] \\\\\\
+& = \mathbb{E}[(x - \mu)^2 + 2(x - \mu)\mu + \mu^2] \\\\\\
+& = \mathbb{E}[(x - \mu)^2] + \mathbb{E}[2(x - \mu)\mu] + \mathbb{E}[\mu^2] \\\\\\
+& = \mathbb{E}[(x - \mu)^2] + 2\mu \cdot 0 + \mu^2 \\\\\\
+& = \mathbb{E}[(x - \mu)^2] + \mu^2 \\\\\\
+& = \text{Var}(x) + \mu^2 \\\\\\
+& = \sigma^2 + \mu^2 \\\\\\
 \end{align*}
 $$
