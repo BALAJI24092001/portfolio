@@ -72,7 +72,7 @@ So, the normal distribution is in the exponential family with:
 $$
 \begin{align*}
 h(x) &= \frac{1}{\sqrt{2 \pi \sigma^2}} \exp \left( -\frac{x^2}{2 \sigma^2} \right) \\
-\e$$ta(\theta) &= \left( \frac{\mu}{\sigma^2}, -\frac{1}{2 \sigma^2} \right) \\
+\eta(\theta) &= \left( \frac{\mu}{\sigma^2}, -\frac{1}{2 \sigma^2} \right) \\
 T(x) &= \left( x, x^2 \right) \\
 A(\theta) &= \frac{\mu^2}{2 \sigma^2} + \frac{1}{2} \log (2 \pi \sigma^2)
 \end{align*}
@@ -91,7 +91,7 @@ $$
 & \eta_2 = -\frac{1}{2\sigma^2} \\
 & \text{The log-partition function A(θ) for the normal distribution is:} \\
 &  A(\theta) = \frac{\mu^2}{2 \sigma^2} + \frac{1}{2} \log(2 \pi \sigma^2) \\
-& \text{Substituting \(\mu\) and \(\sigma^2\) in terms of \(\eta_1\) and \(\eta_2\):}\\
+& \text{Substituting } \(\mu\) and \(\sigma^2\) \text{ in terms of }\(\eta_1\) \text{ and }\(\eta_2\):\\
 &\mu = \eta_1 \sigma^2 \\
  &\sigma^2 = -\frac{1}{2 \eta_2} \\
  &\text{Thus:} \\
@@ -110,9 +110,9 @@ To find the mean of the estimates of $\mu$ and $\sigma2$, we use the first deriv
 
   The first derivative of A(θ) with respect to η1 gives the mean of the sufficient statistic x:
 
-  $$
+$$
   \frac{\partial A(\theta)}{\partial \eta_1} = \mu
-  $$
+$$
 
 - Mean of σ2:
 
@@ -120,10 +120,10 @@ To find the mean of the estimates of $\mu$ and $\sigma2$, we use the first deriv
 
   Since the mean of $x^2$ is $mu^2 + \sigma^2$, and by subtracting $mu^2$, the mean of $\sigma^2$ is directly:
 
-  $$
+$$
   \frac{\partial A(\theta)}{\partial \eta_2} = \frac{\mu^2 + \sigma^2}{2} \\
   \mathbb{E}[\hat{\sigma}^2] = \text{Var}(x) = \sigma^2
-  $$
+$$
 
 ## Variance of the Parameters
 
@@ -132,7 +132,7 @@ To find the variance, we use the second derivatives of $A(\theta)$.
 $$
 \begin{align*}
 \text{Var}(\hat\mu) = -\frac{\partial^2 A(\theta)}{\partial \eta_1^2} = \frac{1}{2 \eta_2} \\ \\
-\text{Since \(\eta_2 = -\frac{1}{2 \sigma^2}\), this can be rewritten as: } \\  \\
+\text{Since} \(\eta_2 = -\frac{1}{2 \sigma^2}\), \text{ this can be rewritten as: } \\  \\
  \text{Var}(\hat\mu) = \sigma^2
 \end{align*}
 $$
@@ -146,11 +146,8 @@ The final estimates of the mean and variance of the statistics are:
 $$
 \begin{align*}
 \mathbb{E}[\hat\mu] &= \mu \\
-
 \text{Var}(\hat\mu) &= \sigma^2 \\
-
 \mathbb{E}[\hat\sigma^2] &= \sigma^2 \\
-
 \text{Var}(\hat\sigma^2) &= 2 \left(\frac{\mu^2}{\sigma^2} + \sigma^2\right) \\
 \end{align*}
 $$
@@ -172,6 +169,5 @@ $$
 & = \text{Var}(x) + \mu^2
 \\ &
 = \sigma^2 + \mu^2
-
 \end{align*}
 $$
