@@ -60,12 +60,14 @@ $$
 $$
 
 $$
-p(x|\mu, \sigma^2) = \frac{1}{\sqrt{2 \pi \sigma^2}} \exp\left( -\frac{x^2}{2 \sigma^2} + \frac{x\mu}{\sigma^2} - \frac{\mu^2}{2 \sigma^2} \right) \\
+p(x|\mu, \sigma^2) = \frac{1}{\sqrt{2 \pi \sigma^2}} \exp\left( -\frac{x^2}{2 \sigma^2} + \frac{x\mu}{\sigma^2} - \frac{\mu^2}{2 \sigma^2} \right)
+$$
+
+$$
 p(x|\mu, \sigma^2) = \left( \frac{1}{\sqrt{2 \pi \sigma^2}} \exp \left( -\frac{\mu^2}{2 \sigma^2} \right) \right) \exp \left( \frac{x\mu}{\sigma^2} - \frac{x^2}{2 \sigma^2} \right)
 $$
 
 So, the normal distribution is in the exponential family with:
-$
 
 $$
 \begin{align*}
@@ -84,7 +86,6 @@ For a univariate normal distribution, the natural parameters are:
 
 $$
 \begin{align*}
-
 & \eta(\theta) = \begin{pmatrix} \frac{\mu}{\sigma^2} \\ -\frac{1}{2\sigma^2} \end{pmatrix} \\
 &  \eta_1 = \frac{\mu}{\sigma^2} \\
 & \eta_2 = -\frac{1}{2\sigma^2} \\
