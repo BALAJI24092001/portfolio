@@ -55,7 +55,7 @@ $$
 We rewrite the normal distribution PDF in a more revealing way:
 
 $$
--\frac{(x - \mu)^2}{2 \sigma^2} = -\frac{x^2 - 2x\mu + \mu^2}{2 \sigma^2} \\
+-\frac{(x - \mu)^2}{2 \sigma^2} = -\frac{x^2 - 2x\mu + \mu^2}{2 \sigma^2} \\\\\\
  = -\frac{x^2}{2 \sigma^2} + \frac{x\mu}{\sigma^2} - \frac{\mu^2}{2 \sigma^2}
 $$
 
@@ -71,9 +71,9 @@ So, the normal distribution is in the exponential family with:
 
 $$
 \begin{align*}
-h(x) &= \frac{1}{\sqrt{2 \pi \sigma^2}} \exp \left( -\frac{x^2}{2 \sigma^2} \right) \\
-\eta(\theta) &= \left( \frac{\mu}{\sigma^2}, -\frac{1}{2 \sigma^2} \right) \\
-T(x) &= \left( x, x^2 \right) \\
+h(x) &= \frac{1}{\sqrt{2 \pi \sigma^2}} \exp \left( -\frac{x^2}{2 \sigma^2} \right) \\\\\\
+\eta(\theta) &= \left( \frac{\mu}{\sigma^2}, -\frac{1}{2 \sigma^2} \right) \\\\\\
+T(x) &= \left( x, x^2 \right) \\\\\\
 A(\theta) &= \frac{\mu^2}{2 \sigma^2} + \frac{1}{2} \log (2 \pi \sigma^2)
 \end{align*}
 $$
