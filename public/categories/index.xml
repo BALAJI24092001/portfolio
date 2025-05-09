@@ -4,21 +4,21 @@
     <title>Categories on BALAJI</title>
     <link>//localhost:1313/categories/</link>
     <description>Recent content in Categories on BALAJI</description>
-    <generator>Hugo -- 0.144.2</generator>
+    <generator>Hugo -- 0.147.2</generator>
     <language>en-us</language>
     <atom:link href="//localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blog</title>
+      <link>//localhost:1313/categories/blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/categories/blog/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Dev</title>
       <link>//localhost:1313/categories/dev/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/categories/dev/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>GATE DA</title>
-      <link>//localhost:1313/categories/gate-da/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/gate-da/</guid>
       <description></description>
     </item>
     <item>

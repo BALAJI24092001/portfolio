@@ -24,10 +24,27 @@ git init (initialise empty git repo in my folder (based on path) aka .git folder
 ls -la (check my folder)
 
 Check &ldquo;world status&rdquo;:
-git status">
+git status
+Help for each command
+git help &lt;command&gt;
+Add files
+
+git add . = add all on current branch
+git add -p &lt;param=file&gt; = add part of file to staging area, ask for each change (if no param =&gt; all files) so we have more control and cleaner commits.
+_After any git add, we need a git commit, either a file or a pattern (e.g. _.txt)*
+
+Delete a file
+
+git rm &lt;filename&gt; = deletes a file, updates git and then commit!
+git rm --cached &lt;filename&gt;&quot; = delete a previously tracked file
+
+Move a file
+git mv &lt;old path&gt; &lt;new path&gt; should be followed by:
+git rm &lt;old path&gt;
+git add &lt;new path&gt;">
 <meta name="author" content="">
 <link rel="canonical" href="//localhost:1313/post/git/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.9de45e225101e4f99701d2b68fc6b8a1ef6027928be6391fa15bf7f56326c909.css" integrity="sha256-neReIlEB5PmXAdK2j8a4oe9gJ5KL5jkfoVv39WMmyQk=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.6da9a63d25a9608bca2f7f907a030e887a7dd3c3f3918e4cc113129361414bda.css" integrity="sha256-bammPSWpYIvKL3&#43;QegMOiHp908PzkY5MwRMSk2FBS9o=" rel="preload stylesheet" as="style">
 <link rel="icon" href="//localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="//localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="//localhost:1313/favicon-32x32.png">
@@ -41,34 +58,6 @@ git status">
         #theme-toggle,
         .top-link {
             display: none;
-        }
-
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
         }
 
     </style>
@@ -144,10 +133,6 @@ git status">
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
     }
 
 </script>
@@ -157,7 +142,7 @@ git status">
         <div class="logo">
             <a href="//localhost:1313/" accesskey="h" title="BALAJI (Alt + H)">BALAJI</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -186,8 +171,8 @@ git status">
                 </a>
             </li>
             <li>
-                <a href="//localhost:1313/categories/" title="Categories">
-                    <span>Categories</span>
+                <a href="//localhost:1313/balaji24092001_resume.pdf" title="CV">
+                    <span>CV</span>
                 </a>
             </li>
             <li>
@@ -196,8 +181,8 @@ git status">
                 </a>
             </li>
             <li>
-                <a href="//localhost:1313/projects/" title="Projects">
-                    <span>Projects</span>
+                <a href="//localhost:1313/categories/blog" title="Blog">
+                    <span>Blog</span>
                 </a>
             </li>
         </ul>
@@ -225,13 +210,21 @@ git status">
                     <a href="#commands" aria-label="Commands">Commands</a><ul>
                         
                 <li>
-                    <a href="#install" aria-label="Install:">Install:</a></li>
+                    <a href="#install" aria-label="Install:
+">Install:
+</a></li>
                 <li>
-                    <a href="#set-up" aria-label="Set up:">Set up:</a></li>
+                    <a href="#set-up" aria-label="Set up:
+">Set up:
+</a></li>
                 <li>
-                    <a href="#create-a-new-project" aria-label="Create a New Project:">Create a New Project:</a></li>
+                    <a href="#create-a-new-project" aria-label="Create a New Project:
+">Create a New Project:
+</a></li>
                 <li>
-                    <a href="#check-world-status" aria-label="Check &ldquo;world status&rdquo;:">Check &ldquo;world status&rdquo;:</a></li>
+                    <a href="#check-world-status" aria-label="Check &ldquo;world status&rdquo;:
+">Check &ldquo;world status&rdquo;:
+</a></li>
                 <li>
                     <a href="#help-for-each-command" aria-label="Help for each command">Help for each command</a></li>
                 <li>
@@ -342,21 +335,21 @@ git status">
 </div>
 
   <div class="post-content"><h2 id="commands">Commands<a hidden class="anchor" aria-hidden="true" href="#commands">#</a></h2>
-<h3 id="install">Install:<!-- raw HTML omitted --><a hidden class="anchor" aria-hidden="true" href="#install">#</a></h3>
+<h3 id="install">Install:<br><a hidden class="anchor" aria-hidden="true" href="#install">#</a></h3>
 <p><code>winget install git</code></p>
-<h3 id="set-up">Set up:<!-- raw HTML omitted --><a hidden class="anchor" aria-hidden="true" href="#set-up">#</a></h3>
+<h3 id="set-up">Set up:<br><a hidden class="anchor" aria-hidden="true" href="#set-up">#</a></h3>
 <ul>
-<li><code>git config --global user.name &quot;User Name&quot;</code> <!-- raw HTML omitted --></li>
+<li><code>git config --global user.name &quot;User Name&quot;</code> <br></li>
 <li><code>git config --global user.email &quot;email@email.com&quot;</code></li>
 </ul>
-<h3 id="create-a-new-project">Create a New Project:<!-- raw HTML omitted --><a hidden class="anchor" aria-hidden="true" href="#create-a-new-project">#</a></h3>
+<h3 id="create-a-new-project">Create a New Project:<br><a hidden class="anchor" aria-hidden="true" href="#create-a-new-project">#</a></h3>
 <ul>
-<li><code>mkdir project</code><!-- raw HTML omitted --></li>
-<li><code>cd project</code><!-- raw HTML omitted --></li>
-<li><code>git init</code> <em>(initialise empty git repo in my folder (based on path) aka .git folder)</em> <!-- raw HTML omitted --></li>
+<li><code>mkdir project</code><br></li>
+<li><code>cd project</code><br></li>
+<li><code>git init</code> <em>(initialise empty git repo in my folder (based on path) aka .git folder)</em> <br></li>
 <li><code>ls -la</code> <em>(check my folder)</em></li>
 </ul>
-<h3 id="check-world-status">Check &ldquo;world status&rdquo;:<!-- raw HTML omitted --><a hidden class="anchor" aria-hidden="true" href="#check-world-status">#</a></h3>
+<h3 id="check-world-status">Check &ldquo;world status&rdquo;:<br><a hidden class="anchor" aria-hidden="true" href="#check-world-status">#</a></h3>
 <p><code>git status</code></p>
 <h3 id="help-for-each-command">Help for each command<a hidden class="anchor" aria-hidden="true" href="#help-for-each-command">#</a></h3>
 <p><code>git help &lt;command&gt;</code></p>
@@ -364,16 +357,16 @@ git status">
 <ul>
 <li><code>git add .</code> = add all on current branch</li>
 <li><code>git add -p &lt;param=file&gt;</code> = add part of file to staging area, ask for each change (if no param =&gt; all files) so we have more control and cleaner commits.
-_After any <code>git add</code>, we need a <code>git commit</code>, either a file or a pattern (e.g. <code>_.txt</code>)<!-- raw HTML omitted -->*</li>
+_After any <code>git add</code>, we need a <code>git commit</code>, either a file or a pattern (e.g. <code>_.txt</code>)<br>*</li>
 </ul>
 <h3 id="delete-a-file">Delete a file<a hidden class="anchor" aria-hidden="true" href="#delete-a-file">#</a></h3>
 <ul>
-<li><code>git rm &lt;filename&gt;</code> = deletes a file, updates git and then commit!<!-- raw HTML omitted --></li>
+<li><code>git rm &lt;filename&gt;</code> = deletes a file, updates git and then commit!<br></li>
 <li><code>git rm --cached &lt;filename&gt;&quot;</code> = delete a previously tracked file</li>
 </ul>
 <h3 id="move-a-file">Move a file<a hidden class="anchor" aria-hidden="true" href="#move-a-file">#</a></h3>
-<p><code>git mv &lt;old path&gt; &lt;new path&gt;</code> <em>should be followed by:</em><!-- raw HTML omitted -->
-<code>git rm &lt;old path&gt;</code><!-- raw HTML omitted -->
+<p><code>git mv &lt;old path&gt; &lt;new path&gt;</code> <em>should be followed by:</em><br>
+<code>git rm &lt;old path&gt;</code><br>
 <code>git add &lt;new path&gt;</code></p>
 <h3 id="check-difference">Check difference<a hidden class="anchor" aria-hidden="true" href="#check-difference">#</a></h3>
 <ul>
@@ -383,19 +376,19 @@ _After any <code>git add</code>, we need a <code>git commit</code>, either a fil
 <li><code>git diff HEAD</code> = displays changes since last commit</li>
 </ul>
 <h3 id="display-history">Display history<a hidden class="anchor" aria-hidden="true" href="#display-history">#</a></h3>
-<p><code>git-log</code> = displays the history, the chronologival order of commits (based on their IDs), who did them, what was their description<!-- raw HTML omitted -->
-<code>git show &lt;id&gt;</code> = displays what the <!-- raw HTML omitted --> commit did = <code>git log</code> + <code>git diff</code></p>
+<p><code>git-log</code> = displays the history, the chronologival order of commits (based on their IDs), who did them, what was their description<br>
+<code>git show &lt;id&gt;</code> = displays what the <id> commit did = <code>git log</code> + <code>git diff</code></p>
 <h3 id="make-an-alias">Make an <a href="https://medium.com/the-lazy-developer/five-life-changing-git-aliases-e4211c090017">alias</a><a hidden class="anchor" aria-hidden="true" href="#make-an-alias">#</a></h3>
 <ul>
 <li><code>git config --global alias.&lt;aliasname&gt; &quot;command(s)&quot;</code>
-<!-- raw HTML omitted -->e.g.:<!-- raw HTML omitted -->
+<br>e.g.:<br>
 <code>git config --global alias.lg &quot;log --color --graph --pretty=format: '%(red%h%(green(%cr)%((bold blue)&lt;%an&gt;%(reset' --abbrev -commit&quot;</code></li>
 <li><code>git config --list</code> - displays our aliases</li>
 </ul>
 <h3 id="make-archive">Make archive<a hidden class="anchor" aria-hidden="true" href="#make-archive">#</a></h3>
 <p><code>git archive --format=zip -o latest.zip HEAD</code></p>
 <h3 id="revert-to-old-commit">Revert to old commit<a hidden class="anchor" aria-hidden="true" href="#revert-to-old-commit">#</a></h3>
-<p><code>git log</code><!-- raw HTML omitted -->
+<p><code>git log</code><br>
 <code>git checkout &lt;commit hex id&gt;</code></p>
 <h3 id="cancel-not-staged-changes">Cancel not staged changes<a hidden class="anchor" aria-hidden="true" href="#cancel-not-staged-changes">#</a></h3>
 <p><code>git checkout</code> = it copies staging area (usually last commit) to out working copy</p>
@@ -455,7 +448,7 @@ _After any <code>git add</code>, we need a <code>git commit</code>, either a fil
 <li>contains an explanatory message</li>
 <li>automatically stores metadata (creator, date etc)</li>
 <li>has a unique (hex) id number
-<!-- raw HTML omitted --> <em>e.g.: <code>git commit -m &quot;Added README file</code></em></li>
+<br> <em>e.g.: <code>git commit -m &quot;Added README file</code></em></li>
 </ul>
 <h2 id="combinations">Combinations<a hidden class="anchor" aria-hidden="true" href="#combinations">#</a></h2>
 <ul>
@@ -464,7 +457,7 @@ _After any <code>git add</code>, we need a <code>git commit</code>, either a fil
 </ul>
 <h2 id="what-is-a-branch">What is a branch?<a hidden class="anchor" aria-hidden="true" href="#what-is-a-branch">#</a></h2>
 <p>It is a version of our code. Branches have a name and are pointing to a commit (there&rsquo;s a different history+past commits depending on our branch, but some commits may be common).
-<!-- raw HTML omitted -->
+<br>
 One branche per feature (the smaller the better) so changes happen to the branch, not the master workflow until the final merge. Afterwards, we merge and delete the branch.</p>
 <h2 id="commands-1">Commands<a hidden class="anchor" aria-hidden="true" href="#commands-1">#</a></h2>
 <ul>
@@ -473,7 +466,7 @@ One branche per feature (the smaller the better) so changes happen to the branch
 <li><code>git checkout &lt;name&gt;</code> = changes current (<code>HEAD</code>), <code>&lt;name&gt;</code> points to <code>HEAD</code> now</li>
 <li><code>git branch -d &lt;name&gt;</code> = deletes this branch (<strong>NOT</strong> the commits also)</li>
 <li><code>git checkout -b &lt;name&gt;</code> = creates a new branch and makes this new branch as our current working one = <code>git branch &lt;name&gt;</code> + <code>git checkout &lt;name&gt;</code></li>
-<li><code>git merge &lt;branch&gt;</code> = merges <!-- raw HTML omitted -->&rsquo;s history with my current branch + try to merge changes in files from both the branches =&gt; 2 parents in new commit. <em>(Afterwards we find the most recent parent of those two parents =&gt; commits of the new branch = commits of parent1 + commits of parent2 =&gt; updates master, master in new commit - see schema (1))</em></li>
+<li><code>git merge &lt;branch&gt;</code> = merges <branch>&rsquo;s history with my current branch + try to merge changes in files from both the branches =&gt; 2 parents in new commit. <em>(Afterwards we find the most recent parent of those two parents =&gt; commits of the new branch = commits of parent1 + commits of parent2 =&gt; updates master, master in new commit - see schema (1))</em></li>
 </ul>
 <p><em>schema (1)</em>
 <img alt="branch" loading="lazy" src="https://user-images.githubusercontent.com/19435096/66163182-62b38500-e638-11e9-96a8-bc81d9ca43a4.jpg"></p>
@@ -514,15 +507,15 @@ One branche per feature (the smaller the better) so changes happen to the branch
 </table>
 <p>e.g. <code>192a812~2</code> = 2 commits before commit #192a812, or <code>HEAD^2</code></p>
 <h2 id="rewriting-history">Rewriting History<a hidden class="anchor" aria-hidden="true" href="#rewriting-history">#</a></h2>
-<p>We can change our commits&rsquo; sequence, description and changes, but: <strong>you should not rewrite a history in commits that others may pull</strong> <!-- raw HTML omitted -->
-<code>git commit --amend</code> = changes most recent commit, add to it the staged stuff.<!-- raw HTML omitted -->
+<p>We can change our commits&rsquo; sequence, description and changes, but: <strong>you should not rewrite a history in commits that others may pull</strong> <br>
+<code>git commit --amend</code> = changes most recent commit, add to it the staged stuff.<br>
 <code>git commit --amend --no-edit</code> = <a href="https://dev.to/lt0mm/comment/eo8">check here</a></p>
 <h2 id="back-merging">Back Merging<a hidden class="anchor" aria-hidden="true" href="#back-merging">#</a></h2>
 <p>When I work on a branch, it is possible that some changes might have happened on master =&gt; we need <code>git merge master</code> and resolve the conflicts. Or&hellip;</p>
 <ul>
 <li><code>git rebase</code> = like <code>merge</code> but better, it happens between two branches and changes the base where a branch has been made, rewrites its history (clean). Followed by a clean <code>pull request</code>. Generally we merge only for final pull request on each branch.</li>
 <li><code>git rebase -i</code> = dynamic: changes the sequence of commit applies changes, fixes multiple commits or can break a commit to many.</li>
-<li><code>git reset &lt;commit&gt;</code> (usually <code>git reset HEAD</code>) = returns current branchto <!-- raw HTML omitted -->, cancels in between changes.</li>
+<li><code>git reset &lt;commit&gt;</code> (usually <code>git reset HEAD</code>) = returns current branchto <commit>, cancels in between changes.</li>
 </ul>
 <p><strong>Not for published commits!!</strong></p>
 <ul>

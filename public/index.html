@@ -2,7 +2,7 @@
 <html lang="en" dir="auto">
 
 <head>
-	<meta name="generator" content="Hugo 0.144.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><link rel="icon" type="" href="logo.png">
+	<meta name="generator" content="Hugo 0.147.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><link rel="icon" type="" href="logo.png">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,7 +12,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="//localhost:1313/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.9de45e225101e4f99701d2b68fc6b8a1ef6027928be6391fa15bf7f56326c909.css" integrity="sha256-neReIlEB5PmXAdK2j8a4oe9gJ5KL5jkfoVv39WMmyQk=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.6da9a63d25a9608bca2f7f907a030e887a7dd3c3f3918e4cc113129361414bda.css" integrity="sha256-bammPSWpYIvKL3&#43;QegMOiHp908PzkY5MwRMSk2FBS9o=" rel="preload stylesheet" as="style">
 <link rel="icon" href="//localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="//localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="//localhost:1313/favicon-32x32.png">
@@ -27,34 +27,6 @@
         #theme-toggle,
         .top-link {
             display: none;
-        }
-
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
         }
 
     </style>
@@ -130,10 +102,6 @@
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
     }
 
 </script>
@@ -143,7 +111,7 @@
         <div class="logo">
             <a href="//localhost:1313/" accesskey="h" title="BALAJI (Alt + H)">BALAJI</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -172,8 +140,8 @@
                 </a>
             </li>
             <li>
-                <a href="//localhost:1313/categories/" title="Categories">
-                    <span>Categories</span>
+                <a href="//localhost:1313/balaji24092001_resume.pdf" title="CV">
+                    <span>CV</span>
                 </a>
             </li>
             <li>
@@ -182,8 +150,8 @@
                 </a>
             </li>
             <li>
-                <a href="//localhost:1313/projects/" title="Projects">
-                    <span>Projects</span>
+                <a href="//localhost:1313/categories/blog" title="Blog">
+                    <span>Blog</span>
                 </a>
             </li>
         </ul>
@@ -238,24 +206,14 @@
 </div>
 
         <div class="buttons">
-            <a class="button" href="categories/gate-da/" rel="noopener" title="GATE DA">
+            <a class="button" href="/projects/" rel="noopener" title="Projects">
                 <span class="button-inner">
-                    GATE DA
+                    Projects
                 </span>
             </a>
-            <a class="button" href="categories/notes" rel="noopener" title="NOTES">
+            <a class="button" href="/categories/" rel="noopener" title="Categories">
                 <span class="button-inner">
-                    NOTES
-                </span>
-            </a>
-            <a class="button" href="categories/dev/" rel="noopener" title="DEV">
-                <span class="button-inner">
-                    DEV
-                </span>
-            </a>
-            <a class="button" href="categories/ml" rel="noopener" title="ML">
-                <span class="button-inner">
-                    ML
+                    Categories
                 </span>
             </a>
         </div>

@@ -1,9 +1,10 @@
 ---
 draft: false
 title: "Database Warehousing"
-categories: ["GATE DA", "Notes"]
-tags: ["CS"]
+categories: ["Notes"]
 ---
+
+<!-- tags: ["CS"] -->
 
 I computing, a data warehouse, also known as an enterprise data warehouse, is a system used for reporting and data analysis and is considered a core component of data analysis.
 

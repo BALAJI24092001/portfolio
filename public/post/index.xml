@@ -4,7 +4,7 @@
     <title>Posts on BALAJI</title>
     <link>//localhost:1313/post/</link>
     <description>Recent content in Posts on BALAJI</description>
-    <generator>Hugo -- 0.144.2</generator>
+    <generator>Hugo -- 0.147.2</generator>
     <language>en-us</language>
     <atom:link href="//localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -30,7 +30,8 @@
       <link>//localhost:1313/post/calculus/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/post/calculus/</guid>
-      <description>&lt;h2 id=&#34;function&#34;&gt;Function&lt;/h2&gt;
+      <description>&lt;!-- tags: [&#34;MATH&#34;] --&gt;
+&lt;h2 id=&#34;function&#34;&gt;Function&lt;/h2&gt;
 &lt;h3 id=&#34;function-of-single-variable&#34;&gt;Function of single variable&lt;/h3&gt;
 &lt;p&gt;A relation f from a set $A$ to a set $B$ is said to be a function if every element of set $A$ has one and only one image in set $B$. In other words, a function $f$ is a relation such that no two pairs in the relation have the same first element.&lt;/p&gt;
 &lt;p&gt;The notation $f : X \rightarrow Y$ means that $f$ is a function from $X$ to $Y$ . $X$ is called the domain of $f$, and $Y$ is called the co-domain of $f$.&lt;/p&gt;</description>
@@ -40,7 +41,8 @@
       <link>//localhost:1313/post/database-warehousing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/post/database-warehousing/</guid>
-      <description>&lt;p&gt;I computing, a data warehouse, also known as an enterprise data warehouse, is a system used for reporting and data analysis and is considered a core component of data analysis.&lt;/p&gt;
+      <description>&lt;!-- tags: [&#34;CS&#34;] --&gt;
+&lt;p&gt;I computing, a data warehouse, also known as an enterprise data warehouse, is a system used for reporting and data analysis and is considered a core component of data analysis.&lt;/p&gt;
 &lt;p&gt;Data warehouses are central repositories of integrated data from one or more different sources. They store current and historical data in one single place.&lt;/p&gt;
 &lt;p&gt;We use databases for transaction purposes, and the historical data of these transactions and it&amp;rsquo;s previous states are stored in this data warehouses.&lt;/p&gt;</description>
     </item>
@@ -49,9 +51,20 @@
       <link>//localhost:1313/post/dbms/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/post/dbms/</guid>
-      <description>&lt;p&gt;A database management system (DBMS) is a collection of programs that enables users to create and maintain a database. The DBMS is a general-purpose software system that facilitates the processes of defining, constructing, manipulating and sharing databases among various users and applications.&lt;/p&gt;
+      <description>&lt;!-- tags: [&#34;CS&#34;] --&gt;
+&lt;p&gt;A database management system (DBMS) is a collection of programs that enables users to create and maintain a database. The DBMS is a general-purpose software system that facilitates the processes of defining, constructing, manipulating and sharing databases among various users and applications.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Data Model:&lt;/strong&gt;&lt;/em&gt; A data model is a collection of concepts that can be used to describe the structure of a database. It provides the necessary means to achieve abstraction.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Explonential Family of Distributions</title>
+      <link>//localhost:1313/post/exponential-family-of-distributions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/post/exponential-family-of-distributions/</guid>
+      <description>&lt;h1 id=&#34;exponential-family-of-distributions&#34;&gt;Exponential Family of Distributions&lt;/h1&gt;
+&lt;p&gt;The exponential family of distributions is a powerful and widely used class of probability distributions in statistics and machine learning. The exponential family provides a unified framework for many common probability distributions like the normal, binomial, Poisson, and gamma distributions.&lt;/p&gt;
+&lt;h2 id=&#34;exponential-family-general-form&#34;&gt;Exponential Family General Form&lt;/h2&gt;
+&lt;p&gt;A probability distribution belongs to the exponential family if its probability density function (for continuous distributions) or probability mass function (for discrete distributions) can be written as:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Git</title>
@@ -59,22 +72,39 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/post/git/</guid>
       <description>&lt;h2 id=&#34;commands&#34;&gt;Commands&lt;/h2&gt;
-&lt;h3 id=&#34;install&#34;&gt;Install:&lt;!-- raw HTML omitted --&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;install&#34;&gt;Install:&lt;br&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;winget install git&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;set-up&#34;&gt;Set up:&lt;!-- raw HTML omitted --&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;set-up&#34;&gt;Set up:&lt;br&gt;&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;git config --global user.name &amp;quot;User Name&amp;quot;&lt;/code&gt; &lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git config --global user.name &amp;quot;User Name&amp;quot;&lt;/code&gt; &lt;br&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git config --global user.email &amp;quot;email@email.com&amp;quot;&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;create-a-new-project&#34;&gt;Create a New Project:&lt;!-- raw HTML omitted --&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;create-a-new-project&#34;&gt;Create a New Project:&lt;br&gt;&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;mkdir project&lt;/code&gt;&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;cd project&lt;/code&gt;&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;git init&lt;/code&gt; &lt;em&gt;(initialise empty git repo in my folder (based on path) aka .git folder)&lt;/em&gt; &lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mkdir project&lt;/code&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cd project&lt;/code&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git init&lt;/code&gt; &lt;em&gt;(initialise empty git repo in my folder (based on path) aka .git folder)&lt;/em&gt; &lt;br&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;ls -la&lt;/code&gt; &lt;em&gt;(check my folder)&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;check-world-status&#34;&gt;Check &amp;ldquo;world status&amp;rdquo;:&lt;!-- raw HTML omitted --&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;git status&lt;/code&gt;&lt;/p&gt;</description>
+&lt;h3 id=&#34;check-world-status&#34;&gt;Check &amp;ldquo;world status&amp;rdquo;:&lt;br&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;git status&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;help-for-each-command&#34;&gt;Help for each command&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;git help &amp;lt;command&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;add-files&#34;&gt;Add files&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git add .&lt;/code&gt; = add all on current branch&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git add -p &amp;lt;param=file&amp;gt;&lt;/code&gt; = add part of file to staging area, ask for each change (if no param =&amp;gt; all files) so we have more control and cleaner commits.
+_After any &lt;code&gt;git add&lt;/code&gt;, we need a &lt;code&gt;git commit&lt;/code&gt;, either a file or a pattern (e.g. &lt;code&gt;_.txt&lt;/code&gt;)&lt;br&gt;*&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;delete-a-file&#34;&gt;Delete a file&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git rm &amp;lt;filename&amp;gt;&lt;/code&gt; = deletes a file, updates git and then commit!&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git rm --cached &amp;lt;filename&amp;gt;&amp;quot;&lt;/code&gt; = delete a previously tracked file&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;move-a-file&#34;&gt;Move a file&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;git mv &amp;lt;old path&amp;gt; &amp;lt;new path&amp;gt;&lt;/code&gt; &lt;em&gt;should be followed by:&lt;/em&gt;&lt;br&gt;
+&lt;code&gt;git rm &amp;lt;old path&amp;gt;&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;git add &amp;lt;new path&amp;gt;&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>NeoVim</title>
@@ -82,7 +112,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/post/neovim/</guid>
       <description>&lt;p&gt;Vim is a text editor which includes most commands from the Unix program &amp;ldquo;Vi&amp;rdquo; and many new ones.&lt;/p&gt;
-&lt;p&gt;An overview of this manual can be found in the file &amp;ldquo;help.txt&amp;rdquo;, help.txt. It can be accessed from within Vim with the &lt;!-- raw HTML omitted --&gt; or &lt;!-- raw HTML omitted --&gt; key and with the :help command (just type &amp;ldquo;:help&amp;rdquo;, without the bars or quotes). The &amp;lsquo;helpfile&amp;rsquo; option can be set to the name of the help file, in case it is not located in the default place. You can jump to subjects like with tags: Use CTRL-] to jump to a subject under the cursor, use CTRL-T to jump back.&lt;/p&gt;</description>
+&lt;p&gt;An overview of this manual can be found in the file &amp;ldquo;help.txt&amp;rdquo;, help.txt. It can be accessed from within Vim with the &lt;Help&gt; or &lt;F1&gt; key and with the :help command (just type &amp;ldquo;:help&amp;rdquo;, without the bars or quotes). The &amp;lsquo;helpfile&amp;rsquo; option can be set to the name of the help file, in case it is not located in the default place. You can jump to subjects like with tags: Use CTRL-] to jump to a subject under the cursor, use CTRL-T to jump back.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

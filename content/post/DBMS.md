@@ -1,9 +1,10 @@
 ---
 draft: false
 title: "DBMS"
-categories: ["GATE DA", "Notes"]
-tags: ["CS"]
+categories: ["Notes"]
 ---
+
+<!-- tags: ["CS"] -->
 
 A database management system (DBMS) is a collection of programs that enables users to create and maintain a database. The DBMS is a general-purpose software system that facilitates the processes of defining, constructing, manipulating and sharing databases among various users and applications.
 

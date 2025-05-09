@@ -1,7 +1,7 @@
 ---
 draft: false
 title: "NeoVim"
-categories: ["Dev", "Notes"]
+categories: ["Dev"]
 ---
 
 Vim is a text editor which includes most commands from the Unix program "Vi" and many new ones.

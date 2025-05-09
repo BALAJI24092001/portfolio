@@ -1,7 +1,7 @@
 ---
 draft: false
 title: "Bayesian Networks"
-categories: ["GATE DA", "Notes"]
+categories: ["Notes"]
 ---
 
 **Bayesian Networks (BNs)**, also known as Belief Networks or Bayes Nets, are graphical models that represent probabilistic relationships among a set of variables. They are widely used in various fields such as medicine, finance, artificial intelligence, and more for reasoning under uncertainty.

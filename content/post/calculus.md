@@ -1,9 +1,10 @@
 ---
 draft: false
 title: "Calculus"
-categories: ["GATE DA", "Notes"]
-tags: ["MATH"]
+categories: ["Notes"]
 ---
+
+<!-- tags: ["MATH"] -->
 
 ## Function
 

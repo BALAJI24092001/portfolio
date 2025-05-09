@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><link rel="icon" type="" href="logo.png">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Explonential Family of Distributions | BALAJI</title>
+<meta name="keywords" content="">
+<meta name="description" content="Exponential Family of Distributions
+The exponential family of distributions is a powerful and widely used class of probability distributions in statistics and machine learning. The exponential family provides a unified framework for many common probability distributions like the normal, binomial, Poisson, and gamma distributions.
+Exponential Family General Form
+A probability distribution belongs to the exponential family if its probability density function (for continuous distributions) or probability mass function (for discrete distributions) can be written as:">
+<meta name="author" content="">
+<link rel="canonical" href="//localhost:1313/post/exponential-family-of-distributions/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.6da9a63d25a9608bca2f7f907a030e887a7dd3c3f3918e4cc113129361414bda.css" integrity="sha256-bammPSWpYIvKL3&#43;QegMOiHp908PzkY5MwRMSk2FBS9o=" rel="preload stylesheet" as="style">
+<link rel="icon" href="//localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="//localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="//localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="//localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="//localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="//localhost:1313/post/exponential-family-of-distributions/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script
+  type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+></script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\[','\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+           extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="//localhost:1313/" accesskey="h" title="BALAJI (Alt + H)">BALAJI</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="//localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="//localhost:1313/balaji24092001_resume.pdf" title="CV">
+                    <span>CV</span>
+                </a>
+            </li>
+            <li>
+                <a href="//localhost:1313/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="//localhost:1313/categories/blog" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Explonential Family of Distributions
+    </h1>
+    <div class="post-meta">5 min
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#exponential-family-of-distributions" aria-label="Exponential Family of Distributions">Exponential Family of Distributions</a><ul>
+                        
+                <li>
+                    <a href="#exponential-family-general-form" aria-label="Exponential Family General Form">Exponential Family General Form</a></li>
+                <li>
+                    <a href="#whats-special-about-the-exponential-family" aria-label="What’s Special About the Exponential Family?">What’s Special About the Exponential Family?</a></li>
+                <li>
+                    <a href="#normal-distribution" aria-label="Normal Distribution">Normal Distribution</a></li>
+                <li>
+                    <a href="#mean-of-the-parameters" aria-label="Mean of the Parameters">Mean of the Parameters</a></li>
+                <li>
+                    <a href="#variance-of-the-parameters" aria-label="Variance of the Parameters">Variance of the Parameters</a></li>
+                <li>
+                    <a href="#appendix" aria-label="Appendix">Appendix</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h1 id="exponential-family-of-distributions">Exponential Family of Distributions<a hidden class="anchor" aria-hidden="true" href="#exponential-family-of-distributions">#</a></h1>
+<p>The exponential family of distributions is a powerful and widely used class of probability distributions in statistics and machine learning. The exponential family provides a unified framework for many common probability distributions like the normal, binomial, Poisson, and gamma distributions.</p>
+<h2 id="exponential-family-general-form">Exponential Family General Form<a hidden class="anchor" aria-hidden="true" href="#exponential-family-general-form">#</a></h2>
+<p>A probability distribution belongs to the exponential family if its probability density function (for continuous distributions) or probability mass function (for discrete distributions) can be written as:</p>
+<p>where:</p>
+<p>$$
+p(x∣θ)=h(x)exp(η(θ) ^⊤ T(x)−A(θ))
+$$</p>
+<p>x is the random variable.</p>
+<p>$\theta$ is the parameter (or vector of parameters) of the distribution.</p>
+<p>$h(x)$ is a base measure, which does not depend on θ.</p>
+<p>$\eta(\theta)$ is called the natural parameter.</p>
+<p>$T(x)$ is the sufficient statistic.</p>
+<p>$A(\theta)$ is the log-partition function (or cumulant function), ensuring that the distribution is normalized (i.e., it integrates to 1 over the sample space).</p>
+<h2 id="whats-special-about-the-exponential-family">What’s Special About the Exponential Family?<a hidden class="anchor" aria-hidden="true" href="#whats-special-about-the-exponential-family">#</a></h2>
+<ul>
+<li>
+<p><strong>Sufficient Statistics</strong>: For exponential family distributions, the function T(x) gives a sufficient statistic for θ. This means that knowing T(x) provides all the information about θ contained in the data.</p>
+</li>
+<li>
+<p><strong>Conjugacy</strong>: Many exponential family distributions have conjugate priors in Bayesian statistics. This means the posterior distribution (after observing data) belongs to the same family as the prior, simplifying Bayesian updating.</p>
+</li>
+<li>
+<p><strong>Moment Properties</strong>: The log-partition function A(θ) has important properties. The first derivative of A(θ) gives the expected value of the sufficient statistic, while the second derivative gives the variance.</p>
+</li>
+</ul>
+<h2 id="normal-distribution">Normal Distribution<a hidden class="anchor" aria-hidden="true" href="#normal-distribution">#</a></h2>
+<p>The probability density function (PDF) of the normal distribution is:</p>
+<p>$$
+p(x|\mu, \sigma^2) = \frac{1}{\sqrt{2 \pi \sigma^2}} \exp\left( -\frac{(x - \mu)^2}{2 \sigma^2} \right)
+$$</p>
+<p>To show that this belongs to the exponential family, we need to express it in the canonical form:</p>
+<p>$$
+p(x|\theta) = h(x) \exp\left( \eta(\theta) \cdot T(x) - A(\theta) \right)
+$$</p>
+<p>We rewrite the normal distribution PDF in a more revealing way:</p>
+<p>$$
+-\frac{(x - \mu)^2}{2 \sigma^2} = -\frac{x^2 - 2x\mu + \mu^2}{2 \sigma^2} \
+= -\frac{x^2}{2 \sigma^2} + \frac{x\mu}{\sigma^2} - \frac{\mu^2}{2 \sigma^2}
+$$</p>
+<p>$$
+p(x|\mu, \sigma^2) = \frac{1}{\sqrt{2 \pi \sigma^2}} \exp\left( -\frac{x^2}{2 \sigma^2} + \frac{x\mu}{\sigma^2} - \frac{\mu^2}{2 \sigma^2} \right)
+$$</p>
+<p>$$
+p(x|\mu, \sigma^2) = \left( \frac{1}{\sqrt{2 \pi \sigma^2}} \exp \left( -\frac{\mu^2}{2 \sigma^2} \right) \right) \exp \left( \frac{x\mu}{\sigma^2} - \frac{x^2}{2 \sigma^2} \right)
+$$</p>
+<p>So, the normal distribution is in the exponential family with:</p>
+<p>$$
+\begin{align*}
+h(x) &amp;= \frac{1}{\sqrt{2 \pi \sigma^2}} \exp \left( -\frac{x^2}{2 \sigma^2} \right) \
+\eta(\theta) &amp;= \left( \frac{\mu}{\sigma^2}, -\frac{1}{2 \sigma^2} \right) \
+T(x) &amp;= \left( x, x^2 \right) \
+A(\theta) &amp;= \frac{\mu^2}{2 \sigma^2} + \frac{1}{2} \log (2 \pi \sigma^2)
+\end{align*}
+$$</p>
+<blockquote>
+<p>The exponential family forms the basis for generalized linear models, which extend linear regression to handle response variables with non-normal distributions.</p></blockquote>
+<p>To find the mean and variance of the estimates of the parameters μ and σ² of the normal distribution using the log-partition function, we use the properties of the exponential family distribution.</p>
+<p>For a univariate normal distribution, the natural parameters are:</p>
+<p>$$
+\begin{align*}
+&amp; \eta(\theta) = \begin{pmatrix} \frac{\mu}{\sigma^2} \ -\frac{1}{2\sigma^2} \end{pmatrix} \\\
+&amp;  \eta_1 = \frac{\mu}{\sigma^2} \\\
+&amp; \eta_2 = -\frac{1}{2\sigma^2} \\\
+&amp; \text{The log-partition function A(θ) for the normal distribution is:} \\\
+&amp;  A(\theta) = \frac{\mu^2}{2 \sigma^2} + \frac{1}{2} \log(2 \pi \sigma^2) \\\
+&amp; \text{Substituting } (\mu) and (\sigma^2) \text{ in terms of }(\eta_1) \text{ and }(\eta_2):\\\
+&amp;\mu = \eta_1 \sigma^2 \\\
+&amp;\sigma^2 = -\frac{1}{2 \eta_2} \\\
+&amp;\text{Thus:} \\\
+A(\theta) &amp; = \frac{(\eta_1 \sigma^2)^2}{2 \sigma^2} + \frac{1}{2} \log\left(2 \pi \sigma^2\right) \\\
+&amp;= \frac{\eta_1^2 \sigma^2}{2} + \frac{1}{2} \log\left(2 \pi \left(-\frac{1}{2 \eta_2}\right)\right) \\\
+&amp;= \frac{\eta_1^2 \left(-\frac{1}{2 \eta_2}\right)}{2} + \frac{1}{2} \left(\log(2 \pi) - \log(-\eta_2)\right) \\\
+&amp;= -\frac{\eta_1^2}{4 \eta_2} - \frac{1}{2} \log(-\eta_2) + \text{constant}
+\end{align*}
+$$</p>
+<h2 id="mean-of-the-parameters">Mean of the Parameters<a hidden class="anchor" aria-hidden="true" href="#mean-of-the-parameters">#</a></h2>
+<p>To find the mean of the estimates of $\mu$ and $\sigma2$, we use the first derivatives of $A(\theta)$.</p>
+<ul>
+<li>
+<p>Mean of $\mu$:</p>
+<p>The first derivative of A(θ) with respect to η1 gives the mean of the sufficient statistic x:</p>
+</li>
+</ul>
+<p>$$
+\frac{\partial A(\theta)}{\partial \eta_1} = \mu
+$$</p>
+<ul>
+<li>
+<p>Mean of σ2:</p>
+<p>The first derivative of A(θ) with respect to η2 gives the mean of the sufficient statistic x2:</p>
+<p>Since the mean of $x^2$ is $mu^2 + \sigma^2$, and by subtracting $mu^2$, the mean of $\sigma^2$ is directly:</p>
+</li>
+</ul>
+<p>$$
+\frac{\partial A(\theta)}{\partial \eta_2} = \frac{\mu^2 + \sigma^2}{2} \\\
+\mathbb{E}[\hat{\sigma}^2] = \text{Var}(x) = \sigma^2
+$$</p>
+<h2 id="variance-of-the-parameters">Variance of the Parameters<a hidden class="anchor" aria-hidden="true" href="#variance-of-the-parameters">#</a></h2>
+<p>To find the variance, we use the second derivatives of $A(\theta)$.</p>
+<p>$$
+\begin{align*}
+\text{Var}(\hat\mu) = -\frac{\partial^2 A(\theta)}{\partial \eta_1^2} = \frac{1}{2 \eta_2} \ \\
+\text{Since} (\eta_2 = -\frac{1}{2 \sigma^2}), \text{ this can be rewritten as: } \  \\
+\text{Var}(\hat\mu) = \sigma^2
+\end{align*}
+$$</p>
+<p>Variance of $\mu$: The variance of the sufficient statistic $x$ is given by the negative of the second derivative of $A(\theta)$ with respect to $\eta_1$:</p>
+<p>Variance of $\sigma^2$: The variance of $\sigma^2$ is related to the second derivative of $A(\theta)$ with respect to $\eta_2$:</p>
+<p>The final estimates of the mean and variance of the statistics are:</p>
+<p>$$
+\begin{align*}
+\mathbb{E}[\hat\mu] &amp;= \mu \\\
+\text{Var}(\hat\mu) &amp;= \sigma^2 \\\
+\mathbb{E}[\hat\sigma^2] &amp;= \sigma^2 \\\
+\text{Var}(\hat\sigma^2) &amp;= 2 \left(\frac{\mu^2}{\sigma^2} + \sigma^2\right) \\\
+\end{align*}
+$$</p>
+<h2 id="appendix">Appendix<a hidden class="anchor" aria-hidden="true" href="#appendix">#</a></h2>
+<p>$$
+\begin{align*}
+\mathbb{E}[x^2] &amp; = \mathbb{E}[(x - \mu + \mu)^2] \newline
+&amp; = \mathbb{E}[(x - \mu)^2 + 2(x - \mu)\mu + \mu^2] \newline
+&amp; = \mathbb{E}[(x - \mu)^2] + \mathbb{E}[2(x - \mu)\mu] + \mathbb{E}[\mu^2] \newline
+&amp; = \mathbb{E}[(x - \mu)^2] + 2\mu \cdot 0 + \mu^2 \newline
+&amp; = \mathbb{E}[(x - \mu)^2] + \mu^2 \newline
+&amp; = \text{Var}(x) + \mu^2 \\\
+&amp; = \sigma^2 + \mu^2 \\\
+\end{align*}
+$$</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="//localhost:1313/">BALAJI</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

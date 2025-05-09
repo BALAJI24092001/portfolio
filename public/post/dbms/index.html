@@ -7,13 +7,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
 <title>DBMS | BALAJI</title>
-<meta name="keywords" content="CS">
-<meta name="description" content="A database management system (DBMS) is a collection of programs that enables users to create and maintain a database. The DBMS is a general-purpose software system that facilitates the processes of defining, constructing, manipulating and sharing databases among various users and applications.
+<meta name="keywords" content="">
+<meta name="description" content="
+A database management system (DBMS) is a collection of programs that enables users to create and maintain a database. The DBMS is a general-purpose software system that facilitates the processes of defining, constructing, manipulating and sharing databases among various users and applications.
 
 Data Model: A data model is a collection of concepts that can be used to describe the structure of a database. It provides the necessary means to achieve abstraction.">
 <meta name="author" content="">
 <link rel="canonical" href="//localhost:1313/post/dbms/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.9de45e225101e4f99701d2b68fc6b8a1ef6027928be6391fa15bf7f56326c909.css" integrity="sha256-neReIlEB5PmXAdK2j8a4oe9gJ5KL5jkfoVv39WMmyQk=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.6da9a63d25a9608bca2f7f907a030e887a7dd3c3f3918e4cc113129361414bda.css" integrity="sha256-bammPSWpYIvKL3&#43;QegMOiHp908PzkY5MwRMSk2FBS9o=" rel="preload stylesheet" as="style">
 <link rel="icon" href="//localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="//localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="//localhost:1313/favicon-32x32.png">
@@ -27,34 +28,6 @@ Data Model: A data model is a collection of concepts that can be used to describ
         #theme-toggle,
         .top-link {
             display: none;
-        }
-
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
         }
 
     </style>
@@ -130,10 +103,6 @@ Data Model: A data model is a collection of concepts that can be used to describ
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
     }
 
 </script>
@@ -143,7 +112,7 @@ Data Model: A data model is a collection of concepts that can be used to describ
         <div class="logo">
             <a href="//localhost:1313/" accesskey="h" title="BALAJI (Alt + H)">BALAJI</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -172,8 +141,8 @@ Data Model: A data model is a collection of concepts that can be used to describ
                 </a>
             </li>
             <li>
-                <a href="//localhost:1313/categories/" title="Categories">
-                    <span>Categories</span>
+                <a href="//localhost:1313/balaji24092001_resume.pdf" title="CV">
+                    <span>CV</span>
                 </a>
             </li>
             <li>
@@ -182,8 +151,8 @@ Data Model: A data model is a collection of concepts that can be used to describ
                 </a>
             </li>
             <li>
-                <a href="//localhost:1313/projects/" title="Projects">
-                    <span>Projects</span>
+                <a href="//localhost:1313/categories/blog" title="Blog">
+                    <span>Blog</span>
                 </a>
             </li>
         </ul>
@@ -290,23 +259,24 @@ Data Model: A data model is a collection of concepts that can be used to describ
     </details>
 </div>
 
-  <div class="post-content"><p>A database management system (DBMS) is a collection of programs that enables users to create and maintain a database. The DBMS is a general-purpose software system that facilitates the processes of defining, constructing, manipulating and sharing databases among various users and applications.</p>
+  <div class="post-content"><!-- tags: ["CS"] -->
+<p>A database management system (DBMS) is a collection of programs that enables users to create and maintain a database. The DBMS is a general-purpose software system that facilitates the processes of defining, constructing, manipulating and sharing databases among various users and applications.</p>
 <hr>
 <p><em><strong>Data Model:</strong></em> A data model is a collection of concepts that can be used to describe the structure of a database. It provides the necessary means to achieve abstraction.</p>
 <p><em><strong>Schema</strong></em>: In any data model, it is important to distinguish between the description of the database and the database itself. The description of a database is called the database schema, which is specified during database design and is not expected to change frequently.</p>
 <h2 id="overview-of-dbms">Overview of DBMS<a hidden class="anchor" aria-hidden="true" href="#overview-of-dbms">#</a></h2>
 <ol>
-<li><em><strong>Requirements Analysis:</strong></em><!-- raw HTML omitted -->
+<li><em><strong>Requirements Analysis:</strong></em><br>
 The very first step in designing a database application is to understand what data is to be stored in the database, what applications must be built on top of it, and what operations are most frequent and subject to performance requirements. In other words, we must find out what the users want from the database. This is usually an informal process that involves discussions with user groups, a study of the current operating environment and how it is expected to change, analysis of any available documentation on existing applications that are expected to be replaced or complemented by the database, and so on</li>
-<li><em><strong>Conceptual Database Design:</strong></em><!-- raw HTML omitted -->
+<li><em><strong>Conceptual Database Design:</strong></em><br>
 The information gathered in the requirements analysis step is used to develop a highlevel description of the data to be stored in the database, along with the constraints that are known to hold over this data. This step is often carried out using the ER model, or a similar high-level data model.</li>
-<li><em><strong>Logical Database Design:</strong></em><!-- raw HTML omitted -->
+<li><em><strong>Logical Database Design:</strong></em><br>
 We must choose a DBMS to implement our database design, and convert the conceptual database design into a database schema in the data model of the chosen DBMS. We will only consider relational DBMSs, and therefore, the task in the logical design step is to convert an ER schema into a relational database schema.</li>
-<li><em><strong>Schema Refinement:</strong></em><!-- raw HTML omitted -->
+<li><em><strong>Schema Refinement:</strong></em><br>
 The fourth step in database design is to analyze the collection of relations in our relational database schema to identify potential problems, and to refine it. In contrast to the requirements analysis and conceptual design steps, which are essentially subjective, schema refinement can be guided by some elegant and powerful theory.</li>
-<li><em><strong>Physical Database Design:</strong></em><!-- raw HTML omitted -->
+<li><em><strong>Physical Database Design:</strong></em><br>
 In this step we must consider typical expected workloads that our database must support and further refine the database design to ensure that it meets the desired performance criteria. This step may simply involve building indexes on some tables and clustering some tables, or it may involve a substantial redesign of parts of the database schema obtained from the earlier design steps.</li>
-<li><em><strong>Security Design:</strong></em><!-- raw HTML omitted -->
+<li><em><strong>Security Design:</strong></em><br>
 In this step, we identify different user groups and different roles played by various users (e.g., the development team for a product, the customer support representatives, the product manager). For each role and user group, we must identify the parts of the database that they must be able to access and the parts of the database that they should not be allowed to access, and take steps to ensure that they can access only the necessary parts.</li>
 </ol>
 <h2 id="er-diagram">ER Diagram<a hidden class="anchor" aria-hidden="true" href="#er-diagram">#</a></h2>
@@ -352,7 +322,7 @@ In this step, we identify different user groups and different roles played by va
 <li>The ”Age” attribute doesn’t have a directly stored value; instead, it is derived from the stored ”Birth date” attribute and the current date when required.</li>
 </ul>
 <h3 id="er-diagram-symbols">ER Diagram Symbols<a hidden class="anchor" aria-hidden="true" href="#er-diagram-symbols">#</a></h3>
-<!-- raw HTML omitted -->
+<center>
 <pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">@startchen
 left to right direction
 entity Entity_Main{
@@ -383,15 +353,16 @@ weak_relation -1- Weak_Entity
 relation -1- Entity_Main
 relation =N= Entity
 @endchen
-</code></pre><!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+</code></pre>   <img src = 'https://erikanacua.wordpress.com/wp-content/uploads/2013/02/image0021.png'>
+</center>
+   <!-- REQ: -->
 <p><strong><a href="https://www.youtube.com/watch?v=Pe1PGnmbDh4&amp;ab_channel=UnacademyComputerScience">E-R Model to Relational Database</a></strong></p>
 <h2 id="relational-algebra">Relational Algebra<a hidden class="anchor" aria-hidden="true" href="#relational-algebra">#</a></h2>
 <p>Relational algebra refers to a procedural query language that takes relation instances as input and returns relation instances as output. It performs queries with the help of operators. It gives a step by step process to obtain the result of the query.</p>
 <h3 id="select-operator-sigma">Select Operator ($\sigma$):<a hidden class="anchor" aria-hidden="true" href="#select-operator-sigma">#</a></h3>
 <p>Select operator is an unary operator. It can be used to select those tuples of a relation
 that satisfy a given condition.
-Notation: $\sigma_{\theta}(R)$ <!-- raw HTML omitted --></p>
+Notation: $\sigma_{\theta}(R)$ <br></p>
 <ul>
 <li>
 <p>$\sigma$: Select operator(read as sigma)</p>
@@ -406,11 +377,11 @@ Notation: $\sigma_{\theta}(R)$ <!-- raw HTML omitted --></p>
 </li>
 </ul>
 <h3 id="project-operator-prod">Project Operator $(\prod)$<a hidden class="anchor" aria-hidden="true" href="#project-operator-prod">#</a></h3>
-<p>The projection operator $\prod$ is one of the unary operators in relational algebra (RA) and is used to project columns from a relation. It can select specific columns from a given relation. <!-- raw HTML omitted -->
-<em><strong>Note:</strong></em> It gives <strong>distinct</strong> fields only. <!-- raw HTML omitted -->
+<p>The projection operator $\prod$ is one of the unary operators in relational algebra (RA) and is used to project columns from a relation. It can select specific columns from a given relation. <br>
+<em><strong>Note:</strong></em> It gives <strong>distinct</strong> fields only. <br>
 <em><strong>Syntax:</strong></em> $\prod_{A_1, A_2}(relation)$, this will return attribute A1 and A2 from the relation.</p>
 <h3 id="rename-operator-rho">Rename Operator $(\rho)$<a hidden class="anchor" aria-hidden="true" href="#rename-operator-rho">#</a></h3>
-<p>The RENAME operation is used to rename the output of a relation. Sometimes it is simple and suitable to break a complicated sequence of operations and rename it as a relation with different names. <!-- raw HTML omitted -->
+<p>The RENAME operation is used to rename the output of a relation. Sometimes it is simple and suitable to break a complicated sequence of operations and rename it as a relation with different names. <br>
 <strong>Syntax</strong> : $\rho_{X}(R)$, it will rename the relation R to X</p>
 <h3 id="set-operators">Set operators<a hidden class="anchor" aria-hidden="true" href="#set-operators">#</a></h3>
 <p>Union $(\cup)$, Intersection $(\cap)$, set difference $(–)$ are called set operators. Result of combining two relations with a set operator is a relation $\implies$ all its elements must be tuples having same structure. Hence scope of set operations is limited to union-compatible relations.</p>
@@ -429,12 +400,12 @@ Notation: $\sigma_{\theta}(R)$ <!-- raw HTML omitted --></p>
 <p>$$
 {t | P(t)}
 $$</p>
-<p>where t = resulting tuples, <!-- raw HTML omitted --></p>
-<p>$P(t) =$ known as predicate and these are the conditions that are used to fetch t. <!-- raw HTML omitted -->
+<p>where t = resulting tuples, <br></p>
+<p>$P(t) =$ known as predicate and these are the conditions that are used to fetch t. <br>
 $P(t)$ may have various conditions logically combined with OR $(\lor)$, AND $(\land)$, NOT $(\neg)$</p>
-<p>It also uses quantifiers:<!-- raw HTML omitted -->
-$\exists \in  r(Q(t)) =$ &ldquo;there exists&rdquo; a tuple in t in relation r such that predicate $Q(t)$ is true. <!-- raw HTML omitted -->
-$\forall t \in r(Q(t)) = Q(t)$ is true &ldquo;for all&rdquo; tuples in relation r. <!-- raw HTML omitted --></p>
+<p>It also uses quantifiers:<br>
+$\exists \in  r(Q(t)) =$ &ldquo;there exists&rdquo; a tuple in t in relation r such that predicate $Q(t)$ is true. <br>
+$\forall t \in r(Q(t)) = Q(t)$ is true &ldquo;for all&rdquo; tuples in relation r. <br></p>
 <dl>
 <dt>${ P | \exists S \in Students(S.CGPA &gt; 8 \land P.name = S.name \land P.age = S.age)}$</dt>
 <dd>returns the name and age of students with a CGPA above 8.</dd>
@@ -489,10 +460,10 @@ $\forall t \in r(Q(t)) = Q(t)$ is true &ldquo;for all&rdquo; tuples in relation 
       </tr>
   </tbody>
 </table>
-<p>weak_relation Students <!-- raw HTML omitted -->
-${&lt; a, b&gt; \exists a, b, c, d(&lt; a, b, c, d&gt; \in students \land c &gt; 75)}$ <!-- raw HTML omitted -->
+<p>weak_relation Students <br>
+${&lt; a, b&gt; \exists a, b, c, d(&lt; a, b, c, d&gt; \in students \land c &gt; 75)}$ <br>
 returns the name and age of students having marks above 75.</p>
-<p><!-- raw HTML omitted -->Note<!-- raw HTML omitted -->: You have to mention the domain variables in the same order as given in the table.</p>
+<p><u>Note</u>: You have to mention the domain variables in the same order as given in the table.</p>
 </li>
 </ul>
 <h2 id="joins">Joins<a hidden class="anchor" aria-hidden="true" href="#joins">#</a></h2>
@@ -684,25 +655,25 @@ $$</p>
 <p>If $t1.X = t2.X$, then $t1.Y = t2.Y$</p>
 <p>$X \rightarrow Y$ is read as $X$ functionally determines $Y$ or simply $X$ determines $Y$ . An FD $X \rightarrow Y$ essentially says that if two tuples agree on the values in attribute $X$, they must also agree on the values in attributes $Y$. If a constraints on $R$ states that there cannot be more than one tuple with a given $X$ value in any relation instance $r(R)$, that is $X$ is the key of $R$, the definition of an FD does not require that the set $X$ be minimal, the additional minimality condition must be met for $X$ to be a key.</p>
 <p>If $X \rightarrow Y$ holds, where $Y$ is a set of all attribute and there is some subset $V$ of $X$ such that $V \rightarrow Y$ holds then $X$ is a super key.</p>
-<p><strong>Trivial FD</strong><!-- raw HTML omitted -->
-If $X$ and $Y$ are attribute set of $R$ and $Y \subseteq X$ then $X \rightarrow Y$ is trivial FD.<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->Example:<!-- raw HTML omitted --> Sid Sname $\rightarrow$ sid
+<p><strong>Trivial FD</strong><br>
+If $X$ and $Y$ are attribute set of $R$ and $Y \subseteq X$ then $X \rightarrow Y$ is trivial FD.<br>
+<u>Example:</u> Sid Sname $\rightarrow$ sid
 Every trivial FD implies in relation.
-<!-- raw HTML omitted --></p>
-<p><strong>Non-trivial FD</strong> <!-- raw HTML omitted -->
-If $X$ and $Y$ are attribute sets of R and no common attribute between $X$ and $Y$. <!-- raw HTML omitted -->
-$X \cap Y\neq$ empty set then $X \rightarrow Y$ is non- trivial FD.<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->Example<!-- raw HTML omitted -->: sid $\rightarrow$ gpa
+<br></p>
+<p><strong>Non-trivial FD</strong> <br>
+If $X$ and $Y$ are attribute sets of R and no common attribute between $X$ and $Y$. <br>
+$X \cap Y\neq$ empty set then $X \rightarrow Y$ is non- trivial FD.<br>
+<u>Example</u>: sid $\rightarrow$ gpa
 Sname $\rightarrow$ sid gpa
 There may be a relation with no non-trivial FD.</p>
-<p><strong>Closure of set of FDs</strong> <!-- raw HTML omitted -->
+<p><strong>Closure of set of FDs</strong> <br>
 Set of all FDs that include given FDs as well as those that can be inferred from the given. FDs is called the closure of FDs. If $F$ is the set of given FDs the $F^{+}$ is called closure of $F$.</p>
 <h3 id="armstrongs-axioms">Armstrong&rsquo;s Axioms<a hidden class="anchor" aria-hidden="true" href="#armstrongs-axioms">#</a></h3>
 <p>The following three rules, called Armstrong’s Axioms can be applied repeatedly to infer all FDs implied by a set $F$ of FDs. Let $X$, $Y$ and $Z$ denotes sets of attributes over a relation schema $R$.</p>
 <ul>
-<li>Reflexivity: If $X\supseteq Y$, then $X \rightarrow Y$.<!-- raw HTML omitted --></li>
-<li>Augmentation: If $X \rightarrow Y$, then $XZ \rightarrow YZ$ for any $Z$.<!-- raw HTML omitted --></li>
-<li>Transitivity: If $X  \rightarrow Y$ and $Y \rightarrow Z$, then $X \rightarrow Z$.<!-- raw HTML omitted --></li>
+<li>Reflexivity: If $X\supseteq Y$, then $X \rightarrow Y$.<br></li>
+<li>Augmentation: If $X \rightarrow Y$, then $XZ \rightarrow YZ$ for any $Z$.<br></li>
+<li>Transitivity: If $X  \rightarrow Y$ and $Y \rightarrow Z$, then $X \rightarrow Z$.<br></li>
 </ul>
 <p>Armstrong&rsquo;s Axioms are sound in that they generate only FDs in F + when applied
 to a set $F$ of FDs. They are complete in that repeated application of these rules will
@@ -717,7 +688,7 @@ to use some additional rules while reasoning about $F^+$ :</p>
 <h2 id="normalization-and-normal-forms">Normalization and Normal Forms<a hidden class="anchor" aria-hidden="true" href="#normalization-and-normal-forms">#</a></h2>
 <p>Database design theory includes design standards called normal forms. The process of making data and tables match these standards is called normalizing data or data normalization. By normalizing data, we eliminate redundant information and organize the table to make it easier to manage the data and make future changes to the table and database structure. This process removes the insertion, deletion, and modification anomalies. In normalizing your data, we usually divide large tables into smaller, easierto- maintain tables. We can then use the technique of adding foreign keys to enable connections between the tables.</p>
 <p>Data normalization is part of the database design process and is neither specific nor unique to any particular RDBMS. These are in order, such as first, second, third, Boyce- Codd, fourth, and fifth normal forms. Each normal form represents an increasingly stringent set of rules; that is, each normal form assumes that the requirements of the preceding forms have been met. Many relational database designers feel that, if their tables are in third normal form, most common design problems have been addressed.</p>
-<!-- raw HTML omitted -->
+<center>
 <pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">@startuml
 skinparam monochrome true
 scale 300 height
@@ -738,7 +709,7 @@ BCNF --&gt; 4NF : Step 5
 4NF --&gt; 5NF : Step 6
 @enduml
 </code></pre><p><img alt="Normalization Forms Diagra" loading="lazy" src="https://media.geeksforgeeks.org/wp-content/uploads/20200804110751/normalizationedited.jpg"></p>
-<!-- raw HTML omitted -->
+</center>
 <h3 id="anomalies">Anomalies<a hidden class="anchor" aria-hidden="true" href="#anomalies">#</a></h3>
 <p>An anomaly is a variation that differs in some way from what is said to be normal, with respect to maintaining a database.</p>
 <ul>
@@ -758,48 +729,48 @@ BCNF --&gt; 4NF : Step 5
 <h3 id="normal-forms">Normal Forms<a hidden class="anchor" aria-hidden="true" href="#normal-forms">#</a></h3>
 <ol>
 <li>
-<p><strong>First Normal Form (1 NF):</strong><!-- raw HTML omitted -->
+<p><strong>First Normal Form (1 NF):</strong><br>
 No multi valued attributes, it must have atomic domain only.</p>
 </li>
 <li>
-<p><strong>Second Normal Form (2 NF):</strong><!-- raw HTML omitted --></p>
+<p><strong>Second Normal Form (2 NF):</strong><br></p>
 <ul>
 <li>Second normal form (2NF) is based on the concept of fully functional dependency. A functional dependency $X \rightarrow Y$ is a full function dependency if the removal of any attribute A from X means that the dependency does not hold anymore; i.e., for any attribute $A \in X$, $(X -{A})$ does not functionally determine Y.</li>
 <li>A functional dependency $X \rightarrow Y$ is a partial dependency if some attribute A can be removed from X and the dependency still holds; i.e., for some $A \in X$, $(X - {A}) \rightarrow Y$.</li>
-<li>The test for 2NF involves testing for functional dependency whose left-hand side attributes are part of the primary key and the right-hand side is a nonprime attribute. If the primary key contains a single attribute the test need not be applied at all.<!-- raw HTML omitted -->
-$X$: is any candidate key<!-- raw HTML omitted -->
-$Y$: Proper subset of key<!-- raw HTML omitted -->
-$A$: None prime attribute<!-- raw HTML omitted -->
+<li>The test for 2NF involves testing for functional dependency whose left-hand side attributes are part of the primary key and the right-hand side is a nonprime attribute. If the primary key contains a single attribute the test need not be applied at all.<br>
+$X$: is any candidate key<br>
+$Y$: Proper subset of key<br>
+$A$: None prime attribute<br>
 Then we can say, $Y \rightarrow A$ is partial dependency.</li>
 </ul>
 </li>
 <li>
 <p><strong>Third Normal Form (3NF):</strong>
-Let $R$ be a relation schema, $X$ be a subset of the attributes of $R$, and $A$ be an attribute of $R$. $R$ is in third normal form if for every FD $X \rightarrow A$ that holds over $R$, one of the following statements is true: <!-- raw HTML omitted --></p>
+Let $R$ be a relation schema, $X$ be a subset of the attributes of $R$, and $A$ be an attribute of $R$. $R$ is in third normal form if for every FD $X \rightarrow A$ that holds over $R$, one of the following statements is true: <br></p>
 <ul>
-<li>$A \in X$; that is, it is a trivial FD, or<!-- raw HTML omitted --></li>
-<li>$X$ is a superkey, or<!-- raw HTML omitted --></li>
-<li>$A$ is part of some key for $R$.<!-- raw HTML omitted -->
+<li>$A \in X$; that is, it is a trivial FD, or<br></li>
+<li>$X$ is a superkey, or<br></li>
+<li>$A$ is part of some key for $R$.<br>
 <em>Note: If Non-Prime Attribute determines non prime attribute then we can say there is a transistive dependency</em></li>
 </ul>
 </li>
 <li>
-<p><strong>Boyce Codd’s normal Form (BCNF)</strong><!-- raw HTML omitted --></p>
+<p><strong>Boyce Codd’s normal Form (BCNF)</strong><br></p>
 <ul>
-<li>Relation shloud be in 3NF first<!-- raw HTML omitted --></li>
-<li>$A \in X$; that is, it is a trivial FD, or<!-- raw HTML omitted --></li>
+<li>Relation shloud be in 3NF first<br></li>
+<li>$A \in X$; that is, it is a trivial FD, or<br></li>
 <li>$X$ is a superkey</li>
 </ul>
 </li>
 <li>
-<p><strong>Forth Normal Form (4NF)</strong><!-- raw HTML omitted --></p>
+<p><strong>Forth Normal Form (4NF)</strong><br></p>
 <ul>
 <li>Relation should be in BCNF</li>
 <li>No Multi Valued Dependency</li>
 </ul>
 </li>
 <li>
-<p><strong>Fifth Normal Form (5NF):</strong> <!-- raw HTML omitted -->
+<p><strong>Fifth Normal Form (5NF):</strong> <br>
 It deals with join dependency</p>
 </li>
 </ol>
@@ -836,6 +807,7 @@ $$</p>
 <li><strong>Topological Sort</strong></li>
 </ol>
 <h1 id="indepth">InDepth<a hidden class="anchor" aria-hidden="true" href="#indepth">#</a></h1>
+<!-- REQ:-->
 <ol>
 <li>TRC and DRC</li>
 <li>Graph Traversals</li>
@@ -847,7 +819,6 @@ $$</p>
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="//localhost:1313/tags/cs/">CS</a></li>
     </ul>
   </footer>
 </article>

@@ -8,11 +8,11 @@
   </url><url>
     <loc>//localhost:1313/post/bayesian-networks/</loc>
   </url><url>
+    <loc>//localhost:1313/categories/blog/</loc>
+  </url><url>
     <loc>//localhost:1313/post/calculus/</loc>
   </url><url>
     <loc>//localhost:1313/categories/</loc>
-  </url><url>
-    <loc>//localhost:1313/tags/cs/</loc>
   </url><url>
     <loc>//localhost:1313/post/database-warehousing/</loc>
   </url><url>
@@ -20,11 +20,9 @@
   </url><url>
     <loc>//localhost:1313/categories/dev/</loc>
   </url><url>
-    <loc>//localhost:1313/categories/gate-da/</loc>
+    <loc>//localhost:1313/post/exponential-family-of-distributions/</loc>
   </url><url>
     <loc>//localhost:1313/post/git/</loc>
-  </url><url>
-    <loc>//localhost:1313/tags/math/</loc>
   </url><url>
     <loc>//localhost:1313/post/neovim/</loc>
   </url><url>

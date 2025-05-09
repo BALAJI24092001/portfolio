@@ -1,7 +1,7 @@
 ---
 draft: false
 title: "Git"
-categories: ["Dev", "Notes"]
+categories: ["Dev"]
 ---
 
 ## Commands

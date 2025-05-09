@@ -1,7 +1,7 @@
 ---
 draft: false
 title: "Explonential Family of Distributions"
-categories: ["Notes", "Statistics"]
+categories: ["Blog"]
 ---
 
 # Exponential Family of Distributions

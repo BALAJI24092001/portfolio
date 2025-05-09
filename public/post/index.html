@@ -11,7 +11,7 @@
 <meta name="description" content="Posts - BALAJI">
 <meta name="author" content="">
 <link rel="canonical" href="//localhost:1313/post/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.9de45e225101e4f99701d2b68fc6b8a1ef6027928be6391fa15bf7f56326c909.css" integrity="sha256-neReIlEB5PmXAdK2j8a4oe9gJ5KL5jkfoVv39WMmyQk=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.6da9a63d25a9608bca2f7f907a030e887a7dd3c3f3918e4cc113129361414bda.css" integrity="sha256-bammPSWpYIvKL3&#43;QegMOiHp908PzkY5MwRMSk2FBS9o=" rel="preload stylesheet" as="style">
 <link rel="icon" href="//localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="//localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="//localhost:1313/favicon-32x32.png">
@@ -26,34 +26,6 @@
         #theme-toggle,
         .top-link {
             display: none;
-        }
-
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
         }
 
     </style>
@@ -129,10 +101,6 @@
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
     }
 
 </script>
@@ -142,7 +110,7 @@
         <div class="logo">
             <a href="//localhost:1313/" accesskey="h" title="BALAJI (Alt + H)">BALAJI</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -171,8 +139,8 @@
                 </a>
             </li>
             <li>
-                <a href="//localhost:1313/categories/" title="Categories">
-                    <span>Categories</span>
+                <a href="//localhost:1313/balaji24092001_resume.pdf" title="CV">
+                    <span>CV</span>
                 </a>
             </li>
             <li>
@@ -181,8 +149,8 @@
                 </a>
             </li>
             <li>
-                <a href="//localhost:1313/projects/" title="Projects">
-                    <span>Projects</span>
+                <a href="//localhost:1313/categories/blog" title="Blog">
+                    <span>Blog</span>
                 </a>
             </li>
         </ul>
@@ -217,7 +185,7 @@ Nodes: Each node in a Bayesian network represents a random variable, which can b
     </h2>
   </header>
   <div class="entry-content">
-    <p>Function Function of single variable A relation f from a set $A$ to a set $B$ is said to be a function if every element of set $A$ has one and only one image in set $B$. In other words, a function $f$ is a relation such that no two pairs in the relation have the same first element.
+    <p>Function Function of single variable A relation f from a set $A$ to a set $B$ is said to be a function if every element of set $A$ has one and only one image in set $B$. In other words, a function $f$ is a relation such that no two pairs in the relation have the same first element.
 The notation $f : X \rightarrow Y$ means that $f$ is a function from $X$ to $Y$ . $X$ is called the domain of $f$, and $Y$ is called the co-domain of $f$.
 ...</p>
   </div>
@@ -231,7 +199,7 @@ The notation $f : X \rightarrow Y$ means that $f$ is a function from $X$ to $Y$ 
     </h2>
   </header>
   <div class="entry-content">
-    <p>I computing, a data warehouse, also known as an enterprise data warehouse, is a system used for reporting and data analysis and is considered a core component of data analysis.
+    <p>I computing, a data warehouse, also known as an enterprise data warehouse, is a system used for reporting and data analysis and is considered a core component of data analysis.
 Data warehouses are central repositories of integrated data from one or more different sources. They store current and historical data in one single place.
 We use databases for transaction purposes, and the historical data of these transactions and it’s previous states are stored in this data warehouses.
 ...</p>
@@ -246,7 +214,7 @@ We use databases for transaction purposes, and the historical data of these tran
     </h2>
   </header>
   <div class="entry-content">
-    <p>A database management system (DBMS) is a collection of programs that enables users to create and maintain a database. The DBMS is a general-purpose software system that facilitates the processes of defining, constructing, manipulating and sharing databases among various users and applications.
+    <p>A database management system (DBMS) is a collection of programs that enables users to create and maintain a database. The DBMS is a general-purpose software system that facilitates the processes of defining, constructing, manipulating and sharing databases among various users and applications.
 Data Model: A data model is a collection of concepts that can be used to describe the structure of a database. It provides the necessary means to achieve abstraction.
 ...</p>
   </div>
@@ -256,12 +224,38 @@ Data Model: A data model is a collection of concepts that can be used to describ
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Explonential Family of Distributions
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Exponential Family of Distributions The exponential family of distributions is a powerful and widely used class of probability distributions in statistics and machine learning. The exponential family provides a unified framework for many common probability distributions like the normal, binomial, Poisson, and gamma distributions.
+Exponential Family General Form A probability distribution belongs to the exponential family if its probability density function (for continuous distributions) or probability mass function (for discrete distributions) can be written as:
+...</p>
+  </div>
+  <footer class="entry-footer">5 min</footer>
+  <a class="entry-link" aria-label="post link to Explonential Family of Distributions" href="//localhost:1313/post/exponential-family-of-distributions/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Git
     </h2>
   </header>
   <div class="entry-content">
-    <p>Commands Install: winget install git
-Set up: git config --global user.name &#34;User Name&#34; git config --global user.email &#34;email@email.com&#34; Create a New Project: mkdir project cd project git init (initialise empty git repo in my folder (based on path) aka .git folder) ls -la (check my folder) Check “world status”: git status
+    <p>Commands Install:
+winget install git
+Set up:
+git config --global user.name &#34;User Name&#34; git config --global user.email &#34;email@email.com&#34; Create a New Project:
+mkdir project
+cd project
+git init (initialise empty git repo in my folder (based on path) aka .git folder) ls -la (check my folder) Check “world status”:
+git status
+Help for each command git help &lt;command&gt;
+Add files git add . = add all on current branch git add -p &lt;param=file&gt; = add part of file to staging area, ask for each change (if no param =&gt; all files) so we have more control and cleaner commits. _After any git add, we need a git commit, either a file or a pattern (e.g. _.txt)
+* Delete a file git rm &lt;filename&gt; = deletes a file, updates git and then commit!
+git rm --cached &lt;filename&gt;&#34; = delete a previously tracked file Move a file git mv &lt;old path&gt; &lt;new path&gt; should be followed by:
+git rm &lt;old path&gt;
+git add &lt;new path&gt;
 ...</p>
   </div>
   <footer class="entry-footer">11 min</footer>

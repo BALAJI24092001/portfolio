@@ -2,12 +2,17 @@ baseURL: "balaji24092001"
 languageCode: en-us
 title: BALAJI
 theme: "PaperMod"
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
 params:
+  math: true
   # ShowShareButtons: true
-  # label.icon: "logo.png"
+  label.icon: "logo.png"
   ShowToc: true
   defaultTheme: light
-  TocSide: right
+  TocSide: "left"
   ShowCodeCopyButtons: true
   ShowReadingTime: true
   profileMode:
@@ -19,14 +24,10 @@ params:
     imageWidth: 120
     imageHeight: 120
     buttons:
-      - name: GATE DA
-        url: "categories/gate-da/"
-      - name: NOTES
-        url: "categories/notes"
-      - name: DEV
-        url: "categories/dev/"
-      - name: ML
-        url: "categories/ml"
+      - name: Projects
+        url: "/projects/"
+      - name: Categories
+        url: "/categories/"
   socialIcons:
     - name: "Github"
       url: "https://github.com/BALAJI24092001"
@@ -44,13 +45,13 @@ menu:
       name: Search
       url: "/search/"
       weight: 1
-    - identifier: Projects
-      name: Projects
-      url: "/projects/"
+    - identifier: Blog
+      name: Blog
+      url: "/categories/blog"
       weight: 4
-    - identifier: categories
-      name: Categories
-      url: "/categories/"
+    - identifier: CV
+      name: CV
+      url: "balaji24092001_resume.pdf"
       weight: 2
     - identifier: tags
       name: Tags
