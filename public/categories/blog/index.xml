@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Blog on BALAJI</title>
-    <link>balaji24092001/categories/blog/</link>
+    <link>//localhost:1313/categories/blog/</link>
     <description>Recent content in Blog on BALAJI</description>
     <generator>Hugo -- 0.147.2</generator>
     <language>en-us</language>
-    <atom:link href="balaji24092001/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/categories/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Explonential Family of Distributions</title>
-      <link>balaji24092001/post/exponential-family-of-distributions/</link>
+      <link>//localhost:1313/post/exponential-family-of-distributions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>balaji24092001/post/exponential-family-of-distributions/</guid>
+      <guid>//localhost:1313/post/exponential-family-of-distributions/</guid>
       <description>&lt;h1 id=&#34;exponential-family-of-distributions&#34;&gt;Exponential Family of Distributions&lt;/h1&gt;
 &lt;p&gt;The exponential family of distributions is a powerful and widely used class of probability distributions in statistics and machine learning. The exponential family provides a unified framework for many common probability distributions like the normal, binomial, Poisson, and gamma distributions.&lt;/p&gt;
 &lt;h2 id=&#34;exponential-family-general-form&#34;&gt;Exponential Family General Form&lt;/h2&gt;
