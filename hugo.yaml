@@ -25,9 +25,9 @@ params:
     imageHeight: 120
     buttons:
       - name: projects
-        url: "/projects"
+        url: "/portfolio/projects/"
       - name: categories
-        url: "/categories"
+        url: "/portfolio/categories/"
   socialIcons:
     - name: "Github"
       url: "https://github.com/BALAJI24092001"
