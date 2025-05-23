@@ -6,7 +6,17 @@
     <description>Recent content on BALAJI</description>
     <generator>Hugo -- 0.147.2</generator>
     <language>en-us</language>
+    <lastBuildDate>Fri, 23 May 2025 21:36:16 +0530</lastBuildDate>
     <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test</title>
+      <link>//localhost:1313/post/test/</link>
+      <pubDate>Fri, 23 May 2025 21:36:16 +0530</pubDate>
+      <guid>//localhost:1313/post/test/</guid>
+      <description>&lt;h1 id=&#34;plotly-image-test&#34;&gt;Plotly Image Test&lt;/h1&gt;
+&lt;p&gt;Insert a plotly image into HUGO Post using below method. Dowload the image as a html file and then using iframe, include the image inside the page as shown below.&lt;/p&gt;
+&lt;iframe src=&#34;//localhost:1313/plotly/checking_html.html&#34; width=&#34;100%&#34; height=&#34;400&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;</description>
+    </item>
     <item>
       <title>Bayesian Networks</title>
       <link>//localhost:1313/post/bayesian-networks/</link>
@@ -119,12 +129,22 @@ _After any &lt;code&gt;git add&lt;/code&gt;, we need a &lt;code&gt;git commit&lt
       <link>//localhost:1313/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/projects/</guid>
-      <description>&lt;h2 id=&#34;github-contribution&#34;&gt;Github Contribution&lt;/h2&gt;
-&lt;picture&gt;
-  &lt;source media=&#34;(prefers-color-scheme: dark)&#34; srcset=&#34;https://raw.githubusercontent.com/spider-man-tm/BALAJI24092001/snake-game/github-contribution-grid-snake-dark.svg&#34;&gt;
-  &lt;source media=&#34;(prefers-color-scheme: light)&#34; srcset=&#34;https://raw.githubusercontent.com/spider-man-tm/BALAJI24092001/snake-game/github-contribution-grid-snake.svg&#34;&gt;
-  &lt;img alt=&#34;github contribution grid snake animation&#34; src=&#34;https://raw.githubusercontent.com/BALAJI24092001/BALAJI24092001/snake-game/github-contribution-grid-snake.svg&#34;&gt;
-&lt;/picture&gt;</description>
+      <description>Show all projects</description>
+    </item>
+    <item>
+      <title>Why Normal Distrubution?</title>
+      <link>//localhost:1313/post/why-normal-distribution/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/post/why-normal-distribution/</guid>
+      <description>&lt;p&gt;How is this distrubiotn derived?&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://notarocketscientist.xyz/posts/2023-01-27-how-gauss-derived-the-normal-distribution/&#34;&gt;https://notarocketscientist.xyz/posts/2023-01-27-how-gauss-derived-the-normal-distribution/&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description>
     </item>
   </channel>
 </rss>

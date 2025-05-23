@@ -30,6 +30,9 @@ Get a localhost to run your website on your local system using the below command
 
 ```
 hugo server
+hugo server -D # for draft posts to show in the localhost
 ```
 
 NOTE: Add the two files in the layouts/partials/ to render latex in markdown posts.
+
+<!-- TODO: Learn how hugo environment is structured. -->

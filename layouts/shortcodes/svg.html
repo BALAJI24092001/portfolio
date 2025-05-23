@@ -1,0 +1,7 @@
+<!-- We'll first use printf to format a string value. -->
+{{ $resourcePath := printf "svg/%s.svg" (.Get "name") }}
+<!-- Then try to load the SVG from the provided path. -->
+{{ with resources.Get $resourcePath }} {{ .Content | safeHTML }} {{ else }}
+<!-- And if it fails, return this. -->
+<span>Icon not found: {{ .Get "name" }}</span>
+{{ end }}
