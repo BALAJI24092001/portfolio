@@ -1,0 +1,1656 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><link rel="icon" type="" href="logo.png">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Calculus | BALAJI</title>
+<meta name="keywords" content="">
+<meta name="description" content="
+Function
+Function of single variable
+A relation f from a set $A$ to a set $B$ is said to be a function if every element of set $A$ has one and only one image in set $B$. In other words, a function $f$ is a relation such that no two pairs in the relation have the same first element.
+The notation $f : X \rightarrow Y$ means that $f$ is a function from $X$ to $Y$ . $X$ is called the domain of $f$, and $Y$ is called the co-domain of $f$.">
+<meta name="author" content="">
+<link rel="canonical" href="//localhost:1313/notes/calculus/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.6da9a63d25a9608bca2f7f907a030e887a7dd3c3f3918e4cc113129361414bda.css" integrity="sha256-bammPSWpYIvKL3&#43;QegMOiHp908PzkY5MwRMSk2FBS9o=" rel="preload stylesheet" as="style">
+<link rel="icon" href="//localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="//localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="//localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="//localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="//localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="//localhost:1313/notes/calculus/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script
+  type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+></script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\[','\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+           extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body class="" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="//localhost:1313/" accesskey="h" title="BALAJI (Alt + H)">BALAJI</a>
+            <div class="logo-switches">
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="//localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="//localhost:1313/balaji24092001_resume.pdf" title="CV">
+                    <span>CV</span>
+                </a>
+            </li>
+            <li>
+                <a href="//localhost:1313/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="//localhost:1313/categories/blog" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Calculus
+    </h1>
+    <div class="post-meta">35 min
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#function" aria-label="Function">Function</a><ul>
+                        
+                <li>
+                    <a href="#function-of-single-variable" aria-label="Function of single variable">Function of single variable</a></li>
+                <li>
+                    <a href="#types-of-functions" aria-label="Types of Functions">Types of Functions</a></li>
+                <li>
+                    <a href="#special-functions" aria-label="Special functions">Special functions</a></li>
+                <li>
+                    <a href="#composition-of-functions" aria-label="Composition of Functions">Composition of Functions</a></li>
+                <li>
+                    <a href="#invertible-function" aria-label="Invertible Function">Invertible Function</a></li></ul>
+                </li>
+                <li>
+                    <a href="#limits" aria-label="Limits">Limits</a><ul>
+                        
+                <li>
+                    <a href="#basic-limit-rules" aria-label="Basic Limit Rules">Basic Limit Rules</a></li>
+                <li>
+                    <a href="#trigonometry-functions" aria-label="Trigonometry Functions">Trigonometry Functions</a></li>
+                <li>
+                    <a href="#1-power-infinity" aria-label="1 power infinity">1 power infinity</a></li>
+                <li>
+                    <a href="#log-and-exponential-functions" aria-label="Log and Exponential Functions">Log and Exponential Functions</a></li>
+                <li>
+                    <a href="#lhospitals-rule" aria-label="L&rsquo;Hospital&rsquo;s Rule">L&rsquo;Hospital&rsquo;s Rule</a></li></ul>
+                </li>
+                <li>
+                    <a href="#continuity" aria-label="Continuity">Continuity</a></li>
+                <li>
+                    <a href="#differentiability" aria-label="Differentiability">Differentiability</a></li>
+                <li>
+                    <a href="#taylor-series" aria-label="Taylor Series">Taylor Series</a><ul>
+                        
+                <li>
+                    <a href="#maclaurin-series" aria-label="Maclaurin Series">Maclaurin Series</a></li>
+                <li>
+                    <a href="#standards-expansions" aria-label="Standards Expansions">Standards Expansions</a></li></ul>
+                </li>
+                <li>
+                    <a href="#differential-calculus" aria-label="DIFFERENTIAL CALCULUS">DIFFERENTIAL CALCULUS</a><ul>
+                        
+                <li>
+                    <a href="#differentiation" aria-label="Differentiation">Differentiation</a><ul>
+                        
+                <li>
+                    <a href="#the-derivative" aria-label="The Derivative">The Derivative</a></li>
+                <li>
+                    <a href="#basic-rules-of-differentiation" aria-label="Basic Rules of Differentiation">Basic Rules of Differentiation</a></li>
+                <li>
+                    <a href="#higher-order-derivatives" aria-label="Higher-Order Derivatives">Higher-Order Derivatives</a></li>
+                <li>
+                    <a href="#mean-value-theorem-for-derivatives" aria-label="Mean Value Theorem for Derivatives">Mean Value Theorem for Derivatives</a><ul>
+                        
+                <li>
+                    <a href="#rolles-theorem" aria-label="Rolle&rsquo;s Theorem">Rolle&rsquo;s Theorem</a></li>
+                <li>
+                    <a href="#lagranges-mean-value-theorem-mvt" aria-label="Lagrange&rsquo;s Mean Value Theorem (MVT)">Lagrange&rsquo;s Mean Value Theorem (MVT)</a></li></ul>
+                </li>
+                <li>
+                    <a href="#mean-value-theorem-for-integrals" aria-label="Mean Value Theorem for Integrals">Mean Value Theorem for Integrals</a></li>
+                <li>
+                    <a href="#implicit-differentiation" aria-label="Implicit Differentiation">Implicit Differentiation</a></li>
+                <li>
+                    <a href="#logarithmic-differentiation" aria-label="Logarithmic Differentiation">Logarithmic Differentiation</a></li>
+                <li>
+                    <a href="#derivatives-of-some-important-functions" aria-label="Derivatives of Some Important Functions">Derivatives of Some Important Functions</a></li></ul>
+                </li>
+                <li>
+                    <a href="#maxima-and-minima" aria-label="Maxima and Minima">Maxima and Minima</a><ul>
+                        
+                <li>
+                    <a href="#functions-of-one-variable" aria-label="Functions of one variable">Functions of one variable</a></li>
+                <li>
+                    <a href="#functions-of-two-variables" aria-label="Functions of two variables:">Functions of two variables:</a></li>
+                <li>
+                    <a href="#absolute-or-global-maximumminimum" aria-label="Absolute or Global maximum/minimum:">Absolute or Global maximum/minimum:</a></li></ul>
+                </li>
+                <li>
+                    <a href="#partial-derivatives" aria-label="Partial Derivatives">Partial Derivatives</a><ul>
+                        
+                <li>
+                    <a href="#higher-order-partial-derivatives" aria-label="Higher-Order Partial Derivatives">Higher-Order Partial Derivatives</a></li>
+                <li>
+                    <a href="#clairauts-theorem" aria-label="Clairaut&rsquo;s Theorem">Clairaut&rsquo;s Theorem</a></li>
+                <li>
+                    <a href="#applications" aria-label="Applications">Applications</a></li>
+                <li>
+                    <a href="#example-problems" aria-label="Example Problems">Example Problems</a></li>
+                <li>
+                    <a href="#visual-representation" aria-label="Visual Representation">Visual Representation</a></li></ul>
+                </li></ul>
+                </li>
+                <li>
+                    <a href="#integration" aria-label="INTEGRATION">INTEGRATION</a><ul>
+                        
+                <li>
+                    <a href="#indefinite-integrals" aria-label="Indefinite Integrals">Indefinite Integrals</a><ul>
+                        
+                <li>
+                    <a href="#standard-formulae" aria-label="Standard Formulae">Standard Formulae</a></li></ul>
+                </li>
+                <li>
+                    <a href="#definite-integrals" aria-label="Definite Integrals">Definite Integrals</a><ul>
+                        
+                <li>
+                    <a href="#properties" aria-label="Properties">Properties</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><!-- tags: ["MATH"] -->
+<h2 id="function">Function<a hidden class="anchor" aria-hidden="true" href="#function">#</a></h2>
+<h3 id="function-of-single-variable">Function of single variable<a hidden class="anchor" aria-hidden="true" href="#function-of-single-variable">#</a></h3>
+<p>A relation f from a set $A$ to a set $B$ is said to be a function if every element of set $A$ has one and only one image in set $B$. In other words, a function $f$ is a relation such that no two pairs in the relation have the same first element.</p>
+<p>The notation $f : X \rightarrow Y$ means that $f$ is a function from $X$ to $Y$ . $X$ is called the domain of $f$, and $Y$ is called the co-domain of $f$.</p>
+<p>Given an element $x \in X$, there is a unique element $y$ in $Y$ that is related to $x$. The unique element $y$ to which $f$ relates $x$ is denoted by $f(x)$ and is called $f$ of $x$, or the value of $f$ at $x$, or the image of $x$ under $f$.</p>
+<p>The set of all values of $f(x)$ taken together is called the range of $f$ or the image of $X$ under $f$. Symbolically:</p>
+<p>range of $f = {y \in Y | y = f(x) \text{ for some } x ∈ X}$</p>
+<table>
+  <thead>
+      <tr>
+          <th>Function</th>
+          <th>Domain</th>
+          <th>Range</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>$y = x + 2$</td>
+          <td>$\mathbb{R}$</td>
+          <td>$\mathbb{R}$</td>
+      </tr>
+      <tr>
+          <td>$y = 3x² - 7$</td>
+          <td>$\mathbb{R}$</td>
+          <td>${y: y ≥ -7}$</td>
+      </tr>
+      <tr>
+          <td>$y = sin x$</td>
+          <td>$\mathbb{R}$</td>
+          <td>${y: -1 ≤ y ≤ 1}$</td>
+      </tr>
+      <tr>
+          <td>$y = 2^x$</td>
+          <td>$\mathbb{R}$</td>
+          <td>${y: y &gt; 0}$</td>
+      </tr>
+      <tr>
+          <td>$y = 1/x$</td>
+          <td>${x: x ≠ 0}$</td>
+          <td>${y: y ≠ 0}$</td>
+      </tr>
+      <tr>
+          <td>$y = log₂ x$</td>
+          <td>${x: x &gt; 0}$</td>
+          <td>$\mathbb{R}$</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="types-of-functions">Types of Functions<a hidden class="anchor" aria-hidden="true" href="#types-of-functions">#</a></h3>
+<ol>
+<li>
+<p><strong>One-One (Injective) Function</strong><br>
+A function $f : X \rightarrow Y$ is defined to be one-one (or injective) if the images of distinct elements of $X$ under $f$ are distinct, i.e., for any $x1, x2 \in X$, if $f(x1) = f(x2)$, then it implies that $x1 = x2$.</p>
+</li>
+<li>
+<p><strong>Onto (Surjective) Function</strong><br>
+A function $f : X \rightarrow Y$ is said to be onto (or surjective) if every element of $Y$ is the image of some element of $X$ under $f$, i.e., for every $y \in Y$ , there exists an element $x \in X$ such that $f(x) = y$.</p>
+</li>
+<li>
+<p><strong>One-One and Onto (Bijective) Function</strong><br>
+A function $f : X \rightarrow Y$ is said to be one-one and onto (or bijective) if it is both one-one and onto.</p>
+</li>
+</ol>
+<h3 id="special-functions">Special functions<a hidden class="anchor" aria-hidden="true" href="#special-functions">#</a></h3>
+<ul>
+<li>
+<p><u><strong>Explicit Functions</strong></u> <br>
+Explicit functions are functions where the dependent variable (usually denoted as $y$) is expressed explicitly in terms of the independent variable (usually denoted as $x$), such as $y = f(x)$. <br>
+<em><strong>Example</strong></em> : $y = f(x) = 2x + 3$</p>
+</li>
+<li>
+<p><u><strong>Implicit Functions</strong></u> <br>
+Implicit functions are functions where the relationship between the dependent and independent variables is defined implicitly, often by an equation involving both variables, like $x^2 + y^2 = 1$.</p>
+</li>
+<li>
+<p><u><strong>Composite Functions</strong></u> <br>
+Composite functions are formed by combining two or more functions, creating a new function. For example, if $f(x)$ and $g(x)$ are functions, the composite function $h(x) = f(g(x))$ or $h(x) = g(f(x))$ <br>
+Let $f(x) = 2x$ and $g(x) = x^2$. Then the composite function is $h(x) = f(g(x)) = 2x^2$.</p>
+</li>
+<li>
+<p><u><strong>Polynomial Functions</strong></u> <br>
+Polynomial functions are algebraic functions of the form <br>
+$f(x) = a_nx^n + a_{n−1}x_{n−1} + . . . + a_1x + a_0$, where ai are constants, and n is a non-negative integer.<br>
+<em><strong>Example</strong></em>: $f(x) = 3x^3 − 2x^2 + 5x − 1$ is a polynomial function in <code>x</code> with degree 3.<br></p>
+<blockquote>
+<p>Note: A polynomial function of degree ’0’ is called a constant polynomial function (or) simply constant function.</p></blockquote>
+</li>
+<li>
+<p><u><strong>Rational Functions</strong></u> <br>
+Rational functions are functions of the form $f(x) = \frac{p(x)}{q(x)}$ , where $p(x)$ and $q(x)$ are both
+polynomial functions. <br> <em><strong>Example</strong></em>: $f(x) = \frac{2x^2−3x+1}{x^2+4x+4}$</p>
+</li>
+<li>
+<p><u><strong>Algebraic Functions</strong></u> <br>
+Algebraic functions are functions that can be defined by algebraic equations involving polynomial, rational, and root functions.<br>
+<em><strong>Example</strong></em>: $f(x) = \sqrt{3x^3 − 2x^2 + 5x − 1}$ <br>
+If a relation arises due to performing a finite number of fundamental operations additions, subtraction, multiplication, division, root extraction etc. on polynomial functions then such a relation is also called an Algebraic function.</p>
+<ol>
+<li>All polynomial functions are algebraic but not the converse.</li>
+<li>A function that is not algebraic is called transcendental function.</li>
+</ol>
+</li>
+<li>
+<p><u><strong>Logarithmic Functions</strong></u><br>
+Logarithmic functions are functions of the form $f(x) = logb(x)$, where $b$ is the base of the logarithm.<br>
+<em><strong>Example</strong></em>: $f(x) = log_{10}(x)$</p>
+</li>
+<li>
+<p><u><strong>Even Functions</strong></u><br>
+Even functions are symmetric about the y-axis, and odd functions are symmetric aboutthe origin. For even functions, $f(−x) = f(x)$, and for odd functions, $f(−x) = −f(x)$. <br>
+<em><strong>Example</strong></em>: Even Function: $f(x) = x^2$ (Symmetric about the y-axis)</p>
+</li>
+<li>
+<p><u><strong>Odd Function:</strong></u><br>
+$f(x) = x^3$ (Symmetric about the origin)</p>
+</li>
+<li>
+<p><u><strong>Exponential Functions</strong></u><br>
+Exponential functions are functions of the form $f(x) = a^x$, where $a$ is a positive constant.
+<em><strong>Example</strong></em>: $f(x) = 2^x$</p>
+</li>
+<li>
+<p><u><strong>Modulus Functions</strong></u><br>
+Modulus functions, often denoted as $f(x) = |x|$, return the absolute value of $x$, making it always non-negative.
+<em><strong>Example</strong></em>: $f(x) = |x|$</p>
+</li>
+<li>
+<p><u><strong>Signum (Sign) Functions</strong></u><br>
+The signum (sign) function is defined as $f(x) = \text{sgn}(x)$, where: <br>
+Example:</p>
+<p>$$
+\text{sgn}(x) =
+\begin{cases}
+-1 &amp; \text{if } x &lt; 0 \
+0 &amp; \text{if } x = 0 \
+1 &amp; \text{if } x &gt; 0
+\end{cases}
+$$</p>
+</li>
+</ul>
+<h3 id="composition-of-functions">Composition of Functions<a hidden class="anchor" aria-hidden="true" href="#composition-of-functions">#</a></h3>
+<ul>
+<li>
+<p>Let $f : A \rightarrow B$ and $g : B \rightarrow C$ be two functions. Then, the composition of $f$ and $g$, denoted by $g \circ f$, is defined as the function $g \circ f : A \rightarrow C$ given by</p>
+<p>$$
+(g \circ f)(x) = g(f(x))\text{, for all }x \in A
+$$</p>
+</li>
+<li>
+<p>If $f : A \rightarrow B$ and $g : B \rightarrow C$ are one-one, then $g \circ f : A \rightarrow C$ is also one-one.</p>
+</li>
+<li>
+<p>If $f : A \rightarrow B$ and $g : B \rightarrow C$ are onto, then $g \circ f : A \rightarrow C$ is also onto.</p>
+</li>
+<li>
+<p>Let $f : A \rightarrow B$ and $g : B \rightarrow C$ be the given functions such that $g \circ f$ is one-one. Then $f$ is one-one.</p>
+</li>
+<li>
+<p>Let $f : A \rightarrow B$ and $g : B \rightarrow C$ be the given functions such that $g \circ f$ is onto. Then $g$ is onto.</p>
+</li>
+</ul>
+<h3 id="invertible-function">Invertible Function<a hidden class="anchor" aria-hidden="true" href="#invertible-function">#</a></h3>
+<ul>
+<li>A function $f : X \rightarrow Y$ is defined to be invertible if there exists a function $g : Y \rightarrow X$ such that $g \circ f = I_X$ and $f \circ g = I_Y$ . The function $g$ is called the inverse of f and is denoted by $f^{−1}$.</li>
+<li>A function $f : X \rightarrow Y$ is invertible if and only if f is a bijective function.</li>
+<li>If $f : X \rightarrow Y$ , $g : Y \rightarrow Z$, and $h : Z \rightarrow S$ are functions, then $h \circ (g \circ f) = (h \circ g) \circ f$.</li>
+<li>Let $f : X \rightarrow Y$ and $g : Y \rightarrow Z$ be two invertible functions. Then $g \circ f$ is also invertible with $(g \circ f)^{−1} = f^{−1} \circ g^{−1}$.</li>
+</ul>
+<h2 id="limits">Limits<a hidden class="anchor" aria-hidden="true" href="#limits">#</a></h2>
+<blockquote>
+<p>Limits describe how a function behaves near a point, instead of at that point. This simple yet powerful idea is the basis of all of calculus.</p></blockquote>
+<p>In calculus, the concept of a limit is fundamental to understanding the behavior of functions as they approach specific points. A limit represents the value that a function approaches as its input (independent variable) gets arbitrarily close to a certain value. We denote the limit of a function f(x) as x approaches a limit point c as follows:</p>
+<p>$$
+\lim_{x \rightarrow c} f(x) = L
+$$</p>
+<p>This means that as x gets very close to c, the values of f(x) get arbitrarily close to L.</p>
+<p>The function $f$ is said to tend to the limit $\ell$ as $x \rightarrow a$, if for a given positive real number $\epsilon &gt; 0$ we can find a real number $\delta &gt; 0$ such that</p>
+<p>$$
+|f(x) - \ell| &lt; \epsilon \quad \text{whenever} \quad 0 &lt; |x - a| &lt; \delta
+$$</p>
+<p>Symbolically we write</p>
+<p>$$
+\lim_{x \to a} f(x) = \ell
+$$</p>
+<p>$\textbf{Left Hand and Right Hand Limits}$</p>
+<p>Let $x &lt; a$ and $x \rightarrow a$ from the left hand side.</p>
+<p>If</p>
+<p>$$
+|f(x) - \ell_1| &lt; \epsilon, \quad a - \delta &lt; x &lt; a \quad \text{or} \quad \lim_{x \to a^-} f(x) = \ell_1
+$$</p>
+<p>then $\ell_1$ is called the left hand limit.</p>
+<p>Let $x &gt; a$ and $x \rightarrow a$ from the right hand side.</p>
+<p>If</p>
+<p>$$
+|f(x) - \ell_2| &lt; \epsilon, \quad a &lt; x &lt; a + \delta \quad \text{or} \quad \lim_{x \to a^+} f(x) = \ell_2
+$$</p>
+<p>then $\ell_2$ is called the right hand limit.</p>
+<p><b>If $\ell_1 = \ell_2$ then $\lim_{x \to a} f(x)$ exists. If the limit exists then it is unique.</b></p>
+<h3 id="basic-limit-rules">Basic Limit Rules<a hidden class="anchor" aria-hidden="true" href="#basic-limit-rules">#</a></h3>
+<p>There are several basic rules that help us evaluate limits:</p>
+<ol>
+<li>
+<p>The Limit of a Constant:
+$$
+\lim_{x \rightarrow c} k = k
+$$
+where k is a constant.</p>
+</li>
+<li>
+<p>The Limit of a Sum or Difference:</p>
+<p>$$
+\lim_{x\rightarrow c} [f(x) ± g(x)] = \lim_{x \rightarrow c}    f(x) \pm \lim_{x \rightarrow c} g(x)
+$$</p>
+</li>
+<li>
+<p>The Limit of a Product:</p>
+<p>$$
+\lim_{x \to c} [f(x) . g(x)] = \lim_{x \to c}f(x) · \lim_{x \to c}  g(x)
+$$</p>
+</li>
+<li>
+<p>The Limit of a Quotient:</p>
+<p>$$
+\lim_{{x \to c}} \frac{f(x)}{g(x)} = \frac{\lim_{{x \to c}} f(x)}{\lim_{{x \to c}} g(x)}, \text{ if } \lim_{{x \to c}} g(x) \neq 0
+$$</p>
+</li>
+</ol>
+<h3 id="trigonometry-functions">Trigonometry Functions<a hidden class="anchor" aria-hidden="true" href="#trigonometry-functions">#</a></h3>
+<ol>
+<li>
+<p>$\quad \lim_{{x \to 0}} \sin x = 0$</p>
+</li>
+<li>
+<p>$\quad \lim_{{x \to 0}} \cos x = 1$</p>
+</li>
+<li>
+<p>$\quad \lim_{{x \to 0}} \frac{\tan x}{x} = 1$</p>
+</li>
+<li>
+<p>$\quad \lim_{{x \to 0}} \frac{\sin x}{x} = 1$</p>
+</li>
+<li>
+<p>$\quad \lim_{{x \to 0}} \frac{\sin^{-1} x}{x} = 1$</p>
+</li>
+<li>
+<p>$\quad \lim_{{x \to 0}} \frac{\tan^{-1} x}{x} = 1$</p>
+</li>
+<li>
+<p>$\quad \lim_{{x \to \infty}} \frac{\sin x}{x} = 0$</p>
+</li>
+<li>
+<p>$\quad \lim_{{x \to 0}} \left(\cos x + a \sin b x\right)^{\frac{1}{x}} = e^{ab}$</p>
+</li>
+<li>
+<p>$\quad \lim_{{x \to 0}} \left(\frac{1 - \cos (ax)}{x}\right) = \frac{a^2}{2}$</p>
+</li>
+</ol>
+<h3 id="1-power-infinity">1 power infinity<a hidden class="anchor" aria-hidden="true" href="#1-power-infinity">#</a></h3>
+<ol>
+<li>
+<p>$\quad \lim_{{x \to 0}} \left(1 + x\right)^{\frac{1}{x}} = e$</p>
+</li>
+<li>
+<p>$\quad \lim_{{x \to 0}} \left(1 + ax\right)^{\frac{1}{x}} = e^a$</p>
+</li>
+<li>
+<p>$\quad \lim_{{x \to \infty}} \left(1 + \frac{1}{x}\right)^x = e$</p>
+</li>
+<li>
+<p>$\quad \lim_{{x \to \infty}} \left(1 + \frac{a}{x}\right)^x = e^a$</p>
+</li>
+</ol>
+<h3 id="log-and-exponential-functions">Log and Exponential Functions<a hidden class="anchor" aria-hidden="true" href="#log-and-exponential-functions">#</a></h3>
+<ol>
+<li>
+<p>$\quad \lim_{{x \to 0}} e^x = 1$</p>
+</li>
+<li>
+<p>$\quad \lim_{{x \to 0}} \frac{e^x - 1}{x} = 1$</p>
+</li>
+<li>
+<p>$\quad \lim_{{x \to 0}} \frac{e^{mx} - 1}{mx} = m$</p>
+</li>
+<li>
+<p>$\quad \lim_{{x \to 0}} \frac{a^x - 1}{x} = \log_e a$</p>
+</li>
+<li>
+<p>$\quad \lim_{{x \to 0}} \frac{\log(1 + x)}{x} = 1$</p>
+</li>
+<li>
+<p>$\quad \lim_{{x \to a}} \frac{x^n - a^n}{x - a} = na^{n-1}$</p>
+</li>
+<li>
+<p>$\quad \lim_{{x \to a}} \left( \frac{a^x + b^x}{2} \right)^{\frac{1}{x}} = \sqrt{ab}$</p>
+</li>
+</ol>
+<h3 id="lhospitals-rule">L&rsquo;Hospital&rsquo;s Rule<a hidden class="anchor" aria-hidden="true" href="#lhospitals-rule">#</a></h3>
+<p>We apply L&rsquo;Hospital&rsquo;s Rule to the limit if we get the limit in the following forms (Indeterminate forms):</p>
+<p>$$
+\frac{0}{0}, \frac{\infty}{\infty}, 0 \cdot \infty, \infty - \infty, 0^0, 1^{\infty}, \infty^0
+$$</p>
+<p>Try to convert all indeterminate forms into $\frac{0}{0}$ or $\frac{\infty}{\infty}$, then only you can apply L&rsquo;Hospital&rsquo;s Rule.</p>
+<p>If $\lim_{x \to a} \frac{f(x)}{g(x)}$ is of the form $\frac{0}{0}$ or $\frac{\infty}{\infty}$, then:</p>
+<p>$$
+\lim_{{x \to a}} \frac{f(x)}{g(x)} = \frac{f&rsquo;(x)}{g&rsquo;(x)}
+$$</p>
+<p>Note:</p>
+<p>If $\lim_{{x \to a}} f(x)$ exists, then it is unique.
+If $f(x)$ is a polynomial function, then $\lim_{{x \to a}} f(x) = f(a)$.</p>
+<h2 id="continuity">Continuity<a hidden class="anchor" aria-hidden="true" href="#continuity">#</a></h2>
+<ol>
+<li>
+<p><strong>Continuity of a function at a point:</strong> <br>
+A function $f(x)$ is said to be continuous at <code>a</code> if it satisfies the following conditions</p>
+<ul>
+<li>$f(a)$ is defined</li>
+<li>$\lim_{x \to a} f(x)$ exists i.e $\lim_{x \to a^{−}} f(x) = lim_{x \to a^{+}} f(x)$</li>
+<li>$\lim_{x \to a^{+}} f(x) = f(a)$</li>
+</ul>
+</li>
+<li>
+<p><strong>Left continuous (or) continuity from the left at a point:</strong> <br>
+A function $f(x)$ is said to be continuous from the left (or) left continuous at $x = a$ if</p>
+<ul>
+<li>$f(a)$ is defined</li>
+<li>$\lim_{x \to a^{-}} f(x) = f(a)$</li>
+</ul>
+</li>
+<li>
+<p><strong>Right continuous (or) continuity from the right at a point:</strong> <br>
+A function $f(x)$ is said to be continuous from the right (or) right continuous at $x = a$ if</p>
+<ul>
+<li>$f(a)$ is defined</li>
+<li>$\lim_{x \to a^{+}} f(x) = f(a)$</li>
+</ul>
+</li>
+<li>
+<p><strong>Continuity of a function in an open interval:</strong> <br>
+A function $f(x)$ is said to be continuous in an open interval $(a, b)$ if $f(x)$ is continuous $\forall x \in (a, b)$ (or) $\lim_{x \to c} f(x) = f(c) \forall c \in (a, b)$</p>
+</li>
+<li>
+<p><strong>Continuity of a function on closed interval:</strong> <br>
+A function $f(x)$ is said to be continuous on closed interval $[a, b]$if</p>
+<ul>
+<li>$f(x)$ is continuous $\forall x ∈ (a, b)$</li>
+<li>$\lim_{x \to a^{+}} f(x) = f(a)$</li>
+<li>$\lim_{x \to b^{-}} f(x) = f(b)$</li>
+</ul>
+</li>
+</ol>
+<p><strong>Important Points:</strong><br></p>
+<ol>
+<li>If $f(x)$ and $g(x)$ are two continuous functions then $\quad f(x) + g(x),\quad f(x) − g(x),\quad f(x).g(x)$ and $\quad \frac{f(x)}{g(x)} (:: g(x) \neq 0)$ are also continuous.</li>
+<li>Polynomial function, exponential function, sine and cosine functions, and modulus function are continuous everywhere.</li>
+<li>Logarithmic functions are continuous in $(0, \infty)$</li>
+<li>Let the functions f and g be continuous at a point $x = x_0$ then,
+<ul>
+<li>$cf$, $f \pm g$ and $f.g$ are continuous at $x = x_0$, where $c$ is any constant.</li>
+<li>$\frac{f}{g}$ is continuous at $x = x_0$, if $g(x_0) \neq 0$</li>
+</ul>
+</li>
+<li>If $f$ is continuous at $x = x_0$ and $g$ is continuous at $f(x_0)$ then the composite function $g(f(g))$ is continuous at $x = x_0$.</li>
+<li>If f is continuous at an interior point $c$ of a closed interval $[a, b]$ and $f(c) \neq 0$, then there exists a neighbourhood of $c$, throughout which $f(x)$ has the same sign as $f(c)$.</li>
+<li>If $f$ is continuous in a closed interval $[a, b]$ then it is bounded there and attains its bounds at least once in $[a, b]$.</li>
+<li>If $f$ is continuous in a closed interval $[a, b]$, and if $f(a)$ and $f(b)$ are of opposite signs, then there exists at least one point $c \in [a, b]$ such that $f(c) = 0$.</li>
+<li>If $f$ is continuous in a closed interval $[a, b]$ and $f(a) \neq f(b)$ then it assumes every value between $f(a)$ and $f(b)$.</li>
+</ol>
+<h2 id="differentiability">Differentiability<a hidden class="anchor" aria-hidden="true" href="#differentiability">#</a></h2>
+<p>$f(x)$ is said to be differentiable at the point $x = a$ if the derivative $f‘(a)$ exists at every point in its domain. It is given by</p>
+<p>$$
+\lim_{h \to 0} \frac{f(a+h)−f(a)}{h}
+$$</p>
+<p><strong>Important Note:</strong><br></p>
+<ol>
+<li>If the derivative of $f(x)$ exists at $x = a$ then the function $f(x)$ is said to be differentiable function at $x = a$.</li>
+<li>$f^l(a)$ exists at $x = a \iff Lf^l(a) = Rf^l(a)$.</li>
+<li>If $f(x)$ and $g(x)$ are two differentiable functions then $f(x)+g(x)$, $f(x)−g(x)$, $f(x).g(x)$, $\frac{f(x)}{g(x)}$ .. $g(x) \neq 0$ are also differentiable.</li>
+<li>Polynomial functions, exponential functions, sine and cosine functions are differentiable every where.</li>
+<li>Every differentiable function is continuous but a continuous function need not be differentiable.</li>
+</ol>
+<p><strong>Derivability of a function in an open interval:</strong><br>
+A function $f(x)$ is said to be derivable (or) differentiable in an open interval $(a, b)$ if $f^l(c)$ exists $\forall c \in (a, b)$.</p>
+<p><strong>Derivability of a function on closed interval:</strong><br>
+A function $f(x)$ is said to be derivable (or) differentiable on closed interval $[a, b]$ i. if $f^l(c)$ exists $\forall c \in (a, b)$</p>
+<ol>
+<li>$Rf^l(a)$ exists</li>
+<li>$Lf^l(b)$ exists.</li>
+</ol>
+<h2 id="taylor-series">Taylor Series<a hidden class="anchor" aria-hidden="true" href="#taylor-series">#</a></h2>
+<p>Let $f(x)$ be a function which is differentiable at $x = a$. Then we can write $f(x)$ as the following power series, called the Taylor series of $f(x)$ at $x = a$:</p>
+<p>$$
+f(x) = f(a) + f&rsquo;(a) \frac{(x - a)}{1!} + f&rsquo;&rsquo;(a) \frac{(x - a)^2}{2!} + f&rsquo;&rsquo;&rsquo;(a) \frac{(x - a)^3}{3!} + \cdots
+$$</p>
+<h3 id="maclaurin-series">Maclaurin Series<a hidden class="anchor" aria-hidden="true" href="#maclaurin-series">#</a></h3>
+<p>If the Taylor Series is centred at 0, then the series is known as the Maclaurin series. It means that, if $a = 0$ in the Taylor series, then we get:</p>
+<p>$$
+f(x) = f(0) + f&rsquo;(0) \frac{x}{1!} + f&rsquo;&rsquo;(0) \frac{x^2}{2!} + f&rsquo;&rsquo;&rsquo;(0) \frac{x^3}{3!} + \cdots
+$$</p>
+<p>This is known as the Maclaurin series.</p>
+<h3 id="standards-expansions">Standards Expansions<a hidden class="anchor" aria-hidden="true" href="#standards-expansions">#</a></h3>
+<ol>
+<li>
+<p>$(1 - x)^{-1} = 1 + x + x^2 + x^3 + \cdots \quad \text{for } |x| &lt; 1$</p>
+</li>
+<li>
+<p>$(1 + x)^{-1} = 1 - x + x^2 - x^3 + \cdots \quad \text{for } |x| &lt; 1$</p>
+</li>
+<li>
+<p>$(1 - x)^{-2} = 1 + 2x + 3x^2 + 4x^3 + \cdots \quad \text{for } |x| &lt; 1$</p>
+</li>
+<li>
+<p>$(1 + x)^{-2} = 1 - 2x + 3x^2 - 4x^3 + \cdots \quad \text{for } |x| &lt; 1$</p>
+</li>
+<li>
+<p>$(1 - x)^{-3} = 1 + 3x + 6x^2 + 10x^3 + \cdots \quad \text{for } |x| &lt; 1$</p>
+</li>
+<li>
+<p>$\quad (1 + x)^{-3} = 1 - 3x + 6x^2 - 10x^3 + \ldots \quad [-1 &lt; x &lt; 1]$</p>
+</li>
+<li>
+<p>$\quad (1 + x)^n = 1 + nx + \frac{n(n-1)}{2!}x^2 + \frac{n(n-1)(n-2)}{3!}x^3 + \ldots \quad [-1 &lt; x &lt; 1]$</p>
+</li>
+<li>
+<p>$\quad (1 - x)^{-n} = 1 + nx + \frac{n(n+1)}{2!}x^2 + \frac{n(n+1)(n+2)}{3!}x^3 + \ldots \quad [-1 &lt; x &lt; 1]$</p>
+</li>
+<li>
+<p>$\quad e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \ldots \quad [-\infty &lt; x &lt; \infty]$</p>
+</li>
+<li>
+<p>$\quad e^{-x} = 1 - x + \frac{x^2}{2!} - \frac{x^3}{3!} + \ldots \quad [-\infty &lt; x &lt; \infty]$</p>
+</li>
+<li>
+<p>$\quad \sin x = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \ldots \quad [-\infty &lt; x &lt; \infty]$</p>
+</li>
+<li>
+<p>$\quad \sinh x = x + \frac{x^3}{3!} + \frac{x^5}{5!} + \frac{x^7}{7!} + \ldots \quad [-\infty &lt; x &lt; \infty]$</p>
+</li>
+<li>
+<p>$$
+\quad \sin^{-1} x = x + \frac{1}{2} \frac{x^3}{3} + \frac{1 \cdot 3}{2 \cdot 4} \frac{x^5}{5} + \frac{1 \cdot 3 \cdot 5}{2 \cdot 4 \cdot 6} \frac{x^7}{7} + \ldots \quad [-1 &lt; x &lt; 1]
+$$</p>
+</li>
+<li>
+<p>$\quad \cos x = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \ldots \quad [-\infty &lt; x &lt; \infty]$</p>
+</li>
+<li>
+<p>$\quad \cosh x = 1 + \frac{x^2}{2!} + \frac{x^4}{4!} + \frac{x^6}{6!} + \ldots \quad [-\infty &lt; x &lt; \infty]$</p>
+</li>
+<li>
+<p>$\quad \cos^{-1} x = \frac{\pi}{2} - \sin^{-1} x = \frac{\pi}{2} - \left( x + \frac{1}{2} \frac{x^3}{3} + \frac{1 \cdot 3}{2 \cdot 4} \frac{x^5}{5} + \ldots \right) \quad [-1 &lt; x &lt; 1]$</p>
+</li>
+<li>
+<p>$\quad \tan x = x + \frac{x^3}{3} + \frac{2x^5}{15} + \ldots \quad \left[ -\frac{\pi}{2} &lt; x &lt; \frac{\pi}{2} \right]$</p>
+</li>
+<li>
+<p>$\quad \tanh x = x - \frac{x^3}{3} + \frac{2x^5}{15} - \ldots \quad \left[ -\frac{\pi}{2} &lt; x &lt; \frac{\pi}{2} \right]$</p>
+</li>
+<li>
+<p>$$
+\quad \tan^{-1} x =
+\begin{cases}
+x - \frac{x^3}{3} + \frac{x^5}{5} - \frac{x^7}{7} + \ldots &amp; \text{for } -1 &lt; x &lt; 1 \newline
+\frac{\pi}{2} - \frac{1}{x} + \frac{1}{3x^3} - \frac{1}{5x^5} + \ldots &amp; \text{for } x \geq 1 \newline
+-\frac{\pi}{2} + \frac{1}{x} - \frac{1}{3x^3} + \frac{1}{5x^5} - \ldots &amp; \text{for } x &lt; -1
+\end{cases}
+\quad \left[-1 &lt; x &lt; 1\right]
+$$</p>
+</li>
+<li>
+<p>$\quad \cot x = \frac{1}{x} - \frac{x}{3} - \frac{x^3}{45} + \ldots \quad \left[0 &lt; x &lt; \pi\right]$</p>
+</li>
+<li>
+<p>$\quad \coth x = \frac{1}{x} + \frac{x}{3} - \frac{x^3}{45} + \ldots \quad \left[0 &lt; |x| &lt; \pi\right]$</p>
+</li>
+<li>
+<p>$$
+\quad \cot^{-1} x = \frac{\pi}{2} - \tan^{-1} x =
+\begin{cases}
+\frac{\pi}{2} - \left(x - \frac{x^3}{3} + \frac{x^5}{5} - \frac{x^7}{7} + \ldots\right) &amp; \text{for } -1 &lt; x &lt; 1 \newline
+\frac{1}{x} - \frac{1}{3x^3} + \frac{1}{5x^5} - \ldots &amp; \text{for } x \geq 1 \newline
+\pi + \frac{1}{x} - \frac{1}{3x^3} + \frac{1}{5x^5} - \ldots &amp; \text{for } x &lt; -1 \newline
+\end{cases}
+\quad \left[-1 &lt; x &lt; 1\right]
+$$</p>
+</li>
+<li>
+<p>$\quad \sec x = 1 + \frac{x^2}{2} + \frac{5x^4}{24} + \ldots \quad \left[-\frac{\pi}{2} &lt; x &lt; \frac{\pi}{2}\right]$</p>
+</li>
+<li>
+<p>$\quad \csc x = \frac{1}{x} + \frac{x}{6} + \frac{7x^3}{360} + \ldots \quad \left[0 &lt; x &lt; \pi\right]$</p>
+</li>
+<li>
+<p>$\quad \ln(1 + x) = x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \ldots \quad \left[-1 &lt; x &lt; 1\right]$</p>
+</li>
+</ol>
+<h2 id="differential-calculus">DIFFERENTIAL CALCULUS<a hidden class="anchor" aria-hidden="true" href="#differential-calculus">#</a></h2>
+<h3 id="differentiation">Differentiation<a hidden class="anchor" aria-hidden="true" href="#differentiation">#</a></h3>
+<p>Differentiation is the process of finding the derivative of a function. The derivative represents the rate of change of the function&rsquo;s value with respect to a change in its input value.</p>
+<h4 id="the-derivative">The Derivative<a hidden class="anchor" aria-hidden="true" href="#the-derivative">#</a></h4>
+<p>If $f(x)$ is a function, its derivative, denoted as $f&rsquo;(x)$ or $\frac{df}{dx}$, is defined as:</p>
+<p>$$
+f&rsquo;(x) = \lim_{{h \to 0}} \frac{f(x+h) - f(x)}{h}
+$$</p>
+<blockquote>
+<p>Note: The derivative represents the slope of the tangent line to the graph of the function at a given point.</p></blockquote>
+<h4 id="basic-rules-of-differentiation">Basic Rules of Differentiation<a hidden class="anchor" aria-hidden="true" href="#basic-rules-of-differentiation">#</a></h4>
+<ul>
+<li>
+<p><strong>Power Rule</strong>:</p>
+<p>$$
+\frac{d}{dx} [x^n] = nx^{n-1}
+$$</p>
+</li>
+<li>
+<p><strong>Constant Rule</strong>:</p>
+<p>$$
+\frac{d}{dx} c = 0
+$$</p>
+<p>where c is a constant.</p>
+</li>
+<li>
+<p><strong>Sum Rule</strong>:</p>
+<p>$$
+\frac{d}{dx} [f(x) + g(x)] = f&rsquo;(x) + g&rsquo;(x)
+$$</p>
+</li>
+<li>
+<p><strong>Difference Rule</strong>:</p>
+<p>$$
+\frac{d}{dx} [f(x) - g(x)] = f&rsquo;(x) - g&rsquo;(x)
+$$</p>
+</li>
+<li>
+<p><strong>Product Rule</strong>:</p>
+<p>$$
+\frac{d}{dx} [f(x) \cdot g(x)] = f&rsquo;(x) \cdot g(x) + f(x) \cdot g&rsquo;(x)
+$$</p>
+</li>
+<li>
+<p><strong>Quotient Rule</strong>:</p>
+<p>$$
+\frac{d}{dx} \left[\frac{f(x)}{g(x)}\right] = \frac{f&rsquo;(x) \cdot g(x) - f(x) \cdot g&rsquo;(x)}{[g(x)]^2}
+$$</p>
+</li>
+<li>
+<p><strong>Chain Rule</strong>:
+$$
+\frac{d}{dx} [f(g(x))] = f&rsquo;(g(x)) \cdot g&rsquo;(x)
+$$</p>
+</li>
+</ul>
+<h4 id="higher-order-derivatives">Higher-Order Derivatives<a hidden class="anchor" aria-hidden="true" href="#higher-order-derivatives">#</a></h4>
+<ul>
+<li><strong>Second Derivative</strong>: The derivative of the derivative, denoted as $f&rsquo;&rsquo;(x)$ or $\frac{d^2f}{dx^2}$.</li>
+<li><strong>nth Derivative</strong>: The derivative taken n times, denoted as $f^{(n)}(x)$ or $\frac{d^nf}{dx^n}$.</li>
+</ul>
+<p><strong>Critical Points and Inflection Points</strong> <br></p>
+<ul>
+<li><strong>Critical Points</strong>: Points where $f&rsquo;(x) = 0$ or $f&rsquo;(x)$ is undefined. Used to determine local maxima and minima.</li>
+<li><strong>Inflection Points</strong>: Points where the concavity of the function changes, identified by $f&rsquo;&rsquo;(x) = 0$.</li>
+</ul>
+<h4 id="mean-value-theorem-for-derivatives">Mean Value Theorem for Derivatives<a hidden class="anchor" aria-hidden="true" href="#mean-value-theorem-for-derivatives">#</a></h4>
+<p>The Mean Value Theorem for Derivatives states that if a function $f$ is continuous on the closed interval $[a, b]$ and differentiable on the open interval $(a, b)$, then there exists at least one point $c$ in $(a, b)$ such that the instantaneous rate of change (derivative) at $c$ is equal to the average rate of change over $[a, b]$. Mathematically, it is expressed as:</p>
+<p>$$
+f&rsquo;(c) = \frac{f(b) - f(a)}{b - a}
+$$</p>
+<p><strong>Conditions:</strong></p>
+<ol>
+<li><strong>Continuity</strong>: $f$ must be continuous on the closed interval $[a, b]$.</li>
+<li><strong>Differentiability</strong>: $f$ must be differentiable on the open interval $(a, b)$.</li>
+</ol>
+<p><strong>Interpretation:</strong></p>
+<p>The theorem essentially states that there is at least one point $c$ where the tangent to the curve is parallel to the secant line connecting $(a, f(a))$ and $(b, f(b))$.</p>
+<h5 id="rolles-theorem">Rolle&rsquo;s Theorem<a hidden class="anchor" aria-hidden="true" href="#rolles-theorem">#</a></h5>
+<p>Rolle&rsquo;s Theorem is a special case of the Mean Value Theorem. It states that if a function $f$ satisfies the following three conditions on a closed interval $[a, b]$:</p>
+<ol>
+<li>$f$ is continuous on the closed interval $[a, b]$.</li>
+<li>$f$ is differentiable on the open interval $(a, b)$.</li>
+<li>$f(a) = f(b)$.</li>
+</ol>
+<p>Then, there exists at least one point $c$ in the open interval $(a, b)$ such that:</p>
+<p>$$
+f&rsquo;(c) = 0
+$$</p>
+<p>In simpler terms, if a function starts and ends at the same value on a certain interval and meets the continuity and differentiability conditions, there is at least one point in that interval where the derivative (slope of the tangent) is zero. This means the function has a horizontal tangent line at some point in the interval.</p>
+<h5 id="lagranges-mean-value-theorem-mvt">Lagrange&rsquo;s Mean Value Theorem (MVT)<a hidden class="anchor" aria-hidden="true" href="#lagranges-mean-value-theorem-mvt">#</a></h5>
+<p>The Mean Value Theorem (MVT) generalizes Rolle&rsquo;s Theorem. It states that if a function $f$ satisfies the following conditions on a closed interval $[a, b]$:</p>
+<ol>
+<li>$f$ is continuous on the closed interval $[a, b]$.</li>
+<li>$f$ is differentiable on the open interval $(a, b)$.</li>
+</ol>
+<p>Then, there exists at least one point $c$ in the open interval $(a, b)$ such that:</p>
+<p>$$
+f&rsquo;(c) = \frac{f(b) - f(a)}{b - a}
+$$</p>
+<p>This means that there is at least one point in the interval where the instantaneous rate of change (the derivative) is equal to the average rate of change over the interval. In other words, the slope of the tangent at some point is equal to the slope of the secant line connecting the endpoints $(a, f(a))$ and $(b, f(b))$.</p>
+<p><strong>Formulas Recap</strong> <br></p>
+<ul>
+<li><strong>Rolle&rsquo;s Theorem:</strong> If $f(a) = f(b)$, then $f&rsquo;(c) = 0$.</li>
+<li><strong>Lagrange&rsquo;s Mean Value Theorem:</strong> $f&rsquo;(c) = \frac{f(b) - f(a)}{b - a}$.</li>
+</ul>
+<h4 id="mean-value-theorem-for-integrals">Mean Value Theorem for Integrals<a hidden class="anchor" aria-hidden="true" href="#mean-value-theorem-for-integrals">#</a></h4>
+<p>The Mean Value Theorem for Integrals states that if $f$ is continuous on the closed interval $[a, b]$, then there exists at least one point $c$ in $(a, b)$ such that the value of the function at $c$ is equal to the average value of the function over $[a, b]$. Mathematically, it is expressed as:</p>
+<p>$$
+f(c) = \frac{1}{b - a} \int_a^b f(x) , dx
+$$</p>
+<p><strong>Conditions:</strong></p>
+<ol>
+<li><strong>Continuity</strong>: $f$ must be continuous on the closed interval $[a, b]$.</li>
+</ol>
+<p><strong>Interpretation:</strong></p>
+<p>The theorem states that there is at least one point $c$ where the function&rsquo;s value is equal to its average value over the interval.</p>
+<p><strong>Example:</strong></p>
+<p>Consider the function $f(x) = x^2$ on the interval $[1, 3]$.</p>
+<ol>
+<li>
+<p><strong>Check conditions</strong>:</p>
+<ul>
+<li>$f(x) = x^2$ is continuous on $[1, 3]$.</li>
+</ul>
+</li>
+<li>
+<p><strong>Apply the Mean Value Theorem for Integrals</strong>:</p>
+<p>$$
+\frac{1}{3 - 1} \int_1^3 x^2 , dx = \frac{1}{2} \left[ \frac{x^3}{3} \right]_1^3 = \frac{1}{2} \left( \frac{27}{3} - \frac{1}{3} \right) = \frac{1}{2} (9 - \frac{1}{3}) = \frac{1}{2} \times \frac{26}{3} = \frac{13}{3}
+$$</p>
+<p>So, there exists a point $c$ in $(1, 3)$ such that $f(c) = \frac{13}{3}$.</p>
+</li>
+</ol>
+<ul>
+<li><strong>Mean Value Theorem for Derivatives</strong>: Guarantees that there is at least one point where the derivative (slope of the tangent) equals the average rate of change over an interval.</li>
+<li><strong>Mean Value Theorem for Integrals</strong>: Guarantees that there is at least one point where the function&rsquo;s value equals its average value over an interval.</li>
+</ul>
+<h4 id="implicit-differentiation">Implicit Differentiation<a hidden class="anchor" aria-hidden="true" href="#implicit-differentiation">#</a></h4>
+<p>Implicit differentiation is a technique used in calculus to find the derivative of a function when it is not explicitly given in the form $y = f(x)$. Instead, both variables $x$ and $y$ are given in a relation, often in the form $F(x, y) = 0$. The goal is to differentiate this relation with respect to $x$ to find $\frac{dy}{dx}$.</p>
+<ol>
+<li>
+<p><strong>Implicit Function</strong>: An implicit function is one where $y$ is not isolated on one side of the equation. For example, in the equation $x^2 + y^2 = 1$, $y$ is defined implicitly in terms of $x$.</p>
+</li>
+<li>
+<p><strong>Differentiation Process</strong>:</p>
+<ul>
+<li>Treat $y$ as a function of $x$, even though it is not explicitly written as $y = f(x)$.</li>
+<li>Differentiate both sides of the equation with respect to $x$. Remember to apply the chain rule when differentiating terms involving $y$, because $y$ is a function of $x$.</li>
+</ul>
+</li>
+<li>
+<p><strong>Chain Rule</strong>: The chain rule is used when differentiating a composite function. When you differentiate $y$ with respect to $x$, you get $\frac{dy}{dx}$. For example, if you differentiate $y^2$ with respect to $x$, you apply the chain rule:
+$$
+\frac{d}{dx}(y^2) = 2y \cdot \frac{dy}{dx}
+$$</p>
+</li>
+</ol>
+<p><strong>Example:</strong><br></p>
+<p>Let&rsquo;s find $\frac{dy}{dx}$ for the equation $x^2 + y^2 = 1$:</p>
+<ol>
+<li>
+<p><strong>Start with the equation</strong>:</p>
+<p>$$
+x^2 + y^2 = 1
+$$</p>
+</li>
+<li>
+<p><strong>Differentiate both sides with respect to $x$</strong>:</p>
+<p>$$
+\frac{d}{dx}(x^2) + \frac{d}{dx}(y^2) = \frac{d}{dx}(1)
+$$</p>
+</li>
+<li>
+<p><strong>Apply the differentiation</strong>:</p>
+<ul>
+<li>The derivative of $x^2$ with respect to $x$ is $2x$.</li>
+<li>The derivative of $y^2$ with respect to $x$ is $2y \cdot \frac{dy}{dx}$ (using the chain rule).</li>
+<li>The derivative of a constant (1) with respect to $x$ is 0.</li>
+</ul>
+<p>So, we get:</p>
+<p>$$
+2x + 2y \cdot \frac{dy}{dx} = 0
+$$</p>
+</li>
+<li>
+<p><strong>Solve for $\frac{dy}{dx}$</strong>:</p>
+<ul>
+<li>Isolate $\frac{dy}{dx}$ on one side of the equation:
+$$
+2y \cdot \frac{dy}{dx} = -2x
+$$</li>
+<li>Divide both sides by $2y$ (assuming $y \neq 0$):
+$$
+\frac{dy}{dx} = -\frac{x}{y}
+$$</li>
+</ul>
+</li>
+</ol>
+<p>So, the derivative $\frac{dy}{dx}$ for the given implicit function $x^2 + y^2 = 1$ is:</p>
+<p>$$
+\frac{dy}{dx} = -\frac{x}{y}
+$$</p>
+<p>Implicit differentiation allows us to find the derivative of a variable that is defined implicitly by a relation involving another variable. By differentiating both sides of the relation with respect to $x$ and applying the chain rule, we can solve for $\frac{dy}{dx}$ even when $y$ is not isolated on one side of the equation. This technique is particularly useful in cases where it is difficult or impossible to explicitly solve for $y$ in terms of $x$.
+Used when a function is not explicitly solved for one variable.</p>
+<h4 id="logarithmic-differentiation">Logarithmic Differentiation<a hidden class="anchor" aria-hidden="true" href="#logarithmic-differentiation">#</a></h4>
+<p>Logarithmic differentiation is a technique used in calculus to differentiate functions that are products, quotients, or powers of other functions. This method leverages the properties of logarithms to simplify the differentiation process, especially when dealing with complex expressions.</p>
+<ol>
+<li>
+<p><strong>Logarithm Properties</strong>: The key properties of logarithms that make logarithmic differentiation useful are:</p>
+<ul>
+<li>$\log(ab) = \log(a) + \log(b)$</li>
+<li>$\log\left(\frac{a}{b}\right) = \log(a) - \log(b)$</li>
+<li>$\log(a^b) = b \log(a)$</li>
+</ul>
+</li>
+<li>
+<p><strong>Steps for Logarithmic Differentiation</strong>:</p>
+<ul>
+<li><strong>Step 1</strong>: Take the natural logarithm $\ln$ of both sides of the function $y = f(x)$. This step transforms the function into a form that is easier to differentiate.</li>
+<li><strong>Step 2</strong>: Use the properties of logarithms to simplify the expression.</li>
+<li><strong>Step 3</strong>: Differentiate both sides of the equation with respect to $x$. Remember to apply the chain rule when differentiating the logarithm of $y$ (since $y$ is a function of $x$).</li>
+<li><strong>Step 4</strong>: Solve for $\frac{dy}{dx}$ by isolating it on one side of the equation.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Example:</strong> <br></p>
+<p>Let&rsquo;s differentiate the function $y = x^x$ using logarithmic differentiation.</p>
+<ol>
+<li>
+<p><strong>Start with the function</strong>:</p>
+<p>$$
+y = x^x
+$$</p>
+</li>
+<li>
+<p><strong>Take the natural logarithm of both sides</strong>:</p>
+<p>$$
+\ln(y) = \ln(x^x)
+$$</p>
+</li>
+<li>
+<p><strong>Simplify using logarithm properties</strong>:</p>
+<p>$$
+\ln(y) = x \ln(x)
+$$</p>
+</li>
+<li>
+<p><strong>Differentiate both sides with respect to $x$</strong>:</p>
+<ul>
+<li>For the left side, use the chain rule:
+$$
+\frac{d}{dx}[\ln(y)] = \frac{1}{y} \cdot \frac{dy}{dx}
+$$</li>
+<li>For the right side, apply the product rule (since $x \ln(x)$ is a product of $x$ and $\ln(x)$):
+$$
+\frac{d}{dx}[x \ln(x)] = \ln(x) + x \cdot \frac{1}{x} = \ln(x) + 1
+$$</li>
+</ul>
+<p>So, we get:</p>
+<p>$$
+\frac{1}{y} \cdot \frac{dy}{dx} = \ln(x) + 1
+$$</p>
+</li>
+<li>
+<p><strong>Solve for $\frac{dy}{dx}$</strong>:</p>
+<ul>
+<li>Multiply both sides by $y$:
+$$
+\frac{dy}{dx} = y (\ln(x) + 1)
+$$</li>
+<li>Recall that $y = x^x$:
+$$
+\frac{dy}{dx} = x^x (\ln(x) + 1)
+$$</li>
+</ul>
+</li>
+</ol>
+<p>So, the derivative $\frac{dy}{dx}$ for the function $y = x^x$ is:</p>
+<p>$$
+\frac{dy}{dx} = x^x (\ln(x) + 1)
+$$</p>
+<p>Logarithmic differentiation is a powerful technique for differentiating functions that involve products, quotients, or powers. By taking the natural logarithm of the function, we can simplify the differentiation process using the properties of logarithms. This method is particularly useful for complex expressions where traditional differentiation rules would be cumbersome.</p>
+<h4 id="derivatives-of-some-important-functions">Derivatives of Some Important Functions<a hidden class="anchor" aria-hidden="true" href="#derivatives-of-some-important-functions">#</a></h4>
+<ol>
+<li>
+<p>$\frac{d}{dx} (x^n) = n \cdot x^{n-1}\quad\quad$
+$\frac{d}{dx} \left( \frac{1}{x^n} \right) = \frac{-n}{x^{n+1}}\quad\quad$
+$\frac{d}{dx} (\sqrt{x}) = \frac{1}{2\sqrt{x}} ;\quad x \neq 0$</p>
+</li>
+<li>
+<p>$\frac{d}{dx} [ax^n + b] = an \cdot x^{n-1}$</p>
+</li>
+<li>
+<p>$\frac{d}{dx} [ax + b]^n = n \cdot a (ax + b)^{n-1}$</p>
+</li>
+<li>
+<p>$\frac{d}{dx} [e^{ax}] = a \cdot e^{ax}$</p>
+</li>
+<li>
+<p>$\frac{d}{dx} [\log x] = \frac{1}{x} ; \quad\quad x &gt; 0$</p>
+</li>
+<li>
+<p>$\frac{d}{dx} [a^x] = a^x \log a; \quad\quad a &gt; 0$</p>
+</li>
+<li>
+<p>$\frac{d}{dx} [\sin x] = \cos x\quad\quad$
+$\frac{d}{dx} [\cos x] = -\sin x\quad\quad$
+$\frac{d}{dx} [\tan x] = \sec^2 x\quad\quad$ <br></p>
+<p>$\frac{d}{dx} [\cot x] = -\csc^2 x\quad\quad$
+$\frac{d}{dx} [\sec x] = \sec x \cdot \tan x\quad\quad$
+$\frac{d}{dx} [\csc x] = -\csc x \cdot \cot x\quad\quad$</p>
+</li>
+</ol>
+<p><strong>Inverse Rule</strong></p>
+<p>If $y = f(x)$ and its inverse $x = f^{-1}(y)$ is also defined, then $\frac{dy}{dx} = \frac{1}{\frac{dx}{dy}}$</p>
+<h3 id="maxima-and-minima">Maxima and Minima<a hidden class="anchor" aria-hidden="true" href="#maxima-and-minima">#</a></h3>
+<ul>
+<li>
+<p><strong>Local Maximum/Minimum</strong>: A point $(x_0, y_0)$ where the function reaches its highest or lowest value in a small surrounding neighborhood.</p>
+</li>
+<li>
+<p><strong>Global Maximum/Minimum</strong>: A point $(x_0, y_0)$ where the function reaches its highest or lowest value over its entire domain.</p>
+</li>
+</ul>
+<h4 id="functions-of-one-variable">Functions of one variable<a hidden class="anchor" aria-hidden="true" href="#functions-of-one-variable">#</a></h4>
+<p><strong>Local or relative maximum</strong> <br>
+A function $f(x)$ is said to have a Maximum at $x = c$ if there exists $\delta &gt; 0$ such that $|x − c| &lt;  \delta \Rightarrow f(x) \leq f(c)$.</p>
+<p><strong>Local or relative minimum</strong> <br>
+A function $f(x)$ is said to have a minimum at $x = c$ if there exists $\delta &gt; 0$ such that $|x − c| &lt; \delta \Rightarrow f(x) \geq f(c)$.</p>
+<p><strong>Stationary points</strong> <br>
+The values of $x$ for which $f(x) = 0$ are called stationary points or turning points.</p>
+<p><strong>Stationary values</strong> <br>
+A function $f(x)$ is said to be stationary at $x = a$ if $f^′(a) = 0$ and $f(a)$ is a stationary value.</p>
+<p><strong>Extreme point</strong> <br>
+The point at which the function has a maximum or a minimum is called an extreme point.</p>
+<p><strong>Extreme values</strong> <br>
+The values of the function at extreme points are called extreme values (Extrema).</p>
+<p><strong>Point of inflection</strong> <br>
+The point at which a curve crosses its tangents is called the point of inflection.
+The function $f(x)$ has neither maximum nor minimum at the point of inflection.</p>
+<p><strong>Note:</strong></p>
+<ol>
+<li>A necessary condition for a function to have an extreme value at $x = a$ is $f&rsquo;(a) = 0$.</li>
+<li>$f&rsquo;(a) = 0$ is only a necessary condition but not a sufficient condition for $f(a)$ to be an extreme value of $f(x)$.</li>
+<li>Every extreme point is a stationary point but every stationary point need not be an extreme point.</li>
+</ol>
+<p><strong>Rule to find maxima and minima:</strong><br></p>
+<p>Let $f(x)$ be the given function</p>
+<p><strong>Step 1:</strong> Find $f&rsquo;(x)$</p>
+<p><strong>Step 2:</strong> Equate $f&rsquo;(x)$ to zero to obtain the stationary points.</p>
+<p><strong>Step 3:</strong> Find $f&rsquo;&rsquo;(x)$ at each stationary point.</p>
+<ul>
+<li>If $f&rsquo;&rsquo;(x_0) &gt; 0$ then $f(x)$ has a minimum at $x = x_0$</li>
+<li>If $f&rsquo;&rsquo;(x_0) &lt; 0$ then $f(x)$ has a maximum at $x = x_0$</li>
+<li>If $f&rsquo;&rsquo;(x_0) = 0$ then $f(x)$ may (or) may not have extremum.</li>
+</ul>
+<p>In this case, check for maxima and minima using the changes in sign of $f(x)$ as given below.</p>
+<ol>
+<li>For $x &lt; x_0$ if $f&rsquo;(x) &lt; 0$ and $x &gt; x_0$ if $f&rsquo;(x) &gt; 0$ then $f(x_0)$ is a minimum value of $f(x)$.</li>
+<li>For $x &lt; x_0$ if $f&rsquo;(x) &gt; 0$ and $x &gt; x_0$ if $f&rsquo;(x) &lt; 0$ then $f(x_0)$ is a maximum value of $f(x)$.</li>
+<li>For $x &lt; x_0$ and $x &gt; x_0$ if $f&rsquo;(x) &gt; 0$ (or) $f&rsquo;(x) &lt; 0$ then $f(x_0)$ is not an extremum.</li>
+</ol>
+<h4 id="functions-of-two-variables">Functions of two variables:<a hidden class="anchor" aria-hidden="true" href="#functions-of-two-variables">#</a></h4>
+<ol>
+<li><strong>Function and Partial Derivatives</strong>: Let $f(x, y)$ be the function. Compute the first-order partial derivatives $f_x$ and $f_y$:</li>
+</ol>
+<p>$$
+f_x = \frac{\partial f}{\partial x}, \quad f_y = \frac{\partial f}{\partial y}
+$$</p>
+<ol start="2">
+<li>
+<p><strong>Critical Points</strong>: Solve the system of equations $f_x = 0$ and $f_y = 0$ to find the critical points $(x_0, y_0)$.</p>
+</li>
+<li>
+<p><strong>Second-Order Partial Derivatives</strong>: Compute the second-order partial derivatives:</p>
+</li>
+</ol>
+<p>$$
+f_{xx} = \frac{\partial^2 f}{\partial x^2}, \quad f_{yy} = \frac{\partial^2 f}{\partial y^2}, \quad f_{xy} = \frac{\partial^2 f}{\partial x \partial y}
+$$</p>
+<ol start="4">
+<li><strong>Hessian Determinant</strong>: Calculate the Hessian determinant $H$ at each critical point:</li>
+</ol>
+<p>$$
+H = f_{xx}(x_0, y_0) f_{yy}(x_0, y_0) - [f_{xy}(x_0, y_0)]^2
+$$</p>
+<ol start="5">
+<li><strong>Classification of Critical Points</strong>:
+<ul>
+<li>If $H &gt; 0$ and $f_{xx} &gt; 0$, $(x_0, y_0)$ is a local minimum.</li>
+<li>If $H &gt; 0$ and $f_{xx} &lt; 0$, $(x_0, y_0)$ is a local maximum.</li>
+<li>If $H &lt; 0$, $(x_0, y_0)$ is a saddle point (neither a maximum nor a minimum).</li>
+<li>If $H = 0$, the test is inconclusive.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Example</strong><br>
+Let&rsquo;s go through an example to illustrate these steps:</p>
+<p>Consider the function:</p>
+<p>$$
+f(x, y) = x^2 + y^2 - 4x - 6y + 13
+$$</p>
+<ol>
+<li><strong>First-Order Partial Derivatives</strong>:</li>
+</ol>
+<p>$$
+f_x = 2x - 4, \quad f_y = 2y - 6
+$$</p>
+<ol start="2">
+<li><strong>Critical Points</strong>:
+Set $f_x = 0$ and $f_y = 0$:</li>
+</ol>
+<p>$$
+2x - 4 = 0 \implies x = 2
+$$</p>
+<p>$$
+2y - 6 = 0 \implies y = 3
+$$</p>
+<p>So, the critical point is $(2, 3)$.</p>
+<ol start="3">
+<li><strong>Second-Order Partial Derivatives</strong>:</li>
+</ol>
+<p>$$
+f_{xx} = 2, \quad f_{yy} = 2, \quad f_{xy} = 0
+$$</p>
+<ol start="4">
+<li><strong>Hessian Determinant</strong>:</li>
+</ol>
+<p>$$
+H = (2)(2) - (0)^2 = 4
+$$</p>
+<ol start="5">
+<li><strong>Classification</strong>:
+Since $H &gt; 0$ and $f_{xx} = 2 &gt; 0$, $(2, 3)$ is a local minimum.</li>
+</ol>
+<p>To verify if it&rsquo;s a global minimum, we need to check the behavior of the function over its entire domain, but generally speaking, quadratic functions like this tend to have their local minima as global minima.</p>
+<h4 id="absolute-or-global-maximumminimum">Absolute or Global maximum/minimum:<a hidden class="anchor" aria-hidden="true" href="#absolute-or-global-maximumminimum">#</a></h4>
+<p>The absolute maximum/minimum values of the function $f(x)$ in the closed interval $[a, b]$ are given by</p>
+<ol>
+<li>
+<p><strong>Absolute maximum value</strong></p>
+<ul>
+<li>$\max (f(a), f(b), \text{all local maximum values of } f)$</li>
+<li>greatest value of $f(x)$ in $[a, b]$.</li>
+</ul>
+</li>
+<li>
+<p><strong>Absolute minimum value</strong></p>
+<ul>
+<li>$\min (f(a), f(b), \text{all local minimum values of } f)$</li>
+<li>least value of $f(x)$ in $[a, b]$.</li>
+</ul>
+</li>
+</ol>
+<h3 id="partial-derivatives">Partial Derivatives<a hidden class="anchor" aria-hidden="true" href="#partial-derivatives">#</a></h3>
+<p>In calculus, a <strong>partial derivative</strong> of a function of multiple variables is its derivative with respect to one of those variables, with the other variables held constant. This is different from an ordinary derivative, where the function depends on a single variable.</p>
+<p>Partial derivatives are crucial in multivariable calculus because they help us understand how a function changes as each of its variables changes. They are widely used in various fields such as physics, engineering, economics, and machine learning.</p>
+<p>Let $f(x, y)$ be a function of two variables $x$ and $y$. The partial derivatives of $f$ with respect to $x$ and $y$ are denoted by $f_x$ and $f_y$, respectively, and are defined as:</p>
+<p>$$
+f_x = \frac{\partial f}{\partial x} = \lim_{\Delta x \to 0} \frac{f(x + \Delta x, y) - f(x, y)}{\Delta x}
+$$</p>
+<p>$$
+f_y = \frac{\partial f}{\partial y} = \lim_{\Delta y \to 0} \frac{f(x, y + \Delta y) - f(x, y)}{\Delta y}
+$$</p>
+<p>In simple terms, $f_x$ measures the rate of change of $f$ with respect to $x$ while keeping $y$ constant, and $f_y$ measures the rate of change of $f$ with respect to $y$ while keeping $x$ constant.</p>
+<p><strong>Notation</strong> <br></p>
+<ul>
+<li>$f_x$ or $\frac{\partial f}{\partial x}$: Partial derivative with respect to $x$.</li>
+<li>$f_y$ or $\frac{\partial f}{\partial y}$: Partial derivative with respect to $y$.</li>
+</ul>
+<p><strong>Example</strong> <br></p>
+<p>Consider the function $f(x, y) = x^2y + 3xy + y^3$.</p>
+<ol>
+<li>
+<p><strong>Partial Derivative with Respect to $x$</strong>:</p>
+<p>$$
+f_x = \frac{\partial}{\partial x} (x^2y + 3xy + y^3)
+$$</p>
+<p>$$
+f_x = 2xy + 3y
+$$</p>
+</li>
+<li>
+<p><strong>Partial Derivative with Respect to $y$</strong>:
+$$
+f_y = \frac{\partial}{\partial y} (x^2y + 3xy + y^3)
+$$
+$$
+f_y = x^2 + 3x + 3y^2
+$$</p>
+</li>
+</ol>
+<blockquote>
+<p>Partial derivatives give us the slope of the tangent line to the curve obtained by intersecting the surface $z = f(x, y)$ with a plane parallel to the respective coordinate plane.</p></blockquote>
+<h4 id="higher-order-partial-derivatives">Higher-Order Partial Derivatives<a hidden class="anchor" aria-hidden="true" href="#higher-order-partial-derivatives">#</a></h4>
+<p>Just like ordinary derivatives, we can take higher-order partial derivatives. For a function $f(x, y)$, the second-order partial derivatives are:</p>
+<ul>
+<li>$f_{xx} = \frac{\partial^2 f}{\partial x^2}$: Second partial derivative with respect to $x$.</li>
+<li>$f_{yy} = \frac{\partial^2 f}{\partial y^2}$: Second partial derivative with respect to $y$.</li>
+<li>$f_{xy} = \frac{\partial^2 f}{\partial y \partial x}$ or $f_{yx} = \frac{\partial^2 f}{\partial x \partial y}$: Mixed partial derivatives.</li>
+</ul>
+<h4 id="clairauts-theorem">Clairaut&rsquo;s Theorem<a hidden class="anchor" aria-hidden="true" href="#clairauts-theorem">#</a></h4>
+<p>As mentioned earlier, for functions with continuous second-order partial derivatives, the mixed partial derivatives are equal:</p>
+<p>$$
+f_{xy} = f_{yx}
+$$</p>
+<h4 id="applications">Applications<a hidden class="anchor" aria-hidden="true" href="#applications">#</a></h4>
+<p>Partial derivatives are used in numerous applications, including:</p>
+<ol>
+<li>
+<p><strong>Gradient</strong>: The gradient of a function $f(x, y)$ is a vector that points in the direction of the steepest ascent. It is denoted by $\nabla f$ and is given by:</p>
+<p>$$
+\nabla f = \left( \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y} \right)
+$$</p>
+</li>
+<li>
+<p><strong>Tangent Planes</strong>: The equation of the tangent plane to the surface $z = f(x, y)$ at the point $(x_0, y_0, z_0)$ is:</p>
+<p>$$
+z - z_0 = f_x(x_0, y_0)(x - x_0) + f_y(x_0, y_0)(y - y_0)
+$$</p>
+</li>
+<li>
+<p><strong>Optimization</strong>: In optimization problems, partial derivatives are used to find local maxima, minima, and saddle points of functions with several variables.</p>
+</li>
+</ol>
+<h4 id="example-problems">Example Problems<a hidden class="anchor" aria-hidden="true" href="#example-problems">#</a></h4>
+<ol>
+<li>
+<p><strong>Find the Partial Derivatives</strong>:
+For the function $g(x, y) = \sin(x) \cos(y)$:</p>
+<p>$$
+g_x = \frac{\partial g}{\partial x} = \cos(x) \cos(y)
+$$</p>
+<p>$$
+g_y = \frac{\partial g}{\partial y} = -\sin(x) \sin(y)
+$$</p>
+</li>
+<li>
+<p><strong>Compute the Gradient</strong>:
+For $h(x, y) = x^2 + y^2$:
+$$
+\nabla h = \left( \frac{\partial h}{\partial x}, \frac{\partial h}{\partial y} \right) = (2x, 2y)
+$$</p>
+</li>
+</ol>
+<h4 id="visual-representation">Visual Representation<a hidden class="anchor" aria-hidden="true" href="#visual-representation">#</a></h4>
+<p>Let&rsquo;s visualize partial derivatives with a simple 3D surface. Suppose we have a surface $z = f(x, y)$, and we slice it with planes parallel to the $x$- and $y$-axes:</p>
+<ul>
+<li><strong>Slice Parallel to $yz$-Plane</strong>: Fix $x = x_0$. The curve is $z = f(x_0, y)$. The slope of this curve at $y = y_0$ is $f_y(x_0, y_0)$.</li>
+<li><strong>Slice Parallel to $xz$-Plane</strong>: Fix $y = y_0$. The curve is $z = f(x, y_0)$. The slope of this curve at $x = x_0$ is $f_x(x_0, y_0)$.</li>
+</ul>
+<p>In summary, partial derivatives help us understand how functions of multiple variables change with respect to each variable independently. They are the cornerstone of multivariable calculus.</p>
+<h2 id="integration">INTEGRATION<a hidden class="anchor" aria-hidden="true" href="#integration">#</a></h2>
+<h3 id="indefinite-integrals">Indefinite Integrals<a hidden class="anchor" aria-hidden="true" href="#indefinite-integrals">#</a></h3>
+<p>If $f(x)$ and $g(x)$ are two functions of $x$ such that $g&rsquo;(x) = f(x)$, then the integral of $f(x)$ is $g(x)$. Further, $g(x)$ is called the antiderivative of $f(x)$.</p>
+<p>The process of computing an integral of a function is called Integration and the function to be integrated is called integrand.</p>
+<p>An integral of a function is not unique. If $g(x)$ is any one integral of $f(x)$, then $g(x) + C$ is also its integral, where $C$ is any constant termed as constant of integration.</p>
+<h4 id="standard-formulae">Standard Formulae<a hidden class="anchor" aria-hidden="true" href="#standard-formulae">#</a></h4>
+<p>1.</p>
+<p>$$
+\int x^n , dx = \frac{x^{n+1}}{n+1} + c \quad (n \ne -1)
+$$</p>
+<p>2.</p>
+<p>$$
+\int (ax + b)^n , dx = \frac{(ax + b)^{n+1}}{(n+1)a} + c \quad (n \ne -1)
+$$</p>
+<p>3.</p>
+<p>$$
+\int \frac{1}{x} , dx = \log x + c
+$$</p>
+<p>4.</p>
+<p>$$
+\int \frac{1}{ax + b} , dx = \frac{\log (ax + b)}{a} + c
+$$</p>
+<p>5.</p>
+<p>$$
+\int a^x , dx = \frac{a^x}{\log a} + c
+$$</p>
+<p>6.</p>
+<p>$$
+\int e^x , dx = e^x + c
+$$</p>
+<p>7.</p>
+<p>$$
+\int \sin x , dx = -\cos x + c
+$$</p>
+<p>8.</p>
+<p>$$
+\int \cos x , dx = \sin x + c
+$$</p>
+<p>9.</p>
+<p>$$
+\int e^{ax} , dx = \frac{e^{ax}}{a} + c
+$$</p>
+<p>10.</p>
+<p>$$
+\int \sec^2 x , dx = \tan x + c
+$$</p>
+<p>11.</p>
+<p>$$
+\int \csc^2 x , dx = -\cot x + c
+$$</p>
+<p>12.</p>
+<p>$$
+\int \sec x \tan x , dx = \sec x + c
+$$</p>
+<p>13.</p>
+<p>$$
+\int \csc x \cot x , dx = -\csc x + c
+$$</p>
+<p>14.</p>
+<p>$$
+\int \tan x , dx = \log (\sec x) + c
+$$</p>
+<p>15.</p>
+<p>$$
+\int \cot x , dx = \log (\sin x) + c
+$$</p>
+<p>16.</p>
+<p>$$
+\int \sec x , dx = \log (\sec x + \tan x) + c
+$$</p>
+<p>17.</p>
+<p>$$
+\int \csc x , dx = \log (\csc x + \cot x) + c
+$$</p>
+<p>18.</p>
+<p>$$
+\int \frac{1}{1-x^2} , dx = \sin^{-1} x + c \quad \text{or} \quad -\cos^{-1} x + c
+$$</p>
+<p>19.</p>
+<p>$$
+\int \frac{1}{1+x^2} , dx = \tan^{-1} x + c \quad \text{or} \quad -\cot^{-1} x + c
+$$</p>
+<p>20.</p>
+<p>$$
+\int \frac{1}{\sqrt{1-x^2}} , dx = \sec^{-1} x + c \quad \text{or} \quad -\csc^{-1} x + c
+$$</p>
+<p>21.</p>
+<p>$$
+\int \sinh x , dx = \cosh x + c
+$$</p>
+<p>22.</p>
+<p>$$
+\int \cosh x , dx = \sinh x + c
+$$</p>
+<p>23.</p>
+<p>$$
+\int \tanh x , dx = \log (\cosh x) + c
+$$</p>
+<p>24.</p>
+<p>$$
+\int \coth x , dx = \log (\sinh x) + c
+$$</p>
+<p>25.</p>
+<p>$$
+\int \text{sech} x , dx = \tan^{-1} (\sinh x) + c
+$$</p>
+<p>26.</p>
+<p>$$
+\int \text{csch} x , dx = \log (\tanh (\frac{x}{2})) + c
+$$</p>
+<p>27.</p>
+<p>$$
+\int f(g(x))g&rsquo;(x) , dx = \int f(u) , du = F(g(x)) + c
+$$</p>
+<p>28.</p>
+<p>$$
+\int \frac{f&rsquo;(x)}{f(x)} , dx = \log |f(x)| + c
+$$</p>
+<p>29.</p>
+<p>$$
+\int \frac{f&rsquo;(x)}{[f(x)]^n} , dx = \frac{[f(x)]^{1-n}}{1-n} + c
+$$</p>
+<p>30.</p>
+<p>$$
+\int \frac{dx}{\sqrt{a^2 - x^2}} = \sin^{-1} \frac{x}{a} + c
+$$</p>
+<p>31.</p>
+<p>$$
+\int \frac{dx}{\sqrt{a^2 + x^2}} = \sinh^{-1} \frac{x}{a} + c \quad \text{or} \quad \log \left| x + \sqrt{a^2 + x^2} \right| + c
+$$</p>
+<p>32.</p>
+<p>$$
+\int \frac{dx}{\sqrt{x^2 - a^2}} = \cosh^{-1} \frac{x}{a} + c \quad \text{or} \quad \log \left| x + \sqrt{x^2 + a^2} \right| + c
+$$</p>
+<p>33.</p>
+<p>$$
+\int \frac{1}{x^2 + a^2} dx = \frac{1}{a} \tan^{-1} \left( \frac{x}{a} \right) + c
+$$</p>
+<p>34.</p>
+<p>$$
+\int \frac{1}{x^2 - a^2} dx = \frac{1}{2a} \log \left| \frac{x - a}{x + a} \right| + c
+$$</p>
+<p>35.</p>
+<p>$$
+\int \frac{1}{a^2 - x^2} dx = \frac{1}{2a} \log \left| \frac{a + x}{a - x} \right| + c
+$$</p>
+<p>36.</p>
+<p>$$
+\int \sqrt{a^2 - x^2} dx = \frac{x \sqrt{a^2 + x^2}}{2} + \frac{a^2}{2} \sin^{-1} \frac{x}{a} + c
+$$</p>
+<p>37.</p>
+<p>$$
+\int \sqrt{a^2 + x^2} dx = \frac{x \sqrt{a^2 + x^2}}{2} + \frac{a^2}{2} \sinh^{-1} \frac{x}{a} + c
+$$</p>
+<p>38.</p>
+<p>$$
+\int \sqrt{x^2 - a^2} dx = \frac{x \sqrt{x^2 - a^2}}{2} - \frac{a^2}{2} \cosh^{-1} \frac{x}{a} + c
+$$</p>
+<p>39.</p>
+<p>$$
+\int \log x , dx = x (\log x - 1) = x \log \left( \frac{x}{e} \right) + c
+$$</p>
+<p>40.</p>
+<p>$$
+\int e^x [f(x) + f&rsquo;(x)] dx = e^x f(x) + c
+$$</p>
+<h3 id="definite-integrals">Definite Integrals<a hidden class="anchor" aria-hidden="true" href="#definite-integrals">#</a></h3>
+<p>The difference in the values of an integral of a function $f(x)$ for two assigned values say $a, b$ of the independent variable $x$, is called the Definite Integral of $f(x)$ over the interval $[a, b]$ and is denoted by $\int_{a}^{b} f(x)dx$.</p>
+<p>The number ‘$a$’ is called the lower limit and the number ‘$b$’ is the upper limit of integration.</p>
+<p>If $f(x)$ is a function of $x$ continuous in $[a, b]$, then</p>
+<p>$$
+\int_{a}^{b} f(x)dx = g(b) - g(a)
+$$</p>
+<p>where $g(x)$ is a function such that</p>
+<p>$$
+\frac{d}{dx} g(x) = f(x).
+$$</p>
+<h4 id="properties">Properties<a hidden class="anchor" aria-hidden="true" href="#properties">#</a></h4>
+<ol>
+<li>
+<p>If $f(x)$ is a continuous function of $x$ over $[a, b]$, and $c$ belongs to $[a, b]$, then <br>
+$\int_{a}^{b} f(x)dx = \int_{a}^{c} f(x)dx + \int_{c}^{b} f(x)dx.$</p>
+</li>
+<li>
+<p>If $f(x)$ is a continuous function of $x$ over $[a, b]$, then<br>
+$\int_{a}^{b} Kf(x)dx = K \int_{a}^{b} f(x)dx.$</p>
+</li>
+<li>
+<p>If $f(x)$ is a continuous function of $x$ over $[a, b]$, then<br>
+$\int_a^b f(x)dx = -\int_b^a f(x)dx.$</p>
+</li>
+<li>
+<p>If $f(x)$ is continuous in some neighbourhood of $a$, then<br>
+$\int_a^a f(x)dx = 0.$</p>
+</li>
+<li>
+<p>If $f(x)$ and $g(x)$ are continuous in $[a, b]$, then<br>
+$\int_a^b [f(x) + g(x)]dx = \int_a^b f(x)dx + \int_a^b g(x)dx.$</p>
+</li>
+<li>
+<p>$\int_a^b f(x)dx = \int_a^b f(z)dz = \int_a^b f(t)dt.$</p>
+</li>
+<li>
+<p>$\int_0^a f(x)dx = \int_0^a f(a - x)dx.$</p>
+</li>
+<li>
+<p>$\int_{-a}^a f(x)dx = 0, \text{ if } f(x) \text{ is odd}.$</p>
+</li>
+<li>
+<p>$\int_{-a}^a f(x)dx = 2 \int_0^a f(x)dx \text{ if } f(x) \text{ is even}.$</p>
+</li>
+<li>
+<p>$\int_0^{2a} f(x)dx = 2 \int_0^a f(x)dx, \text{ if } f(2a - x) = f(x) = 0 \text{ if } f(2a - x) = -f(x)$</p>
+</li>
+<li>
+<p>$\int_0^{na} f(x)dx = n \int_0^a f(x)dx, \text{ if } f(a + x) = f(x)$</p>
+</li>
+</ol>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="//localhost:1313/">BALAJI</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

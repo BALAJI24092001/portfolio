@@ -19,9 +19,9 @@
     </item>
     <item>
       <title>Bayesian Networks</title>
-      <link>//localhost:1313/post/bayesian-networks/</link>
+      <link>//localhost:1313/notes/bayesian-networks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/post/bayesian-networks/</guid>
+      <guid>//localhost:1313/notes/bayesian-networks/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Bayesian Networks (BNs)&lt;/strong&gt;, also known as Belief Networks or Bayes Nets, are graphical models that represent probabilistic relationships among a set of variables. They are widely used in various fields such as medicine, finance, artificial intelligence, and more for reasoning under uncertainty.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Key Concepts:&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
@@ -37,9 +37,9 @@
     </item>
     <item>
       <title>Calculus</title>
-      <link>//localhost:1313/post/calculus/</link>
+      <link>//localhost:1313/notes/calculus/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/post/calculus/</guid>
+      <guid>//localhost:1313/notes/calculus/</guid>
       <description>&lt;!-- tags: [&#34;MATH&#34;] --&gt;
 &lt;h2 id=&#34;function&#34;&gt;Function&lt;/h2&gt;
 &lt;h3 id=&#34;function-of-single-variable&#34;&gt;Function of single variable&lt;/h3&gt;
@@ -48,9 +48,9 @@
     </item>
     <item>
       <title>Database Warehousing</title>
-      <link>//localhost:1313/post/database-warehousing/</link>
+      <link>//localhost:1313/notes/database-warehousing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/post/database-warehousing/</guid>
+      <guid>//localhost:1313/notes/database-warehousing/</guid>
       <description>&lt;!-- tags: [&#34;CS&#34;] --&gt;
 &lt;p&gt;I computing, a data warehouse, also known as an enterprise data warehouse, is a system used for reporting and data analysis and is considered a core component of data analysis.&lt;/p&gt;
 &lt;p&gt;Data warehouses are central repositories of integrated data from one or more different sources. They store current and historical data in one single place.&lt;/p&gt;
@@ -58,9 +58,9 @@
     </item>
     <item>
       <title>DBMS</title>
-      <link>//localhost:1313/post/dbms/</link>
+      <link>//localhost:1313/notes/dbms/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/post/dbms/</guid>
+      <guid>//localhost:1313/notes/dbms/</guid>
       <description>&lt;!-- tags: [&#34;CS&#34;] --&gt;
 &lt;p&gt;A database management system (DBMS) is a collection of programs that enables users to create and maintain a database. The DBMS is a general-purpose software system that facilitates the processes of defining, constructing, manipulating and sharing databases among various users and applications.&lt;/p&gt;
 &lt;hr&gt;

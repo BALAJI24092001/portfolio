@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><link rel="icon" type="" href="logo.png">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>DBMS | BALAJI</title>
+<meta name="keywords" content="">
+<meta name="description" content="
+A database management system (DBMS) is a collection of programs that enables users to create and maintain a database. The DBMS is a general-purpose software system that facilitates the processes of defining, constructing, manipulating and sharing databases among various users and applications.
+
+Data Model: A data model is a collection of concepts that can be used to describe the structure of a database. It provides the necessary means to achieve abstraction.">
+<meta name="author" content="">
+<link rel="canonical" href="//localhost:1313/notes/dbms/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.6da9a63d25a9608bca2f7f907a030e887a7dd3c3f3918e4cc113129361414bda.css" integrity="sha256-bammPSWpYIvKL3&#43;QegMOiHp908PzkY5MwRMSk2FBS9o=" rel="preload stylesheet" as="style">
+<link rel="icon" href="//localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="//localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="//localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="//localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="//localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="//localhost:1313/notes/dbms/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script
+  type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+></script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\[','\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+           extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body class="" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="//localhost:1313/" accesskey="h" title="BALAJI (Alt + H)">BALAJI</a>
+            <div class="logo-switches">
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="//localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="//localhost:1313/balaji24092001_resume.pdf" title="CV">
+                    <span>CV</span>
+                </a>
+            </li>
+            <li>
+                <a href="//localhost:1313/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="//localhost:1313/categories/blog" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      DBMS
+    </h1>
+    <div class="post-meta">19 min
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul><ul>
+                <li>
+                    <a href="#overview-of-dbms" aria-label="Overview of DBMS">Overview of DBMS</a></li>
+                <li>
+                    <a href="#er-diagram" aria-label="ER Diagram">ER Diagram</a><ul>
+                        
+                <li>
+                    <a href="#attributes" aria-label="Attributes">Attributes</a></li>
+                <li>
+                    <a href="#er-diagram-symbols" aria-label="ER Diagram Symbols">ER Diagram Symbols</a></li></ul>
+                </li>
+                <li>
+                    <a href="#relational-algebra" aria-label="Relational Algebra">Relational Algebra</a><ul>
+                        
+                <li>
+                    <a href="#select-operator-sigma" aria-label="Select Operator ($\sigma$):">Select Operator ($\sigma$):</a></li>
+                <li>
+                    <a href="#project-operator-prod" aria-label="Project Operator $(\prod)$">Project Operator $(\prod)$</a></li>
+                <li>
+                    <a href="#rename-operator-rho" aria-label="Rename Operator $(\rho)$">Rename Operator $(\rho)$</a></li>
+                <li>
+                    <a href="#set-operators" aria-label="Set operators">Set operators</a></li>
+                <li>
+                    <a href="#union-compatible-weak-relations" aria-label="Union Compatible weak relations">Union Compatible weak relations</a></li></ul>
+                </li>
+                <li>
+                    <a href="#relational-calculus" aria-label="Relational Calculus">Relational Calculus</a><ul>
+                        
+                <li>
+                    <a href="#tuple-relational-calculus" aria-label="Tuple Relational Calculus">Tuple Relational Calculus</a></li>
+                <li>
+                    <a href="#domain-relational-calculus" aria-label="Domain Relational Calculus">Domain Relational Calculus</a></li></ul>
+                </li>
+                <li>
+                    <a href="#joins" aria-label="Joins">Joins</a><ul>
+                        
+                <li>
+                    <a href="#inner-join" aria-label="Inner Join">Inner Join</a></li>
+                <li>
+                    <a href="#left-outer-join" aria-label="Left Outer Join">Left Outer Join</a></li>
+                <li>
+                    <a href="#right-outer-join" aria-label="Right Outer Join">Right Outer Join</a></li>
+                <li>
+                    <a href="#full-outer-join" aria-label="Full Outer Join">Full Outer Join</a></li>
+                <li>
+                    <a href="#cross-join-cartesian-product" aria-label="Cross Join (Cartesian Product)">Cross Join (Cartesian Product)</a></li>
+                <li>
+                    <a href="#theta-join" aria-label="Theta Join">Theta Join</a></li>
+                <li>
+                    <a href="#practical-examples" aria-label="Practical Examples">Practical Examples</a><ul>
+                        
+                <li>
+                    <a href="#students-table" aria-label="Students Table:">Students Table:</a></li>
+                <li>
+                    <a href="#courses-table" aria-label="Courses Table:">Courses Table:</a></li></ul>
+                </li></ul>
+                </li>
+                <li>
+                    <a href="#functional-dependency-and-decomposition" aria-label="Functional Dependency and Decomposition">Functional Dependency and Decomposition</a><ul>
+                        
+                <li>
+                    <a href="#armstrongs-axioms" aria-label="Armstrong&rsquo;s Axioms">Armstrong&rsquo;s Axioms</a></li></ul>
+                </li>
+                <li>
+                    <a href="#normalization-and-normal-forms" aria-label="Normalization and Normal Forms">Normalization and Normal Forms</a><ul>
+                        
+                <li>
+                    <a href="#anomalies" aria-label="Anomalies">Anomalies</a></li>
+                <li>
+                    <a href="#normal-forms" aria-label="Normal Forms">Normal Forms</a></li>
+                <li>
+                    <a href="#advantages-and-disadvantages" aria-label="Advantages and Disadvantages">Advantages and Disadvantages</a></li></ul>
+                </li></ul>
+                    
+                <li>
+                    <a href="#keywords" aria-label="Keywords">Keywords</a></li>
+                <li>
+                    <a href="#indepth" aria-label="InDepth">InDepth</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><!-- tags: ["CS"] -->
+<p>A database management system (DBMS) is a collection of programs that enables users to create and maintain a database. The DBMS is a general-purpose software system that facilitates the processes of defining, constructing, manipulating and sharing databases among various users and applications.</p>
+<hr>
+<p><em><strong>Data Model:</strong></em> A data model is a collection of concepts that can be used to describe the structure of a database. It provides the necessary means to achieve abstraction.</p>
+<p><em><strong>Schema</strong></em>: In any data model, it is important to distinguish between the description of the database and the database itself. The description of a database is called the database schema, which is specified during database design and is not expected to change frequently.</p>
+<h2 id="overview-of-dbms">Overview of DBMS<a hidden class="anchor" aria-hidden="true" href="#overview-of-dbms">#</a></h2>
+<ol>
+<li><em><strong>Requirements Analysis:</strong></em><br>
+The very first step in designing a database application is to understand what data is to be stored in the database, what applications must be built on top of it, and what operations are most frequent and subject to performance requirements. In other words, we must find out what the users want from the database. This is usually an informal process that involves discussions with user groups, a study of the current operating environment and how it is expected to change, analysis of any available documentation on existing applications that are expected to be replaced or complemented by the database, and so on</li>
+<li><em><strong>Conceptual Database Design:</strong></em><br>
+The information gathered in the requirements analysis step is used to develop a highlevel description of the data to be stored in the database, along with the constraints that are known to hold over this data. This step is often carried out using the ER model, or a similar high-level data model.</li>
+<li><em><strong>Logical Database Design:</strong></em><br>
+We must choose a DBMS to implement our database design, and convert the conceptual database design into a database schema in the data model of the chosen DBMS. We will only consider relational DBMSs, and therefore, the task in the logical design step is to convert an ER schema into a relational database schema.</li>
+<li><em><strong>Schema Refinement:</strong></em><br>
+The fourth step in database design is to analyze the collection of relations in our relational database schema to identify potential problems, and to refine it. In contrast to the requirements analysis and conceptual design steps, which are essentially subjective, schema refinement can be guided by some elegant and powerful theory.</li>
+<li><em><strong>Physical Database Design:</strong></em><br>
+In this step we must consider typical expected workloads that our database must support and further refine the database design to ensure that it meets the desired performance criteria. This step may simply involve building indexes on some tables and clustering some tables, or it may involve a substantial redesign of parts of the database schema obtained from the earlier design steps.</li>
+<li><em><strong>Security Design:</strong></em><br>
+In this step, we identify different user groups and different roles played by various users (e.g., the development team for a product, the customer support representatives, the product manager). For each role and user group, we must identify the parts of the database that they must be able to access and the parts of the database that they should not be allowed to access, and take steps to ensure that they can access only the necessary parts.</li>
+</ol>
+<h2 id="er-diagram">ER Diagram<a hidden class="anchor" aria-hidden="true" href="#er-diagram">#</a></h2>
+<p>The entity-relationship (ER) data model allows us to describe the data involved in a realworld enterprise in terms of objects and their relationships and is widely used to develop an initial database design. The ER model is important primarily for its role in database design. It provides useful concepts that allow us to move from an informal description of what users want from their database to a more detailed, and precise, description that can be implemented in a DBMS. Within the larger context of the overall design process, the ER model is used in a phase called conceptual database design.</p>
+<p><em><strong>Entity:</strong></em> An entity is a “thing” or “object” in the real world that is distinguishable from all other objects. An entity is represented by a set of attributes. An entity set is a set of entities of the same type that share the same properties, or attributes.</p>
+<p><em><strong>weak_relationship:</strong></em> A relationship is an association among several entities. A relationship set is a set of relationships of the same type.</p>
+<h3 id="attributes">Attributes<a hidden class="anchor" aria-hidden="true" href="#attributes">#</a></h3>
+<ul>
+<li>The basic concept that the ER model represents is an entity, which is a thing or object in the real world with an independent existence.</li>
+<li>An entity may be an object with a physical existence (for example, a particular person, car, house, or employee) or it may be an object with a conceptual existence (for instance, a company, a job, or a university course).</li>
+<li>Each entity has attributes—the particular properties that describe it. For example, an EMPLOYEE entity may be described by the employee’s name, age, address, salary, and job.</li>
+<li>A particular entity will have a value for each of its attributes. The attribute values that describe each entity become a major part of the data stored in the database.</li>
+</ul>
+<p><em><strong>Composite attributes:</strong></em></p>
+<ul>
+<li>Composite attributes can be divided into smaller subparts, which represent more basicattributes with independent meanings.</li>
+<li>For example, the Address attribute of the EMPLOYEE entity can be subdivided into Street address, City, State.</li>
+<li>Attributes that are not divisible are called simple or atomic attributes.</li>
+</ul>
+<p><em><strong>Single-Valued Attribute:</strong></em></p>
+<ul>
+<li>A single-valued attribute is an attribute that can have only one value for a particular entity within a database.</li>
+<li>In other words, each entity instance possesses a single, unique value for a single-valued attribute.</li>
+<li>For example, the ”Age” attribute of a person is single-valued because each person has a specific, singular age at any given time, and that age doesn’t change while referring to the same person.</li>
+<li>Single-valued attributes are straightforward and do not allow for multiple values or variations.</li>
+</ul>
+<p><em><strong>Multivalued Attribute:</strong></em></p>
+<ul>
+<li>A multivalued attribute is an attribute that can have multiple values for a single entity within a database. This means that an entity can have more than one value associated with the same attribute.</li>
+<li>For instance, the ”Colors” attribute for a car is multivalued because a car can have one or more colors. A single-color car has only one value for the ”Colors” attribute, whereas a two-tone car has two values for the same attribute. Similarly, the ”College degrees” attribute for a person is multivalued because different individuals may have varying numbers of college degrees, ranging from zero to multiple degrees.</li>
+<li>Multivalued attributes introduce complexity into the data model, and they can have constraints, such as minimum and maximum values, to limit the number of values allowed for each entity.</li>
+</ul>
+<p><em><strong>Stored Attribute:</strong></em></p>
+<ul>
+<li>A stored attribute is an attribute whose value is directly and explicitly stored in the database. These values are typically entered or updated by users or processes and are maintained as part of the entity’s data.</li>
+<li>Stored attributes are not computed or derived from other attributes or external sources. For example, in the context you provided, ”Birth date” is a stored attribute of a person because it represents an explicit value that is recorded in the database and is not calculated from other attributes or data.</li>
+</ul>
+<p><em><strong>Derived Attribute:</strong></em></p>
+<ul>
+<li>A derived attribute is an attribute whose value can be calculated or derived from other attributes or data within the database.</li>
+<li>The value of a derived attribute is not stored explicitly but is computed or derived when needed based on specific rules, algorithms, or formulas.</li>
+<li>In the example you mentioned, ”Age” is a derived attribute of a person because it is calculated by subtracting the person’s ”Birth date” from the current date.</li>
+<li>The ”Age” attribute doesn’t have a directly stored value; instead, it is derived from the stored ”Birth date” attribute and the current date when required.</li>
+</ul>
+<h3 id="er-diagram-symbols">ER Diagram Symbols<a hidden class="anchor" aria-hidden="true" href="#er-diagram-symbols">#</a></h3>
+<center>
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">@startchen
+left to right direction
+entity Entity_Main{
+   attribute
+   derived_attribute &lt;&lt;derived&gt;&gt;
+   key_attribute &lt;&lt;key&gt;&gt;
+   Multi_valued &lt;&lt;multi&gt;&gt;
+   composite{
+      LName
+      FName
+   }
+entity Weak_Entity &lt;&lt;weak&gt;&gt;{
+   key_attribute &lt;&lt;key&gt;&gt;
+}
+
+entity Entity {
+attribute
+}
+relationship relation {
+
+}
+relationship weak_relation &lt;&lt;identifying&gt;&gt;{
+
+}
+
+weak_relation -1- Entity_Main
+weak_relation -1- Weak_Entity
+relation -1- Entity_Main
+relation =N= Entity
+@endchen
+</code></pre>   <img src = 'https://erikanacua.wordpress.com/wp-content/uploads/2013/02/image0021.png'>
+</center>
+   <!-- REQ: -->
+<p><strong><a href="https://www.youtube.com/watch?v=Pe1PGnmbDh4&amp;ab_channel=UnacademyComputerScience">E-R Model to Relational Database</a></strong></p>
+<h2 id="relational-algebra">Relational Algebra<a hidden class="anchor" aria-hidden="true" href="#relational-algebra">#</a></h2>
+<p>Relational algebra refers to a procedural query language that takes relation instances as input and returns relation instances as output. It performs queries with the help of operators. It gives a step by step process to obtain the result of the query.</p>
+<h3 id="select-operator-sigma">Select Operator ($\sigma$):<a hidden class="anchor" aria-hidden="true" href="#select-operator-sigma">#</a></h3>
+<p>Select operator is an unary operator. It can be used to select those tuples of a relation
+that satisfy a given condition.
+Notation: $\sigma_{\theta}(R)$ <br></p>
+<ul>
+<li>
+<p>$\sigma$: Select operator(read as sigma)</p>
+</li>
+<li>
+<p>$\theta$: Selection condition</p>
+</li>
+<li>
+<p>$R$: weak_relation name</p>
+<p>Result is a relation with the same scheme as R consisting of the tuples in R that satisfy condition $\theta$</p>
+<p>Syntax: $\sigma_{condition}(relation)$</p>
+</li>
+</ul>
+<h3 id="project-operator-prod">Project Operator $(\prod)$<a hidden class="anchor" aria-hidden="true" href="#project-operator-prod">#</a></h3>
+<p>The projection operator $\prod$ is one of the unary operators in relational algebra (RA) and is used to project columns from a relation. It can select specific columns from a given relation. <br>
+<em><strong>Note:</strong></em> It gives <strong>distinct</strong> fields only. <br>
+<em><strong>Syntax:</strong></em> $\prod_{A_1, A_2}(relation)$, this will return attribute A1 and A2 from the relation.</p>
+<h3 id="rename-operator-rho">Rename Operator $(\rho)$<a hidden class="anchor" aria-hidden="true" href="#rename-operator-rho">#</a></h3>
+<p>The RENAME operation is used to rename the output of a relation. Sometimes it is simple and suitable to break a complicated sequence of operations and rename it as a relation with different names. <br>
+<strong>Syntax</strong> : $\rho_{X}(R)$, it will rename the relation R to X</p>
+<h3 id="set-operators">Set operators<a hidden class="anchor" aria-hidden="true" href="#set-operators">#</a></h3>
+<p>Union $(\cup)$, Intersection $(\cap)$, set difference $(–)$ are called set operators. Result of combining two relations with a set operator is a relation $\implies$ all its elements must be tuples having same structure. Hence scope of set operations is limited to union-compatible relations.</p>
+<h3 id="union-compatible-weak-relations">Union Compatible weak relations<a hidden class="anchor" aria-hidden="true" href="#union-compatible-weak-relations">#</a></h3>
+<p>Two relations are union compatible if</p>
+<ol>
+<li>Both have same number of columns</li>
+<li>Names of attributes are same</li>
+<li>Corresponding fields have same type</li>
+<li>Attributes with the same name in both relations have same domain and datatype.</li>
+</ol>
+<h2 id="relational-calculus">Relational Calculus<a hidden class="anchor" aria-hidden="true" href="#relational-calculus">#</a></h2>
+<p>Relational calculus is an alternative to relational algebra. In contrast to algebra, which is procedural, calculus is nonprocedural, or declarative, in that it allows us to describe the set of answers without being explicit about how they should be computed. The variant of the calculus that we present in detail is called the tuple relational calculus (TRC). Variables in TRC take on tuples as values. In another variant, called the domain relational calculus (DRC), the variables range over field values.</p>
+<h3 id="tuple-relational-calculus">Tuple Relational Calculus<a hidden class="anchor" aria-hidden="true" href="#tuple-relational-calculus">#</a></h3>
+<p>TRC is a nonprocedural query language, where each query is of the form</p>
+<p>$$
+{t | P(t)}
+$$</p>
+<p>where t = resulting tuples, <br></p>
+<p>$P(t) =$ known as predicate and these are the conditions that are used to fetch t. <br>
+$P(t)$ may have various conditions logically combined with OR $(\lor)$, AND $(\land)$, NOT $(\neg)$</p>
+<p>It also uses quantifiers:<br>
+$\exists \in  r(Q(t)) =$ &ldquo;there exists&rdquo; a tuple in t in relation r such that predicate $Q(t)$ is true. <br>
+$\forall t \in r(Q(t)) = Q(t)$ is true &ldquo;for all&rdquo; tuples in relation r. <br></p>
+<dl>
+<dt>${ P | \exists S \in Students(S.CGPA &gt; 8 \land P.name = S.name \land P.age = S.age)}$</dt>
+<dd>returns the name and age of students with a CGPA above 8.</dd>
+</dl>
+<h3 id="domain-relational-calculus">Domain Relational Calculus<a hidden class="anchor" aria-hidden="true" href="#domain-relational-calculus">#</a></h3>
+<p>${&lt;x_1, x_2, &hellip;, x_n&gt; | P(x_1, x_2, &hellip;, x_n)}$</p>
+<ul>
+<li>
+<p>$x_1, x_2, &hellip;, x_n$ represent domain variables</p>
+</li>
+<li>
+<p>P represents a formula similar to that of the predicate calculus</p>
+<table>
+  <thead>
+      <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Marks</th>
+          <th>Subject</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>David</td>
+          <td>23</td>
+          <td>78</td>
+          <td>Maths</td>
+      </tr>
+      <tr>
+          <td>Mathew</td>
+          <td>29</td>
+          <td>54</td>
+          <td>English</td>
+      </tr>
+      <tr>
+          <td>Anand</td>
+          <td>29</td>
+          <td>89</td>
+          <td>JAVA</td>
+      </tr>
+      <tr>
+          <td>Mitchel</td>
+          <td>21</td>
+          <td>56</td>
+          <td>Maths</td>
+      </tr>
+      <tr>
+          <td>Shaun</td>
+          <td>26</td>
+          <td>92</td>
+          <td>Maths</td>
+      </tr>
+  </tbody>
+</table>
+<p>weak_relation Students <br>
+${&lt; a, b&gt; \exists a, b, c, d(&lt; a, b, c, d&gt; \in students \land c &gt; 75)}$ <br>
+returns the name and age of students having marks above 75.</p>
+<p><u>Note</u>: You have to mention the domain variables in the same order as given in the table.</p>
+</li>
+</ul>
+<h2 id="joins">Joins<a hidden class="anchor" aria-hidden="true" href="#joins">#</a></h2>
+<h3 id="inner-join">Inner Join<a hidden class="anchor" aria-hidden="true" href="#inner-join">#</a></h3>
+<p>An inner join returns only the rows where there is a match in both tables. It discards rows that do not have matching values in both tables.</p>
+<p><strong>Relational Algebra Notation:</strong></p>
+<p>$$
+R \bowtie S
+$$</p>
+<p>where $R$ and $S$ are two relations.</p>
+<p>For example, if we have two relations $R(A, B)$ and $S(B, C)$, an inner join on the attribute $B$ (common in both tables) will be:</p>
+<p>$$
+R \bowtie S = { (a, b, c) , | , (a, b) \in R \text{ and } (b, c) \in S }
+$$</p>
+<h3 id="left-outer-join">Left Outer Join<a hidden class="anchor" aria-hidden="true" href="#left-outer-join">#</a></h3>
+<p>A left outer join returns all the rows from the left table (relation) and the matching rows from the right table. If there is no match, the result will contain NULL values for columns from the right table.</p>
+<p><strong>Relational Algebra Notation:</strong></p>
+<p>$$
+R \ltimes S
+$$</p>
+<h3 id="right-outer-join">Right Outer Join<a hidden class="anchor" aria-hidden="true" href="#right-outer-join">#</a></h3>
+<p>A right outer join returns all the rows from the right table and the matching rows from the left table. If there is no match, the result will contain NULL values for columns from the left table.</p>
+<p><strong>Relational Algebra Notation:</strong></p>
+<p>$$
+R \rtimes S
+$$</p>
+<h3 id="full-outer-join">Full Outer Join<a hidden class="anchor" aria-hidden="true" href="#full-outer-join">#</a></h3>
+<p>A full outer join returns all the rows when there is a match in either the left table or the right table. If there is no match, the result will contain NULL values for columns from the table that does not have a match.</p>
+<p><strong>Relational Algebra Notation:</strong></p>
+<p>$$
+R\quad ⟗  \quad S
+$$</p>
+<h3 id="cross-join-cartesian-product">Cross Join (Cartesian Product)<a hidden class="anchor" aria-hidden="true" href="#cross-join-cartesian-product">#</a></h3>
+<p>A cross join returns the Cartesian product of the two tables, meaning it combines each row of the first table with each row of the second table.</p>
+<p><strong>Relational Algebra Notation:</strong></p>
+<p>$$
+R \times S
+$$</p>
+<p>For example, if relation $R$ has 3 rows and relation $S$ has 2 rows, the Cartesian product $R \times S$ will have $3 \times 2 = 6$ rows.</p>
+<h3 id="theta-join">Theta Join<a hidden class="anchor" aria-hidden="true" href="#theta-join">#</a></h3>
+<p>A theta join allows us to join tables based on a condition that uses comparison operators other than equality (e.g., &lt;, &gt;, ≤, ≥, ≠).</p>
+<p><strong>Relational Algebra Notation:</strong></p>
+<p>$$
+R \bowtie_\theta S
+$$</p>
+<p>where $\theta$ is a condition involving comparison operators.</p>
+<h3 id="practical-examples">Practical Examples<a hidden class="anchor" aria-hidden="true" href="#practical-examples">#</a></h3>
+<p>Let&rsquo;s say we have two tables, <code>Students</code> and <code>Courses</code>:</p>
+<h4 id="students-table">Students Table:<a hidden class="anchor" aria-hidden="true" href="#students-table">#</a></h4>
+<table>
+  <thead>
+      <tr>
+          <th>StudentID</th>
+          <th>Name</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td>Alice</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>Bob</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>Carol</td>
+      </tr>
+  </tbody>
+</table>
+<h4 id="courses-table">Courses Table:<a hidden class="anchor" aria-hidden="true" href="#courses-table">#</a></h4>
+<table>
+  <thead>
+      <tr>
+          <th>CourseID</th>
+          <th>StudentID</th>
+          <th>CourseName</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>101</td>
+          <td>1</td>
+          <td>Math</td>
+      </tr>
+      <tr>
+          <td>102</td>
+          <td>2</td>
+          <td>Science</td>
+      </tr>
+      <tr>
+          <td>103</td>
+          <td>2</td>
+          <td>History</td>
+      </tr>
+      <tr>
+          <td>104</td>
+          <td>4</td>
+          <td>Literature</td>
+      </tr>
+  </tbody>
+</table>
+<ul>
+<li>
+<p><strong>Inner Join Example:</strong> Retrieve students and their courses</p>
+<p>$$</p>
+<p>Students \bowtie_{Students.StudentID = Courses.StudentID} Courses
+$$</p>
+<p>Result:</p>
+<table>
+  <thead>
+      <tr>
+          <th>StudentID</th>
+          <th>Name</th>
+          <th>CourseID</th>
+          <th>CourseName</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td>Alice</td>
+          <td>101</td>
+          <td>Math</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>Bob</td>
+          <td>102</td>
+          <td>Science</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>Bob</td>
+          <td>103</td>
+          <td>History</td>
+      </tr>
+  </tbody>
+</table>
+</li>
+<li>
+<p><strong>Left Outer Join Example:</strong> Retrieve all students and their courses (if any)</p>
+<p>$$</p>
+<p>Students \ltimes Courses
+$$</p>
+<p>Result:</p>
+<table>
+  <thead>
+      <tr>
+          <th>StudentID</th>
+          <th>Name</th>
+          <th>CourseID</th>
+          <th>CourseName</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td>Alice</td>
+          <td>101</td>
+          <td>Math</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>Bob</td>
+          <td>102</td>
+          <td>Science</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>Bob</td>
+          <td>103</td>
+          <td>History</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>Carol</td>
+          <td>NULL</td>
+          <td>NULL</td>
+      </tr>
+  </tbody>
+</table>
+</li>
+</ul>
+<p>These examples illustrate how joins in relational algebra help us retrieve and combine data from multiple tables based on specific conditions.</p>
+<h2 id="functional-dependency-and-decomposition">Functional Dependency and Decomposition<a hidden class="anchor" aria-hidden="true" href="#functional-dependency-and-decomposition">#</a></h2>
+<p>A functional dependency (FD) is a kind of integrity constraints that generalizes the concept of a key. Let $R$ be a relation schema and let $X$ and $Y$ be nonempty sets of attributes in $R$. We say that an instance $r$ of $R$ satisfies the FD $X \rightarrow Y$ . If the following holds for every pair of tuples $t1$ and $t2$ in $r$.</p>
+<p>If $t1.X = t2.X$, then $t1.Y = t2.Y$</p>
+<p>$X \rightarrow Y$ is read as $X$ functionally determines $Y$ or simply $X$ determines $Y$ . An FD $X \rightarrow Y$ essentially says that if two tuples agree on the values in attribute $X$, they must also agree on the values in attributes $Y$. If a constraints on $R$ states that there cannot be more than one tuple with a given $X$ value in any relation instance $r(R)$, that is $X$ is the key of $R$, the definition of an FD does not require that the set $X$ be minimal, the additional minimality condition must be met for $X$ to be a key.</p>
+<p>If $X \rightarrow Y$ holds, where $Y$ is a set of all attribute and there is some subset $V$ of $X$ such that $V \rightarrow Y$ holds then $X$ is a super key.</p>
+<p><strong>Trivial FD</strong><br>
+If $X$ and $Y$ are attribute set of $R$ and $Y \subseteq X$ then $X \rightarrow Y$ is trivial FD.<br>
+<u>Example:</u> Sid Sname $\rightarrow$ sid
+Every trivial FD implies in relation.
+<br></p>
+<p><strong>Non-trivial FD</strong> <br>
+If $X$ and $Y$ are attribute sets of R and no common attribute between $X$ and $Y$. <br>
+$X \cap Y\neq$ empty set then $X \rightarrow Y$ is non- trivial FD.<br>
+<u>Example</u>: sid $\rightarrow$ gpa
+Sname $\rightarrow$ sid gpa
+There may be a relation with no non-trivial FD.</p>
+<p><strong>Closure of set of FDs</strong> <br>
+Set of all FDs that include given FDs as well as those that can be inferred from the given. FDs is called the closure of FDs. If $F$ is the set of given FDs the $F^{+}$ is called closure of $F$.</p>
+<h3 id="armstrongs-axioms">Armstrong&rsquo;s Axioms<a hidden class="anchor" aria-hidden="true" href="#armstrongs-axioms">#</a></h3>
+<p>The following three rules, called Armstrong’s Axioms can be applied repeatedly to infer all FDs implied by a set $F$ of FDs. Let $X$, $Y$ and $Z$ denotes sets of attributes over a relation schema $R$.</p>
+<ul>
+<li>Reflexivity: If $X\supseteq Y$, then $X \rightarrow Y$.<br></li>
+<li>Augmentation: If $X \rightarrow Y$, then $XZ \rightarrow YZ$ for any $Z$.<br></li>
+<li>Transitivity: If $X  \rightarrow Y$ and $Y \rightarrow Z$, then $X \rightarrow Z$.<br></li>
+</ul>
+<p>Armstrong&rsquo;s Axioms are sound in that they generate only FDs in F + when applied
+to a set $F$ of FDs. They are complete in that repeated application of these rules will
+generate all FDs in the closure $F^+$. (We will not prove these claims.) It is convenient
+to use some additional rules while reasoning about $F^+$ :</p>
+<ul>
+<li>Union: If $X — Y$and $X — Z$, then $X — YZ$.</li>
+<li>Decomposition: If $X \rightarrow YZ$ then $x \rightarrow Y$ and $X \rightarrow Z$</li>
+<li>Psuedo-transitivity rule: If $A \rightarrow B$ and $BC \rightarrow D$ then $AC \rightarrow D$</li>
+</ul>
+<p>These additional rules are not essential; their soundness can be proved using Armstrong&rsquo;s Axioms.</p>
+<h2 id="normalization-and-normal-forms">Normalization and Normal Forms<a hidden class="anchor" aria-hidden="true" href="#normalization-and-normal-forms">#</a></h2>
+<p>Database design theory includes design standards called normal forms. The process of making data and tables match these standards is called normalizing data or data normalization. By normalizing data, we eliminate redundant information and organize the table to make it easier to manage the data and make future changes to the table and database structure. This process removes the insertion, deletion, and modification anomalies. In normalizing your data, we usually divide large tables into smaller, easierto- maintain tables. We can then use the technique of adding foreign keys to enable connections between the tables.</p>
+<p>Data normalization is part of the database design process and is neither specific nor unique to any particular RDBMS. These are in order, such as first, second, third, Boyce- Codd, fourth, and fifth normal forms. Each normal form represents an increasingly stringent set of rules; that is, each normal form assumes that the requirements of the preceding forms have been met. Many relational database designers feel that, if their tables are in third normal form, most common design problems have been addressed.</p>
+<center>
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">@startuml
+skinparam monochrome true
+scale 300 height
+scale 400 width
+title Database Normalization Process
+state &#34;Unnormalized Relations &#34; as UR : Raw data with redundancies and anomalies
+state &#34;1NF (First Normal Form)&#34; as 1NF : - Remove Repeating Groups\n- Ensure atomic values
+state &#34;2NF (Second Normal Form)&#34; as 2NF: - Remove Partial Dependency\n- Full functional dependency
+state &#34;3NF (Third Normal Form)&#34; as 3NF: - Remove Transitive Dependency\n- No transitive dependencies
+state &#34;BCNF (Boyce-Codd Normal Form)&#34; as BCNF: - Remove Overlapping Candidate Key\n- Strictly only one candidate key per attribute
+state &#34;4NF (Fourth Normal Form)&#34; as 4NF : - Remove Multi-Valued Dependency\n- No non-trivial multi-valued dependencies
+state &#34;5NF (Fifth Normal Form)&#34; as 5NF: - Remove Non-Implied Join-Dependency\n- Every join dependency is implied by candidate keys
+UR --&gt; 1NF :   Step 1
+1NF --&gt; 2NF : Step 2
+2NF --&gt; 3NF : Step 3
+3NF --&gt; BCNF : Step 4
+BCNF --&gt; 4NF : Step 5
+4NF --&gt; 5NF : Step 6
+@enduml
+</code></pre><p><img alt="Normalization Forms Diagra" loading="lazy" src="https://media.geeksforgeeks.org/wp-content/uploads/20200804110751/normalizationedited.jpg"></p>
+</center>
+<h3 id="anomalies">Anomalies<a hidden class="anchor" aria-hidden="true" href="#anomalies">#</a></h3>
+<p>An anomaly is a variation that differs in some way from what is said to be normal, with respect to maintaining a database.</p>
+<ul>
+<li>The basic operations performed on Databases are Record insertion, Record updation, and Record deletion.</li>
+<li>It is desirable for these operations to be straight forward and efficient.</li>
+<li>When relations are not fully normalized they exhibit anomalies.</li>
+<li>The design goal of database is too easily to understand and to maintain.</li>
+<li>Anomalies are problems that occur in un-normalized databases where all the data is stored in one table.</li>
+</ul>
+<p><strong>Types of anomalies</strong></p>
+<p>There are three types of anomalies that can arise in the database because of redundancy as follows:</p>
+<ol>
+<li>Insertion anomaly: An insertion anomaly occurs when particular attributes cannot be inserted into the database without the presence of other attributes</li>
+<li>Deletion anomaly: Deletion anomaly occurs when some particular attributes are lost because of the deletion of other attributes.</li>
+<li>Updation anomaly: An updation anomaly occurs when one or more instances of duplicated data are updated but not all.</li>
+</ol>
+<h3 id="normal-forms">Normal Forms<a hidden class="anchor" aria-hidden="true" href="#normal-forms">#</a></h3>
+<ol>
+<li>
+<p><strong>First Normal Form (1 NF):</strong><br>
+No multi valued attributes, it must have atomic domain only.</p>
+</li>
+<li>
+<p><strong>Second Normal Form (2 NF):</strong><br></p>
+<ul>
+<li>Second normal form (2NF) is based on the concept of fully functional dependency. A functional dependency $X \rightarrow Y$ is a full function dependency if the removal of any attribute A from X means that the dependency does not hold anymore; i.e., for any attribute $A \in X$, $(X -{A})$ does not functionally determine Y.</li>
+<li>A functional dependency $X \rightarrow Y$ is a partial dependency if some attribute A can be removed from X and the dependency still holds; i.e., for some $A \in X$, $(X - {A}) \rightarrow Y$.</li>
+<li>The test for 2NF involves testing for functional dependency whose left-hand side attributes are part of the primary key and the right-hand side is a nonprime attribute. If the primary key contains a single attribute the test need not be applied at all.<br>
+$X$: is any candidate key<br>
+$Y$: Proper subset of key<br>
+$A$: None prime attribute<br>
+Then we can say, $Y \rightarrow A$ is partial dependency.</li>
+</ul>
+</li>
+<li>
+<p><strong>Third Normal Form (3NF):</strong>
+Let $R$ be a relation schema, $X$ be a subset of the attributes of $R$, and $A$ be an attribute of $R$. $R$ is in third normal form if for every FD $X \rightarrow A$ that holds over $R$, one of the following statements is true: <br></p>
+<ul>
+<li>$A \in X$; that is, it is a trivial FD, or<br></li>
+<li>$X$ is a superkey, or<br></li>
+<li>$A$ is part of some key for $R$.<br>
+<em>Note: If Non-Prime Attribute determines non prime attribute then we can say there is a transistive dependency</em></li>
+</ul>
+</li>
+<li>
+<p><strong>Boyce Codd’s normal Form (BCNF)</strong><br></p>
+<ul>
+<li>Relation shloud be in 3NF first<br></li>
+<li>$A \in X$; that is, it is a trivial FD, or<br></li>
+<li>$X$ is a superkey</li>
+</ul>
+</li>
+<li>
+<p><strong>Forth Normal Form (4NF)</strong><br></p>
+<ul>
+<li>Relation should be in BCNF</li>
+<li>No Multi Valued Dependency</li>
+</ul>
+</li>
+<li>
+<p><strong>Fifth Normal Form (5NF):</strong> <br>
+It deals with join dependency</p>
+</li>
+</ol>
+<h3 id="advantages-and-disadvantages">Advantages and Disadvantages<a hidden class="anchor" aria-hidden="true" href="#advantages-and-disadvantages">#</a></h3>
+<p><strong>Advantages of Normalization:</strong></p>
+<ul>
+<li>Normalization helps to minimize data redundancy.</li>
+<li>Greater overall database organization.</li>
+<li>Data consistency within the database.</li>
+<li>Much more flexible database design.</li>
+<li>Enforces the concept of relational integrity.</li>
+</ul>
+<p><strong>Disadvantages of Normalization:</strong></p>
+<ul>
+<li>You cannot start building the database before knowing what the user needs.</li>
+<li>The performance degrades when normalizing the relations to higher normal forms, i.e., 4NF, 5NF.</li>
+<li>It is very time-consuming and difficult to normalize relations of a higher degree.-</li>
+<li>Careless decomposition may lead to a bad database design, leading to serious problems.</li>
+</ul>
+<p><strong>Lossless and Lossy Decompositions</strong></p>
+<p>If a relation $R$ is decomposed into $R1$ and $R2$ and</p>
+<p>$$
+R1\cap R2 \neq = \phi
+$$</p>
+<p>then we say the decomposition is lossless.</p>
+<p><strong>Dependency Preserving</strong></p>
+<p>If a realation $R$ is decomposed into n relations $R1, R2, R3, &hellip;, Rn$ then if the functional dependency set of R is exactly equal to union of broken relations, then we say the dependency is preserved.</p>
+<p>$$
+F.D{R1 \cup R2 \cup R3 \cup &hellip; \cup Rn }= F.D{R}
+$$</p>
+<h1 id="keywords">Keywords<a hidden class="anchor" aria-hidden="true" href="#keywords">#</a></h1>
+<ol>
+<li><strong>Tautology</strong> : In a database management system (DBMS), a tautology is a statement that is always true, regardless of the values of the individual statements that make it up</li>
+<li><strong>Topological Sort</strong></li>
+</ol>
+<h1 id="indepth">InDepth<a hidden class="anchor" aria-hidden="true" href="#indepth">#</a></h1>
+<!-- REQ:-->
+<ol>
+<li>TRC and DRC</li>
+<li>Graph Traversals</li>
+<li>Functional Dependencies, Decompositions and Normal Forms</li>
+</ol>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="//localhost:1313/">BALAJI</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

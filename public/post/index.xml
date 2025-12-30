@@ -18,55 +18,6 @@
 &lt;iframe src=&#34;//localhost:1313/plotly/checking_html.html&#34; width=&#34;100%&#34; height=&#34;400&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;</description>
     </item>
     <item>
-      <title>Bayesian Networks</title>
-      <link>//localhost:1313/post/bayesian-networks/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/post/bayesian-networks/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Bayesian Networks (BNs)&lt;/strong&gt;, also known as Belief Networks or Bayes Nets, are graphical models that represent probabilistic relationships among a set of variables. They are widely used in various fields such as medicine, finance, artificial intelligence, and more for reasoning under uncertainty.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Key Concepts:&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Nodes and Edges:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Nodes:&lt;/strong&gt; Each node in a Bayesian network represents a random variable, which can be discrete or continuous.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Edges:&lt;/strong&gt; Directed edges (arrows) between nodes represent conditional dependencies. If there is an edge from node $A$ to node $B$, it indicates that $B$ is conditionally dependent on $A$.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Directed Acyclic Graph (DAG):&lt;/strong&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Calculus</title>
-      <link>//localhost:1313/post/calculus/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/post/calculus/</guid>
-      <description>&lt;!-- tags: [&#34;MATH&#34;] --&gt;
-&lt;h2 id=&#34;function&#34;&gt;Function&lt;/h2&gt;
-&lt;h3 id=&#34;function-of-single-variable&#34;&gt;Function of single variable&lt;/h3&gt;
-&lt;p&gt;A relation f from a set $A$ to a set $B$ is said to be a function if every element of set $A$ has one and only one image in set $B$. In other words, a function $f$ is a relation such that no two pairs in the relation have the same first element.&lt;/p&gt;
-&lt;p&gt;The notation $f : X \rightarrow Y$ means that $f$ is a function from $X$ to $Y$ . $X$ is called the domain of $f$, and $Y$ is called the co-domain of $f$.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Database Warehousing</title>
-      <link>//localhost:1313/post/database-warehousing/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/post/database-warehousing/</guid>
-      <description>&lt;!-- tags: [&#34;CS&#34;] --&gt;
-&lt;p&gt;I computing, a data warehouse, also known as an enterprise data warehouse, is a system used for reporting and data analysis and is considered a core component of data analysis.&lt;/p&gt;
-&lt;p&gt;Data warehouses are central repositories of integrated data from one or more different sources. They store current and historical data in one single place.&lt;/p&gt;
-&lt;p&gt;We use databases for transaction purposes, and the historical data of these transactions and it&amp;rsquo;s previous states are stored in this data warehouses.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>DBMS</title>
-      <link>//localhost:1313/post/dbms/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/post/dbms/</guid>
-      <description>&lt;!-- tags: [&#34;CS&#34;] --&gt;
-&lt;p&gt;A database management system (DBMS) is a collection of programs that enables users to create and maintain a database. The DBMS is a general-purpose software system that facilitates the processes of defining, constructing, manipulating and sharing databases among various users and applications.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Data Model:&lt;/strong&gt;&lt;/em&gt; A data model is a collection of concepts that can be used to describe the structure of a database. It provides the necessary means to achieve abstraction.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>Explonential Family of Distributions</title>
       <link>//localhost:1313/post/exponential-family-of-distributions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><link rel="icon" type="" href="logo.png">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Bayesian Networks | BALAJI</title>
+<meta name="keywords" content="">
+<meta name="description" content="Bayesian Networks (BNs), also known as Belief Networks or Bayes Nets, are graphical models that represent probabilistic relationships among a set of variables. They are widely used in various fields such as medicine, finance, artificial intelligence, and more for reasoning under uncertainty.
+Key Concepts:
+
+
+Nodes and Edges:
+
+Nodes: Each node in a Bayesian network represents a random variable, which can be discrete or continuous.
+Edges: Directed edges (arrows) between nodes represent conditional dependencies. If there is an edge from node $A$ to node $B$, it indicates that $B$ is conditionally dependent on $A$.
+
+
+
+Directed Acyclic Graph (DAG):">
+<meta name="author" content="">
+<link rel="canonical" href="//localhost:1313/notes/bayesian-networks/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.6da9a63d25a9608bca2f7f907a030e887a7dd3c3f3918e4cc113129361414bda.css" integrity="sha256-bammPSWpYIvKL3&#43;QegMOiHp908PzkY5MwRMSk2FBS9o=" rel="preload stylesheet" as="style">
+<link rel="icon" href="//localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="//localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="//localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="//localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="//localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="//localhost:1313/notes/bayesian-networks/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script
+  type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+></script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\[','\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+           extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body class="" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="//localhost:1313/" accesskey="h" title="BALAJI (Alt + H)">BALAJI</a>
+            <div class="logo-switches">
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="//localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="//localhost:1313/balaji24092001_resume.pdf" title="CV">
+                    <span>CV</span>
+                </a>
+            </li>
+            <li>
+                <a href="//localhost:1313/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="//localhost:1313/categories/blog" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Bayesian Networks
+    </h1>
+    <div class="post-meta">14 min
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#nodes-and-edges-in-bayesian-networks" aria-label="Nodes and Edges in Bayesian Networks">Nodes and Edges in Bayesian Networks</a></li>
+                <li>
+                    <a href="#conditional-probability-tables-cpts" aria-label="Conditional Probability Tables (CPTs)">Conditional Probability Tables (CPTs)</a></li>
+                <li>
+                    <a href="#joint-probability-distribution" aria-label="Joint Probability Distribution">Joint Probability Distribution</a></li>
+                <li>
+                    <a href="#inference" aria-label="Inference">Inference</a><ul>
+                        
+                <li>
+                    <a href="#1-exact-inference" aria-label="1. Exact Inference">1. Exact Inference</a><ul>
+                        
+                <li>
+                    <a href="#key-algorithms-for-exact-inference" aria-label="Key Algorithms for Exact Inference">Key Algorithms for Exact Inference</a></li></ul>
+                </li>
+                <li>
+                    <a href="#2-approximate-inference" aria-label="2. Approximate Inference">2. Approximate Inference</a><ul>
+                        
+                <li>
+                    <a href="#key-algorithms-for-approximate-inference" aria-label="Key Algorithms for Approximate Inference">Key Algorithms for Approximate Inference</a></li></ul>
+                </li></ul>
+                </li>
+                <li>
+                    <a href="#misc" aria-label="Misc">Misc</a><ul>
+                        
+                <li>
+                    <a href="#tools-for-inference" aria-label="Tools for Inference">Tools for Inference</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p><strong>Bayesian Networks (BNs)</strong>, also known as Belief Networks or Bayes Nets, are graphical models that represent probabilistic relationships among a set of variables. They are widely used in various fields such as medicine, finance, artificial intelligence, and more for reasoning under uncertainty.</p>
+<p><strong>Key Concepts:</strong></p>
+<ol>
+<li>
+<p><strong>Nodes and Edges:</strong></p>
+<ul>
+<li><strong>Nodes:</strong> Each node in a Bayesian network represents a random variable, which can be discrete or continuous.</li>
+<li><strong>Edges:</strong> Directed edges (arrows) between nodes represent conditional dependencies. If there is an edge from node $A$ to node $B$, it indicates that $B$ is conditionally dependent on $A$.</li>
+</ul>
+</li>
+<li>
+<p><strong>Directed Acyclic Graph (DAG):</strong></p>
+<ul>
+<li>A Bayesian network is a type of DAG, meaning it has no directed cycles. This ensures that the network represents a valid probability distribution.</li>
+</ul>
+</li>
+<li>
+<p><strong>Conditional Probability Tables (CPTs):</strong></p>
+<ul>
+<li>Each node has an associated CPT that quantifies the effect of the parent nodes on it. For a node with no parents, the CPT reduces to a prior probability distribution.</li>
+</ul>
+</li>
+<li>
+<p><strong>Joint Probability Distribution:</strong></p>
+<ul>
+<li>The network encodes the joint probability distribution of all variables. For a set of variables $X_1, X_2, \ldots, X_n$, the joint distribution is given by:
+$$
+P(X_1, X_2, \ldots, X_n) = \prod_{i=1}^n P(X_i | \text{Parents}(X_i))
+$$</li>
+<li>This factorization is possible due to the conditional independence assumptions represented by the network structure.</li>
+</ul>
+</li>
+<li>
+<p><strong>Inference:</strong></p>
+<ul>
+<li>Inference in Bayesian networks involves computing the posterior distribution of some variables given evidence about others. This can be done using exact methods (e.g., variable elimination, junction trees) or approximate methods (e.g., Monte Carlo simulations).</li>
+</ul>
+</li>
+<li>
+<p><strong>Learning:</strong></p>
+<ul>
+<li>Bayesian networks can be learned from data. This involves structure learning (determining the graph structure) and parameter learning (estimating the CPTs).</li>
+</ul>
+</li>
+</ol>
+<p><strong>Example:</strong>
+Consider a simple Bayesian network with three variables: $A$, $B$, and $C$. If $A$ influences $B$ and $B$ influences $C$, the network would have edges $A \rightarrow B$ and $B \rightarrow C$. The joint probability distribution would be:</p>
+<p>$$
+P(A, B, C) = P(A) \cdot P(B | A) \cdot P(C | B)
+$$</p>
+<h2 id="nodes-and-edges-in-bayesian-networks">Nodes and Edges in Bayesian Networks<a hidden class="anchor" aria-hidden="true" href="#nodes-and-edges-in-bayesian-networks">#</a></h2>
+<p><strong>Nodes:</strong></p>
+<ul>
+<li>In a Bayesian network, each node represents a random variable. These variables can be of different types:
+<ul>
+<li><strong>Discrete Variables:</strong> Variables that take on a finite set of values (e.g., weather conditions: sunny, rainy, cloudy).</li>
+<li><strong>Continuous Variables:</strong> Variables that can take on any value within a range (e.g., temperature, height).</li>
+</ul>
+</li>
+</ul>
+<p><strong>Edges:</strong></p>
+<ul>
+<li>Directed edges (arrows) between nodes represent conditional dependencies. If there is an edge from node $A$ to node $B$, it indicates that $B$ is conditionally dependent on $A$. This means the probability distribution of $B$ is influenced by the value of $A$.</li>
+</ul>
+<p><strong>Conditional Independence:</strong></p>
+<ul>
+<li>One of the key features of Bayesian networks is that they encode conditional independence relationships. If two nodes are not connected by a directed path, they are conditionally independent given their parents. This property helps in simplifying the computation of joint probabilities.</li>
+<li>Two variables $X$ and $Y$ are said to be conditionally independent given a third variable $Z$ if the probability distribution of $X$ given $Z$ does not depend on $Y$, and vice versa. Mathematically, this is expressed as:
+$$
+P(X | Y, Z) = P(X | Z)
+$$
+This means that once $Z$ is known, $Y$ provides no additional information about $X$.</li>
+</ul>
+<h2 id="conditional-probability-tables-cpts">Conditional Probability Tables (CPTs)<a hidden class="anchor" aria-hidden="true" href="#conditional-probability-tables-cpts">#</a></h2>
+<p><strong>Conditional Probability Tables (CPTs):</strong></p>
+<ul>
+<li>Each node in a Bayesian network has an associated <strong>Conditional Probability Table (CPT)</strong> that quantifies the probabilistic relationships between the node and its parents.</li>
+<li>The CPT specifies the probability distribution of the node given all possible combinations of its parents&rsquo; states.</li>
+</ul>
+<p><strong>Structure of CPTs:</strong></p>
+<ul>
+<li>For a node with no parents (root node), the CPT contains the <strong>prior probabilities</strong> of the node&rsquo;s states.</li>
+<li>For a node with parents, the CPT contains the <strong>conditional probabilities</strong> of the node&rsquo;s states given each possible combination of its parents&rsquo; states.</li>
+</ul>
+<p><strong>Example:</strong>
+Consider a Bayesian network with three nodes:</p>
+<ul>
+<li>$A$ (no parents): Represents &ldquo;Rain&rdquo; (with states: True, False).</li>
+<li>$B$ (parent: $A$): Represents &ldquo;Wet Grass&rdquo; (with states: True, False).</li>
+<li>$C$ (parent: $B$): Represents &ldquo;Slippery Sidewalk&rdquo; (with states: True, False).</li>
+</ul>
+<p><strong>CPT for $A$ (Rain):</strong></p>
+<ul>
+<li>Since $A$ has no parents, its CPT contains the prior probabilities:
+$$
+P(A = \text{True}) = 0.3, \quad P(A = \text{False}) = 0.7
+$$</li>
+</ul>
+<p><strong>CPT for $B$ (Wet Grass):</strong></p>
+<ul>
+<li>$B$ depends on $A$, so its CPT specifies the probability of $B$ being True or False given $A$:
+$$
+\begin{array}{c|cc}
+A &amp; P(B = \text{True} | A) &amp; P(B = \text{False} | A) \
+\hline
+\text{True} &amp; 0.8 &amp; 0.2 \
+\text{False} &amp; 0.1 &amp; 0.9 \
+\end{array}
+$$
+<ul>
+<li>If it rains ($A = \text{True}$), the probability of wet grass ($B = \text{True}$) is 0.8.</li>
+<li>If it does not rain ($A = \text{False}$), the probability of wet grass ($B = \text{True}$) is 0.1.</li>
+</ul>
+</li>
+</ul>
+<p><strong>CPT for $C$ (Slippery Sidewalk):</strong></p>
+<ul>
+<li>$C$ depends on $B$, so its CPT specifies the probability of $C$ being True or False given $B$:
+$$
+\begin{array}{c|cc}
+B &amp; P(C = \text{True} | B) &amp; P(C = \text{False} | B) \
+\hline
+\text{True} &amp; 0.7 &amp; 0.3 \
+\text{False} &amp; 0.1 &amp; 0.9 \
+\end{array}
+$$
+<ul>
+<li>If the grass is wet ($B = \text{True}$), the probability of a slippery sidewalk ($C = \text{True}$) is 0.7.</li>
+<li>If the grass is not wet ($B = \text{False}$), the probability of a slippery sidewalk ($C = \text{True}$) is 0.1.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Key Points:</strong></p>
+<ul>
+<li>CPTs encode the probabilistic relationships between nodes and their parents.</li>
+<li>They allow the network to compute the joint probability distribution of all variables.</li>
+<li>CPTs are essential for performing inference in Bayesian networks.</li>
+</ul>
+<pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">@startuml
+skinparam nodesep 50
+skinparam ranksep 50
+
+class Outlook {
+    Sunny: 0.4
+    Overcast: 0.3
+    Rain: 0.3
+}
+
+class Humidity {
+    High: 0.7
+    Normal: 0.3
+}
+
+class Decision {
+    No: 0.6
+    Yes: 0.4
+}
+
+Outlook --&gt; Humidity : &#34;P(Humidity | Outlook)&#34;
+Outlook --&gt; Decision : &#34;P(Decision | Outlook)&#34;
+Humidity --&gt; Decision : &#34;P(Decision | Humidity)&#34;
+
+note right of Outlook
+    **P(Outlook):**
+    - Sunny: 0.4
+    - Overcast: 0.3
+    - Rain: 0.3
+end note
+
+note right of Humidity
+    **P(Humidity | Outlook):**
+    - Sunny: High (0.7), Normal (0.3)
+    - Overcast: High (0.5), Normal (0.5)
+    - Rain: High (0.6), Normal (0.4)
+end note
+
+note right of Decision
+    **P(Decision | Outlook, Humidity):**
+    - Sunny, High: No (0.8), Yes (0.2)
+    - Sunny, Normal: No (0.4), Yes (0.6)
+    - Overcast, High: No (0.3), Yes (0.7)
+    - Overcast, Normal: No (0.1), Yes (0.9)
+    - Rain, High: No (0.6), Yes (0.4)
+    - Rain, Normal: No (0.2), Yes (0.8)
+end note
+
+@enduml
+</code></pre><h2 id="joint-probability-distribution">Joint Probability Distribution<a hidden class="anchor" aria-hidden="true" href="#joint-probability-distribution">#</a></h2>
+<p><strong>Joint Probability Distribution:</strong></p>
+<ul>
+<li>The <strong>joint probability distribution</strong> of a set of random variables represents the probability of every possible combination of their states. For a Bayesian network, the joint distribution is factorized using the structure of the network and the conditional independence assumptions it encodes.</li>
+</ul>
+<p><strong>Factorization in Bayesian Networks:</strong></p>
+<ul>
+<li>A Bayesian network represents the joint distribution as a product of conditional probabilities, one for each node given its parents. This is known as the <strong>chain rule for Bayesian networks</strong>:
+$$
+P(X_1, X_2, \ldots, X_n) = \prod_{i=1}^n P(X_i | \text{Parents}(X_i))
+$$
+<ul>
+<li>Here, $X_1, X_2, \ldots, X_n$ are the nodes (variables) in the network.</li>
+<li>$\text{Parents}(X_i)$ refers to the parent nodes of $X_i$.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Example:</strong>
+Consider the Bayesian network with three nodes:</p>
+<ul>
+<li>$A$: Rain (no parents)</li>
+<li>$B$: Wet Grass (parent: $A$)</li>
+<li>$C$: Slippery Sidewalk (parent: $B$)</li>
+</ul>
+<p>The joint probability distribution $P(A, B, C)$ is factorized as:</p>
+<p>$$
+P(A, B, C) = P(A) \cdot P(B | A) \cdot P(C | B)
+$$</p>
+<p><strong>Step-by-Step Calculation:</strong></p>
+<ol>
+<li>
+<p><strong>Prior Probability of $A$:</strong></p>
+<ul>
+<li>$P(A)$ is given by the CPT for $A$:
+$$
+P(A = \text{True}) = 0.3, \quad P(A = \text{False}) = 0.7
+$$</li>
+</ul>
+</li>
+<li>
+<p><strong>Conditional Probability of $B$ given $A$:</strong></p>
+<ul>
+<li>$P(B | A)$ is given by the CPT for $B$:
+$$
+\begin{array}{c|cc}
+A &amp; P(B = \text{True} | A) &amp; P(B = \text{False} | A) \
+\hline
+\text{True} &amp; 0.8 &amp; 0.2 \
+\text{False} &amp; 0.1 &amp; 0.9 \
+\end{array}
+$$</li>
+</ul>
+</li>
+<li>
+<p><strong>Conditional Probability of $C$ given $B$:</strong></p>
+<ul>
+<li>$P(C | B)$ is given by the CPT for $C$:
+$$
+\begin{array}{c|cc}
+B &amp; P(C = \text{True} | B) &amp; P(C = \text{False} | B) \
+\hline
+\text{True} &amp; 0.7 &amp; 0.3 \
+\text{False} &amp; 0.1 &amp; 0.9 \
+\end{array}
+$$</li>
+</ul>
+</li>
+<li>
+<p><strong>Compute the Joint Probability:</strong></p>
+<ul>
+<li>For a specific combination of states, multiply the relevant probabilities:
+<ul>
+<li>Example: Compute $P(A = \text{True}, B = \text{True}, C = \text{True})$:
+$$
+P(A = \text{True}) \cdot P(B = \text{True} | A = \text{True}) \cdot P(C = \text{True} | B = \text{True}) = 0.3 \cdot 0.8 \cdot 0.7 = 0.168
+$$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>Key Points:</strong></p>
+<ul>
+<li>The joint distribution is factorized into a product of conditional probabilities, simplifying the representation and computation.
+-Certainly! Let&rsquo;s move to the next topic in <strong>Bayesian Networks</strong>. A natural progression from the basics would be to discuss <strong>inference in Bayesian Networks</strong>.</li>
+</ul>
+<h2 id="inference">Inference<a hidden class="anchor" aria-hidden="true" href="#inference">#</a></h2>
+<p>Inference refers to the process of using a Bayesian Network to answer probabilistic queries. Given observed evidence, we want to compute the posterior probabilities of certain variables of interest. There are two main types of inference:</p>
+<ol>
+<li>
+<p><strong>Exact Inference</strong>:</p>
+<ul>
+<li>Computes the exact probabilities using mathematical techniques.</li>
+<li>Common methods:
+<ul>
+<li><strong>Variable Elimination</strong>: Eliminates variables one by one by summing them out.</li>
+<li><strong>Junction Tree Algorithm</strong>: Converts the Bayesian Network into a tree structure for efficient computation.</li>
+<li><strong>Brute Force</strong>: Computes probabilities by enumerating all possible states (not scalable for large networks).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Approximate Inference</strong>:</p>
+<ul>
+<li>Used when exact inference is computationally infeasible (e.g., in large networks).</li>
+<li>Common methods:
+<ul>
+<li><strong>Sampling Methods</strong>:
+<ul>
+<li><strong>Forward Sampling</strong>: Generates samples from the prior distribution.</li>
+<li><strong>Rejection Sampling</strong>: Discards samples inconsistent with the evidence.</li>
+<li><strong>Markov Chain Monte Carlo (MCMC)</strong>: Uses a Markov chain to sample from the posterior distribution (e.g., Gibbs sampling).</li>
+</ul>
+</li>
+<li><strong>Variational Inference</strong>: Approximates the posterior distribution using optimization techniques.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>Key Concepts in Inference</strong></p>
+<ol>
+<li>
+<p><strong>Marginalization</strong>:</p>
+<ul>
+<li>Summing out irrelevant variables to compute the marginal probability of a variable.</li>
+<li>Example: $P(A) = \sum_{B} P(A, B)$.</li>
+</ul>
+</li>
+<li>
+<p><strong>Conditioning</strong>:</p>
+<ul>
+<li>Incorporating evidence to update probabilities.</li>
+<li>Example: $P(A | B = b)$ is the probability of $A$ given that $B$ is observed to be $b$.</li>
+</ul>
+</li>
+<li>
+<p><strong>Explaining Away</strong>:</p>
+<ul>
+<li>A phenomenon where two causes of an event become dependent when the event is observed.</li>
+<li>Example: If $A$ and $B$ both cause $C$, observing $C$ makes $A$ and $B$ dependent, even if they were initially independent.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Example of Exact Inference</strong>
+Consider a simple Bayesian Network with three variables:</p>
+<ul>
+<li>$A$: Weather (Sunny, Rainy)</li>
+<li>$B$: Sprinkler (On, Off)</li>
+<li>$C$: Grass Wet (Yes, No)</li>
+</ul>
+<p>The network structure is:</p>
+<ul>
+<li>$A \rightarrow B$</li>
+<li>$A \rightarrow C$</li>
+<li>$B \rightarrow C$</li>
+</ul>
+<p>Suppose we want to compute $P(C = \text{Yes} | A = \text{Sunny})$:</p>
+<ol>
+<li>Use the chain rule to factorize the joint distribution:
+$$
+P(A, B, C) = P(A) \cdot P(B | A) \cdot P(C | A, B)
+$$</li>
+<li>Marginalize over $B$:
+$$
+P(C = \text{Yes} | A = \text{Sunny}) = \sum_{B} P(C = \text{Yes} | A = \text{Sunny}, B) \cdot P(B | A = \text{Sunny})
+$$</li>
+</ol>
+<p><strong>Challenges in Inference</strong></p>
+<ol>
+<li>
+<p><strong>Complexity</strong>:</p>
+<ul>
+<li>Exact inference is NP-hard in general.</li>
+<li>Approximate inference trades off accuracy for scalability.</li>
+</ul>
+</li>
+<li>
+<p><strong>Large Networks</strong>:</p>
+<ul>
+<li>Inference becomes computationally expensive as the number of variables grows.</li>
+</ul>
+</li>
+<li>
+<p><strong>Continuous Variables</strong>:</p>
+<ul>
+<li>Handling continuous variables requires additional techniques (e.g., Gaussian Bayesian Networks).Certainly! Let’s dive deeper into the <strong>specific aspects of inference</strong> in Bayesian Networks. We’ll explore <strong>exact inference</strong> and <strong>approximate inference</strong> in more detail, including algorithms, challenges, and examples.</li>
+</ul>
+</li>
+</ol>
+<h3 id="1-exact-inference">1. Exact Inference<a hidden class="anchor" aria-hidden="true" href="#1-exact-inference">#</a></h3>
+<p>Exact inference computes the precise probabilities of query variables given evidence. While it is accurate, it can be computationally expensive for large networks.</p>
+<h4 id="key-algorithms-for-exact-inference">Key Algorithms for Exact Inference<a hidden class="anchor" aria-hidden="true" href="#key-algorithms-for-exact-inference">#</a></h4>
+<ol>
+<li>
+<p><strong>Variable Elimination</strong>:</p>
+<p>Variable Elimination (VE) is a fundamental algorithm for exact inference. It systematically eliminates variables by summing them out, reducing the problem to a smaller one.</p>
+<p><strong>Steps in Variable Elimination</strong></p>
+<ol>
+<li>
+<p><strong>Start with the Joint Distribution</strong>:</p>
+<ul>
+<li>Represent the joint distribution as a product of factors (conditional probability tables, or CPTs).</li>
+<li>Example: For a network with variables $A, B, C$, the joint distribution is:
+$$
+P(A, B, C) = P(A) \cdot P(B | A) \cdot P(C | A, B)
+$$</li>
+</ul>
+</li>
+<li>
+<p><strong>Eliminate Variables</strong>:</p>
+<ul>
+<li>Choose an ordering of variables to eliminate (e.g., $B$ before $A$).</li>
+<li>For each variable, sum it out from the factors that include it.</li>
+<li>Example: To eliminate $B$:
+$$
+P(A, C) = \sum_{B} P(A) \cdot P(B | A) \cdot P(C | A, B)
+$$</li>
+</ul>
+</li>
+<li>
+<p><strong>Multiply Remaining Factors</strong>:</p>
+<ul>
+<li>After eliminating all irrelevant variables, multiply the remaining factors.</li>
+<li>Example: If only $A$ and $C$ remain:
+$$
+P(A, C) = P(A) \cdot \sum_{B} P(B | A) \cdot P(C | A, B)
+$$</li>
+</ul>
+</li>
+<li>
+<p><strong>Normalize</strong>:</p>
+<ul>
+<li>If computing a conditional probability, normalize the result.</li>
+<li>Example: To compute $P(C | A = a)$:
+$$
+P(C | A = a) = \frac{P(A = a, C)}{\sum_{C} P(A = a, C)}
+$$</li>
+</ul>
+</li>
+</ol>
+<p><strong>Example of Variable Elimination</strong>
+Consider a Bayesian Network with:</p>
+<ul>
+<li>$A$: Weather (Sunny, Rainy)</li>
+<li>$B$: Sprinkler (On, Off)</li>
+<li>$C$: Grass Wet (Yes, No)</li>
+</ul>
+<p>The CPTs are:</p>
+<table>
+  <thead>
+      <tr>
+          <th>$A$</th>
+          <th>$P(A)$</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Sunny</td>
+          <td>0.6</td>
+      </tr>
+      <tr>
+          <td>Rainy</td>
+          <td>0.4</td>
+      </tr>
+  </tbody>
+</table>
+<table>
+  <thead>
+      <tr>
+          <th>$A$</th>
+          <th>$P(B \mid A)$</th>
+          <th>$P(\neg B \mid A)$</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Sunny</td>
+          <td>0.7</td>
+          <td>0.3</td>
+      </tr>
+      <tr>
+          <td>Rainy</td>
+          <td>0.2</td>
+          <td>0.8</td>
+      </tr>
+  </tbody>
+</table>
+<table>
+  <thead>
+      <tr>
+          <th>$A$</th>
+          <th>$B$</th>
+          <th>$P(C \mid A, B)$</th>
+          <th>$P(\neg C \mid A, B)$</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Sunny</td>
+          <td>On</td>
+          <td>0.9</td>
+          <td>0.1</td>
+      </tr>
+      <tr>
+          <td>Sunny</td>
+          <td>Off</td>
+          <td>0.2</td>
+          <td>0.8</td>
+      </tr>
+      <tr>
+          <td>Rainy</td>
+          <td>On</td>
+          <td>0.8</td>
+          <td>0.2</td>
+      </tr>
+      <tr>
+          <td>Rainy</td>
+          <td>Off</td>
+          <td>0.3</td>
+          <td>0.7</td>
+      </tr>
+  </tbody>
+</table>
+<p>Query: Compute $P(C = \text{Yes} | A = \text{Sunny})$.</p>
+<ol>
+<li>
+<p>Eliminate $B$:
+$$
+P(C = \text{Yes} | A = \text{Sunny}) = \sum_{B} P(C = \text{Yes} | A = \text{Sunny}, B) \cdot P(B | A = \text{Sunny})
+$$</p>
+</li>
+<li>
+<p>Substitute values:</p>
+<p>$$
+P(C = \text{Yes} | A = \text{Sunny}) = (0.9 \cdot 0.7) + (0.2 \cdot 0.3) = 0.63 + 0.06 = 0.69
+$$</p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>Junction Tree Algorithm</strong>:
+The Junction Tree Algorithm is a more advanced method for exact inference. It transforms the Bayesian Network into a tree structure for efficient computation.</p>
+<p><strong>Steps in the Junction Tree Algorithm</strong></p>
+<ol>
+<li>
+<p><strong>Moralize</strong>:</p>
+<ul>
+<li>Add edges between parents of the same node to make the graph moral (undirected).</li>
+</ul>
+</li>
+<li>
+<p><strong>Triangulate</strong>:</p>
+<ul>
+<li>Ensure the graph is chordal (no cycles of length &gt; 3 without a chord).</li>
+</ul>
+</li>
+<li>
+<p><strong>Construct the Junction Tree</strong>:</p>
+<ul>
+<li>Identify cliques in the triangulated graph and connect them to form a tree.</li>
+</ul>
+</li>
+<li>
+<p><strong>Propagate Probabilities</strong>:</p>
+<ul>
+<li>Perform message passing between cliques to compute marginals.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Example of Junction Tree Algorithm</strong>
+Consider the same Bayesian Network as above. The steps are:</p>
+<ol>
+<li>Moralize: Add an edge between $A$ and $B$ (if not already present).</li>
+<li>Triangulate: Ensure the graph is chordal.</li>
+<li>Construct the Junction Tree: Cliques might be ${A, B}$ and ${A, C}$.</li>
+<li>Propagate probabilities: Use message passing to compute $P(C | A)$.</li>
+</ol>
+</li>
+<li>
+<p><strong>Brute Force</strong>:</p>
+<ul>
+<li>Enumerate all possible states of the network and compute probabilities directly.</li>
+<li>Not scalable for large networks due to exponential complexity.</li>
+</ul>
+</li>
+</ol>
+<h3 id="2-approximate-inference">2. Approximate Inference<a hidden class="anchor" aria-hidden="true" href="#2-approximate-inference">#</a></h3>
+<p>Approximate inference is used when exact inference is computationally infeasible. It trades off accuracy for scalability.</p>
+<h4 id="key-algorithms-for-approximate-inference">Key Algorithms for Approximate Inference<a hidden class="anchor" aria-hidden="true" href="#key-algorithms-for-approximate-inference">#</a></h4>
+<ol>
+<li>
+<p><strong>Sampling Methods</strong>:</p>
+<ul>
+<li>
+<p>Generate samples from the joint distribution and use them to estimate probabilities.</p>
+</li>
+<li>
+<p>Common techniques:</p>
+<ul>
+<li>
+<p><strong>Forward Sampling</strong>:</p>
+<ul>
+<li>Samples are drawn from the prior distribution.</li>
+<li>Example: Sample $A$, then $B$ given $A$, then $C$ given $A$ and $B$.</li>
+</ul>
+</li>
+<li>
+<p><strong>Rejection Sampling</strong>:</p>
+<ul>
+<li>Discard samples inconsistent with the evidence.</li>
+<li>Example: To estimate $P(A | B = b)$, discard samples where $B \neq b$.</li>
+</ul>
+</li>
+<li>
+<p><strong>Likelihood Weighting</strong>:</p>
+<ul>
+<li>Fix evidence variables and weight samples by their likelihood.</li>
+<li>Example: If $B = b$ is observed, weight each sample by $P(B = b | \text{parents of } B)$.</li>
+</ul>
+</li>
+<li>
+<p><strong>Markov Chain Monte Carlo (MCMC)</strong>:</p>
+<ul>
+<li>
+<p>Uses a Markov chain to sample from the posterior distribution.</p>
+</li>
+<li>
+<p>Example: <strong>Gibbs Sampling</strong>:</p>
+<ul>
+<li>Iteratively samples each variable conditioned on the current values of the other variables.</li>
+</ul>
+<p><strong>Gibbs Sampling</strong>
+Gibbs Sampling is a Markov Chain Monte Carlo (MCMC) method for approximate inference. It iteratively samples each variable conditioned on the current values of the other variables.</p>
+<p><strong>Steps in Gibbs Sampling</strong></p>
+<ol>
+<li>
+<p><strong>Initialize</strong>:</p>
+<ul>
+<li>Assign random values to all variables.</li>
+</ul>
+</li>
+<li>
+<p><strong>Iterate</strong>:</p>
+<ul>
+<li>For each variable $X_i$, sample from $P(X_i | \text{Markov Blanket of } X_i)$.</li>
+<li>The Markov Blanket of $X_i$ includes its parents, children, and children’s parents.</li>
+</ul>
+</li>
+<li>
+<p><strong>Collect Samples</strong>:</p>
+<ul>
+<li>After a burn-in period, collect samples to approximate the posterior distribution.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Example of Gibbs Sampling</strong>
+Query: Estimate $P(A | C = \text{Yes})$.</p>
+<ol>
+<li>Initialize $A$ and $B$ randomly (e.g., $A = \text{Sunny}, B = \text{On}$).</li>
+<li>Iterate:
+<ul>
+<li>Sample $A$ from $P(A | B = \text{On}, C = \text{Yes})$.</li>
+<li>Sample $B$ from $P(B | A = \text{Sunny}, C = \text{Yes})$.</li>
+</ul>
+</li>
+<li>Repeat for many iterations and collect samples for $A$.</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Variational Inference</strong>:</p>
+<p>Variational Inference approximates the posterior distribution by optimizing a simpler distribution.</p>
+<p><strong>Steps in Variational Inference</strong></p>
+<ol>
+<li>
+<p><strong>Choose a Family of Distributions</strong>:</p>
+<ul>
+<li>Select a family of simpler distributions (e.g., Gaussian).</li>
+</ul>
+</li>
+<li>
+<p><strong>Optimize</strong>:</p>
+<ul>
+<li>Minimize the KL divergence between the true posterior and the approximation.</li>
+</ul>
+</li>
+<li>
+<p><strong>Compute Marginals</strong>:</p>
+<ul>
+<li>Use the optimized distribution to compute approximate marginals.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Example of Variational Inference</strong>
+Query: Approximate $P(A | C = \text{Yes})$.</p>
+<ol>
+<li>Choose a Gaussian distribution for $A$.</li>
+<li>Optimize the parameters (mean and variance) to minimize KL divergence.</li>
+<li>Use the optimized Gaussian to compute $P(A | C = \text{Yes})$.</li>
+</ol>
+</li>
+</ol>
+<h2 id="misc">Misc<a hidden class="anchor" aria-hidden="true" href="#misc">#</a></h2>
+<p><strong>Markov Blanket</strong>: The Markov Blanket of a node is the set containing the node&rsquo;s parents, children and the children&rsquo;s co-parents.</p>
+<p>Theorem: A node is conditionally independent of every other node given its markov blanket.</p>
+<center>
+<img style="align:center;" src = 'https://www.researchgate.net/publication/220320437/figure/fig1/AS:669008948887562@1536515571489/Example-of-a-Markov-blanket-The-Markov-blanket-of-the-node-X-6-shown-stippled.png' >
+</center>
+<p>The Markov blanket for node {6} is the union of its parents {2,3}, the children of {6}, which are {8,9}, and the parents&rsquo; of children {5, 7}. Hence, {6} = {2, 3} U {8,9} U {5, 7} = {2, 3, 5, 6, 8, 9}. The union of {6} does not include {1}. This highlights that {1} and {6} are conditionally independent given {2, 3, 5, 6, 8, 9}.</p>
+<h3 id="tools-for-inference">Tools for Inference<a hidden class="anchor" aria-hidden="true" href="#tools-for-inference">#</a></h3>
+<ul>
+<li><strong>Software Libraries</strong>:
+<ul>
+<li><strong>PyMC3</strong>: For probabilistic programming and MCMC.</li>
+<li><strong>pgmpy</strong>: A Python library for Bayesian Networks.</li>
+<li><strong>Stan</strong>: A probabilistic programming language for Bayesian inference.</li>
+</ul>
+</li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="//localhost:1313/">BALAJI</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

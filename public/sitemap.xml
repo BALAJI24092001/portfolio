@@ -13,17 +13,17 @@
   </url><url>
     <loc>//localhost:1313/archives/</loc>
   </url><url>
-    <loc>//localhost:1313/post/bayesian-networks/</loc>
+    <loc>//localhost:1313/notes/bayesian-networks/</loc>
   </url><url>
     <loc>//localhost:1313/categories/blog/</loc>
   </url><url>
-    <loc>//localhost:1313/post/calculus/</loc>
+    <loc>//localhost:1313/notes/calculus/</loc>
   </url><url>
     <loc>//localhost:1313/categories/</loc>
   </url><url>
-    <loc>//localhost:1313/post/database-warehousing/</loc>
+    <loc>//localhost:1313/notes/database-warehousing/</loc>
   </url><url>
-    <loc>//localhost:1313/post/dbms/</loc>
+    <loc>//localhost:1313/notes/dbms/</loc>
   </url><url>
     <loc>//localhost:1313/categories/dev/</loc>
   </url><url>
@@ -34,6 +34,8 @@
     <loc>//localhost:1313/post/neovim/</loc>
   </url><url>
     <loc>//localhost:1313/categories/notes/</loc>
+  </url><url>
+    <loc>//localhost:1313/notes/</loc>
   </url><url>
     <loc>//localhost:1313/projects/</loc>
   </url><url>
